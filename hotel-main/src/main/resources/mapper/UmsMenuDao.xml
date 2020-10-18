@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangkai.hotel.main.dao.UmsMenuDao">
+    <delete id="deleteRelated" parameterType="java.lang.Long">
+    delete
+        m,rm
+    from
+        ums_menu as m
+    left join ums_role_menu_relation as rm on m.id = rm.menu_id
+    where
+        m.id = #{id,jdbcType=BIGINT}
+        or m.parent_id = #{id,jdbcType=BIGINT}
+  </delete>
+
+</mapper>

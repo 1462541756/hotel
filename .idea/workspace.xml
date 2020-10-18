@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cabb4356-108b-413f-a27f-8b5ef40e5dc3" name="Default Changelist" comment="&quot;修改文件存储方式为minio;添加房间管理&quot;">
+      <change afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsResourceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsMenuDao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsResourceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hotel-admin-web/src/views/rms/room/components/RoomDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../hotel-admin-web/src/views/rms/room/components/RoomDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/RmsRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/RmsRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/UmsAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/UmsAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/UmsMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/UmsMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/UmsRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/controller/UmsRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/CmsPrefrenceAreaProductRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/CmsSubjectProductRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/OmsOrderDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/OmsOrderOperateHistoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/OmsOrderReturnApplyDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsMemberPriceDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductAttributeCategoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductAttributeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductAttributeValueDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductCategoryAttributeRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductCategoryDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductFullReductionDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductLadderDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsProductVertifyRecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/PmsSkuStockDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/SmsCouponDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/SmsCouponProductCategoryRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/SmsCouponProductRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/SmsFlashPromotionProductRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsAdminPermissionRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsAdminRoleRelationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsAdminRoleRelationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsRoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dao/UmsRolePermissionRelationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsMoneyInfoParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsOrderDeliveryParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsOrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsOrderQueryParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsOrderReturnApplyResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsReceiverInfoParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsReturnApplyQueryParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/OmsUpdateStatusParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsBrandParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductAttributeCategoryItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductAttributeParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductCategoryParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductCategoryWithChildrenItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductQueryParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/PmsProductResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/ProductAttrInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/SmsCouponParam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/SmsFlashPromotionProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/SmsFlashPromotionSessionDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/dto/UmsPermissionNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/UmsAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/UmsAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/UmsResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/UmsResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/UmsRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/UmsRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsAdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsAdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsMenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsResourceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsResourceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main/service/impl/UmsRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/CmsPrefrenceAreaProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/CmsSubjectProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/OmsOrderDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/OmsOrderOperateHistoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/OmsOrderReturnApplyDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsMemberPriceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductAttributeCategoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductAttributeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductAttributeValueDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductCategoryAttributeRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductCategoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductFullReductionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductLadderDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsProductVertifyRecordDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/PmsSkuStockDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/SmsCouponDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/SmsCouponProductCategoryRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/SmsCouponProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/SmsFlashPromotionProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsAdminPermissionRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsAdminRoleRelationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsAdminRoleRelationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsRoleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsRoleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/src/main/resources/mapper/UmsRolePermissionRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/bo/AdminUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/bo/AdminUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/bo/WebLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/bo/WebLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/config/HotelSecurityConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/config/HotelSecurityConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/config/HotelSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/config/HotelSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/config/MyBatisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/controller/UmsAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/controller/UmsAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/controller/UmsMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/controller/UmsMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/controller/UmsRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/controller/UmsRoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/CmsPrefrenceAreaProductRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/CmsSubjectProductRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/OmsOrderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/OmsOrderOperateHistoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/OmsOrderReturnApplyDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsMemberPriceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductAttributeCategoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductAttributeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductAttributeValueDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductCategoryAttributeRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductCategoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductFullReductionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductLadderDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsProductVertifyRecordDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/PmsSkuStockDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/SmsCouponDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/SmsCouponProductCategoryRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/SmsCouponProductRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/SmsFlashPromotionProductRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/UmsAdminPermissionRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/UmsAdminRoleRelationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/UmsAdminRoleRelationDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dao/UmsRolePermissionRelationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/MinioUploadDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/MinioUploadDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsMoneyInfoParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsOrderDeliveryParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsOrderDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsOrderQueryParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsOrderReturnApplyResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsReceiverInfoParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsReturnApplyQueryParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OmsUpdateStatusParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OssCallbackParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OssCallbackParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OssCallbackResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OssCallbackResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OssPolicyResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/OssPolicyResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsBrandParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductAttributeCategoryItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductAttributeParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductCategoryParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductCategoryWithChildrenItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductQueryParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/PmsProductResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/ProductAttrInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/SmsCouponParam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/SmsFlashPromotionProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/SmsFlashPromotionSessionDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsAdminLoginParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsAdminLoginParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsAdminParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsAdminParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsMenuNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsMenuNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UmsPermissionNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UpdateAdminPasswordParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/dto/UpdateAdminPasswordParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/UmsAdminService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/UmsAdminService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/UmsRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/UmsRoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsAdminServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsAdminServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsMenuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsResourceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsResourceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/service/impl/UmsRoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/validator/FlagValidatorClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/com/yangkai/hotel/main/validator/FlagValidatorClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/CmsPrefrenceAreaProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/CmsSubjectProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/OmsOrderDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/OmsOrderOperateHistoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/OmsOrderReturnApplyDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsMemberPriceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductAttributeCategoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductAttributeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductAttributeValueDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductCategoryAttributeRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductCategoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductFullReductionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductLadderDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsProductVertifyRecordDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/PmsSkuStockDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/SmsCouponDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/SmsCouponProductCategoryRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/SmsCouponProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/SmsFlashPromotionProductRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/UmsAdminPermissionRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/UmsAdminRoleRelationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/mapper/UmsAdminRoleRelationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/UmsRoleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-main/target/classes/mapper/UmsRoleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-main/target/classes/mapper/UmsRolePermissionRelationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-mbg/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsHelpCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsHelpMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsMemberReportMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsPrefrenceAreaMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsPrefrenceAreaProductRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsSubjectCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsSubjectCommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsSubjectMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsSubjectProductRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsTopicCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsTopicCommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/CmsTopicMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsCartItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsCompanyAddressMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsOrderItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsOrderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsOrderOperateHistoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsOrderReturnApplyMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsOrderReturnReasonMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/OmsOrderSettingMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsAlbumMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsAlbumPicMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsBrandMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsCommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsCommentReplayMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsFeightTemplateMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsMemberPriceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductAttributeCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductAttributeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductAttributeValueMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductCategoryAttributeRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductFullReductionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductLadderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductOperateLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsProductVertifyRecordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/PmsSkuStockMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/RmsRoomMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsCouponHistoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsCouponMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsCouponProductCategoryRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsCouponProductRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionProductRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionSessionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsHomeAdvertiseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsHomeBrandMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsHomeNewProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsHomeRecommendProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/SmsHomeRecommendSubjectMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/TestMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsAdminLoginLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsAdminMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsAdminPermissionRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsAdminRoleRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsGrowthChangeHistoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsIntegrationChangeHistoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsIntegrationConsumeSettingMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberLevelMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberLoginLogMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberMemberTagRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberProductCategoryRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberReceiveAddressMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberRuleSettingMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberStatisticsInfoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberTagMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsMemberTaskMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsPermissionMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsResourceCategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsResourceMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsRoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsRoleMenuRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsRolePermissionRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/mapper/UmsRoleResourceRelationMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsHelp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsHelpCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsHelpCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsHelpExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsMemberReport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsMemberReportExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsPrefrenceArea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectComment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectCommentExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectProductRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsSubjectProductRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsTopic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsTopicCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsTopicCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsTopicComment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsTopicCommentExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/CmsTopicExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsCartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsCartItemExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsCompanyAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsCompanyAddressExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderItemExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderOperateHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderOperateHistoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderReturnApply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderReturnApplyExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderReturnReason.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderReturnReasonExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderSetting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/OmsOrderSettingExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsAlbum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsAlbumExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsAlbumPic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsAlbumPicExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsBrand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsBrandExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsComment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsCommentExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsCommentReplay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsCommentReplayExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsFeightTemplate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsFeightTemplateExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsMemberPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsMemberPriceExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductAttributeCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductAttributeCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductAttributeExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductAttributeValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductAttributeValueExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductFullReduction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductFullReductionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductLadder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductLadderExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductOperateLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductOperateLogExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductVertifyRecord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsProductVertifyRecordExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsSkuStock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/PmsSkuStockExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/RmsRoom.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/RmsRoomExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCoupon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponHistoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponProductRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsCouponProductRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionLogExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionSession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsFlashPromotionSessionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeAdvertise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeAdvertiseExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeBrand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeBrandExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeNewProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeNewProductExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeRecommendProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeRecommendProductExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubjectExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/TestExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdmin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminLoginLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminLoginLogExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminRoleRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsAdminRoleRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSetting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSettingExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMember.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberLevel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberLevelExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberLoginLog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberLoginLogExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddress.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddressExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberRuleSetting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberRuleSettingExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfoExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberTag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberTagExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMemberTaskExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsMenuExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsPermission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsPermissionExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsResourceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsResourceCategoryExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsResourceExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRoleExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRoleMenuRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRoleMenuRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRolePermissionRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRolePermissionRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRoleResourceRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/java/com/yangkai/hotel/mbg/model/UmsRoleResourceRelationExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsHelpCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsHelpMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsMemberReportMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsPrefrenceAreaMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsPrefrenceAreaProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsSubjectCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsSubjectCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsSubjectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsSubjectProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsTopicCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsTopicCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/CmsTopicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsCartItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsCompanyAddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsOrderItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsOrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsOrderOperateHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsOrderReturnApplyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsOrderReturnReasonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/OmsOrderSettingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsAlbumMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsAlbumPicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsBrandMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsCommentReplayMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsFeightTemplateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsMemberPriceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductAttributeCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductAttributeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductAttributeValueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductCategoryAttributeRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductFullReductionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductLadderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductOperateLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsProductVertifyRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/PmsSkuStockMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/RmsRoomMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsCouponHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsCouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsCouponProductCategoryRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsCouponProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsFlashPromotionLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsFlashPromotionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsFlashPromotionProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsFlashPromotionSessionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsHomeAdvertiseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsHomeBrandMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsHomeNewProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsHomeRecommendProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/SmsHomeRecommendSubjectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsAdminLoginLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsAdminMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsAdminPermissionRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsAdminRoleRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsGrowthChangeHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsIntegrationChangeHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsIntegrationConsumeSettingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberLevelMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberLoginLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberMemberTagRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberProductCategoryRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberReceiveAddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberRuleSettingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberStatisticsInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberTagMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMemberTaskMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsMenuMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsPermissionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsResourceCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsResourceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsRoleMenuRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsRolePermissionRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/src/main/resources/mapper/UmsRoleResourceRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsHelpCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsHelpMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsMemberReportMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsPrefrenceAreaMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsPrefrenceAreaProductRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsSubjectCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsSubjectCommentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsSubjectMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsSubjectProductRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsTopicCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsTopicCommentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/CmsTopicMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsCartItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsCompanyAddressMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsOrderItemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsOrderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsOrderOperateHistoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsOrderReturnApplyMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsOrderReturnReasonMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/OmsOrderSettingMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsAlbumMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsAlbumPicMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsBrandMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsCommentMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsCommentReplayMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsFeightTemplateMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsMemberPriceMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductAttributeCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductAttributeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductAttributeValueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductCategoryAttributeRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductCategoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductFullReductionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductLadderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductOperateLogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsProductVertifyRecordMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/PmsSkuStockMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsCouponHistoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsCouponMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsCouponProductCategoryRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsCouponProductRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionLogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionProductRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsFlashPromotionSessionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsHomeAdvertiseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsHomeBrandMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsHomeNewProductMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsHomeRecommendProductMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/SmsHomeRecommendSubjectMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/TestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsAdminPermissionRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsGrowthChangeHistoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsIntegrationChangeHistoryMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsIntegrationConsumeSettingMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberLevelMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberLoginLogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberMemberTagRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberProductCategoryRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberReceiveAddressMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberRuleSettingMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberStatisticsInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberTagMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsMemberTaskMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsPermissionMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsRoleMenuRelationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsRoleMenuRelationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsRolePermissionRelationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsRoleResourceRelationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/mapper/UmsRoleResourceRelationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpCategoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpCategoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpCategoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpCategoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsHelpExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsMemberReport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsMemberReportExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsMemberReportExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsMemberReportExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsMemberReportExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceArea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsPrefrenceAreaProductRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCategoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCategoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCategoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCategoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCommentExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCommentExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCommentExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectCommentExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectProductRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectProductRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectProductRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectProductRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsSubjectProductRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCategoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCategoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCategoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCategoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCommentExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCommentExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCommentExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicCommentExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/CmsTopicExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCartItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCartItemExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCartItemExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCartItemExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCartItemExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCompanyAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCompanyAddressExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCompanyAddressExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCompanyAddressExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsCompanyAddressExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderItemExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderItemExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderItemExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderItemExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderOperateHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderOperateHistoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderOperateHistoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderOperateHistoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderOperateHistoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnApply.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnApplyExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnApplyExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnApplyExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnApplyExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnReason.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnReasonExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnReasonExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnReasonExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderReturnReasonExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderSettingExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderSettingExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderSettingExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/OmsOrderSettingExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumPic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumPicExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumPicExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumPicExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsAlbumPicExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsBrandExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsBrandExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsBrandExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsBrandExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentReplay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentReplayExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentReplayExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentReplayExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsCommentReplayExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsFeightTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsFeightTemplateExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsFeightTemplateExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsFeightTemplateExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsFeightTemplateExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsMemberPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsMemberPriceExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsMemberPriceExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsMemberPriceExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsMemberPriceExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttribute.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeCategoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeCategoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeCategoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeCategoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeValue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeValueExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeValueExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeValueExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductAttributeValueExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryAttributeRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductCategoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductFullReduction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductFullReductionExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductFullReductionExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductFullReductionExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductFullReductionExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductLadder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductLadderExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductLadderExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductLadderExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductLadderExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductOperateLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductOperateLogExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductOperateLogExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductOperateLogExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductOperateLogExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductVertifyRecord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductVertifyRecordExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductVertifyRecordExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductVertifyRecordExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsProductVertifyRecordExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsSkuStock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsSkuStockExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsSkuStockExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsSkuStockExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/PmsSkuStockExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCoupon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponHistoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponHistoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponHistoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponHistoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductCategoryRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsCouponProductRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionLogExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionLogExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionLogExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionLogExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionProductRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionSessionExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionSessionExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionSessionExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsFlashPromotionSessionExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeAdvertise.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeAdvertiseExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeAdvertiseExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeAdvertiseExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeAdvertiseExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeBrand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeBrandExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeBrandExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeBrandExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeBrandExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeNewProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeNewProductExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeNewProductExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeNewProductExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeNewProductExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendProductExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendProductExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendProductExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendProductExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubjectExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubjectExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubjectExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/SmsHomeRecommendSubjectExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/TestExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/TestExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/TestExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/TestExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsAdminPermissionRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsGrowthChangeHistoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistoryExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistoryExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistoryExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationChangeHistoryExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSettingExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSettingExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSettingExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsIntegrationConsumeSettingExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMember.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLevelExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLevelExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLevelExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLevelExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLoginLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLoginLogExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLoginLogExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLoginLogExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberLoginLogExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberMemberTagRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberProductCategoryRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddressExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddressExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddressExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberReceiveAddressExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberRuleSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberRuleSettingExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberRuleSettingExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberRuleSettingExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberRuleSettingExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfoExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfoExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfoExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberStatisticsInfoExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTagExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTagExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTagExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTagExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTaskExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTaskExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTaskExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsMemberTaskExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsPermission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsPermissionExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsPermissionExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsPermissionExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsPermissionExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsRolePermissionRelation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsRolePermissionRelationExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsRolePermissionRelationExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsRolePermissionRelationExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/com/yangkai/hotel/mbg/model/UmsRolePermissionRelationExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsHelpCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsHelpMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsMemberReportMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsPrefrenceAreaMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsPrefrenceAreaProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsSubjectCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsSubjectCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsSubjectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsSubjectProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsTopicCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsTopicCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/CmsTopicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsCartItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsCompanyAddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsOrderItemMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsOrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsOrderOperateHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsOrderReturnApplyMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsOrderReturnReasonMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/OmsOrderSettingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsAlbumMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsAlbumPicMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsBrandMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsCommentMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsCommentReplayMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsFeightTemplateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsMemberPriceMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductAttributeCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductAttributeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductAttributeValueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductCategoryAttributeRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductCategoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductFullReductionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductLadderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductOperateLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsProductVertifyRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/PmsSkuStockMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsCouponHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsCouponMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsCouponProductCategoryRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsCouponProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsFlashPromotionLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsFlashPromotionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsFlashPromotionProductRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsFlashPromotionSessionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsHomeAdvertiseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsHomeBrandMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsHomeNewProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsHomeRecommendProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/SmsHomeRecommendSubjectMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsAdminPermissionRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsGrowthChangeHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsIntegrationChangeHistoryMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsIntegrationConsumeSettingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberLevelMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberLoginLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberMemberTagRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberProductCategoryRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberReceiveAddressMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberRuleSettingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberStatisticsInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberTagMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsMemberTaskMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsPermissionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsRoleMenuRelationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsRoleMenuRelationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsRolePermissionRelationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsRoleResourceRelationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hotel-mbg/target/classes/mapper/UmsRoleResourceRelationMapper.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hotel@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hotel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hotel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="hotel: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="d764d4b1-237b-48f4-9145-f7c1357a6671">
+        <node key="hotel" />
+      </node>
+    </checked>
+    <expanded>
+      <node key="d764d4b1-237b-48f4-9145-f7c1357a6671" />
+    </expanded>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="mapper" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="G:/apache-maven-3.6.1" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1icb7Jw2O8rYVXV3etS0BLUBzN4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hotel-main/src/main/java/com/yangkai/hotel/main" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15499534" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.yangkai.hotel" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-main\src\main\java\com\yangkai\hotel\main\dao" />
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-main\src\main\java\com\yangkai\hotel\main" />
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-main\src\main\java\com\yangkai\hotel\main\dto" />
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel" />
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel\mbg\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yangkai.hotel.main.controller" />
+      <recent name="com.yangkai.hotel.main.service.impl" />
+      <recent name="com.yangkai.hotel.main.service" />
+      <recent name="com.yangkai.hotel.main.config" />
+      <recent name="com.yangkai.hotel.hotel_main.service.impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel\mbg\src\main\java\com\yangkai\hotel" />
+      <recent name="D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel_main\src\main\resources\dao" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 45 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 45 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="hotel-main" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn compile" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.HotelMainApplication">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yangkai.hotel.mbg.Generator" />
+      <module name="hotel-mbg" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yangkai.hotel.mbg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelMainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hotel-main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yangkai.hotel.main.HotelMainApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Generator" />
+      <item itemvalue="Spring Boot.HotelMainApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.2120065" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@baa17c3" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cabb4356-108b-413f-a27f-8b5ef40e5dc3" name="Default Changelist" comment="" />
+      <created>1602209658996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602209658996</updated>
+      <workItem from="1602209662527" duration="6244000" />
+      <workItem from="1602216005415" duration="32080000" />
+      <workItem from="1602249665743" duration="16819000" />
+      <workItem from="1602435479197" duration="3993000" />
+      <workItem from="1602463361865" duration="320000" />
+      <workItem from="1602463936938" duration="11337000" />
+      <workItem from="1602657567748" duration="255000" />
+      <workItem from="1602658408600" duration="6292000" />
+      <workItem from="1602921566822" duration="38541000" />
+    </task>
+    <task id="LOCAL-00001" summary="&quot;添加前端&quot;">
+      <created>1602438622990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602438622990</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;修改文件存储方式为minio;添加房间管理&quot;">
+      <created>1602962799213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602962799213</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;修改文件存储方式为minio;添加房间管理&quot;">
+      <created>1602963469555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602963469555</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;修改文件存储方式为minio;添加房间管理&quot;">
+      <created>1603001688685</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603001688685</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="&quot;添加前端&quot;" />
+    <MESSAGE value="&quot;修改文件存储方式为minio;添加房间管理&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;修改文件存储方式为minio;添加房间管理&quot;" />
+  </component>
+</project>
