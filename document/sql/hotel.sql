@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2020-10-19 00:20:06
+Date: 2020-10-20 02:00:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -57,17 +57,20 @@ CREATE TABLE `ums_admin` (
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `login_time` datetime DEFAULT NULL COMMENT '最后登录时间',
   `status` int(1) DEFAULT '1' COMMENT '帐号启用状态：0->禁用；1->启用',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='后台用户表';
+  `phone` varchar(255) DEFAULT NULL COMMENT '手机号',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ums_admin_phone` (`phone`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='后台用户表';
 
 -- ----------------------------
 -- Records of ums_admin
 -- ----------------------------
-INSERT INTO `ums_admin` VALUES ('1', 'test', '$2a$10$ZLWLW6rS0HB9R9BAglIIx.4JcCg39ln/N7FglDRgVX8fTWn0UQtJi', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/timg.jpg', 'test@qq.com', '测试账号', null, '2018-09-29 13:55:30', '2018-09-29 13:55:39', '1');
-INSERT INTO `ums_admin` VALUES ('3', 'admin', '$2a$10$qxvL1ojiBaNut8VgN7gh8eYSqHjjBWzB2y8pq6ahKHAuLhkWheaNW', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/timg.jpg', 'admin@163.com', '系统管理员', '系统管理员', '2018-10-08 13:32:47', '2019-04-20 12:45:16', '1');
-INSERT INTO `ums_admin` VALUES ('4', 'macro', '$2a$10$Bx4jZPR7GhEpIQfefDQtVeS58GfT5n6mxs/b4nLLK65eMFa16topa', 'string', 'macro@qq.com', 'macro', 'macro专用', '2019-10-06 15:53:51', '2020-02-03 14:55:55', '1');
-INSERT INTO `ums_admin` VALUES ('6', 'productAdmin', '$2a$10$RGazHaYXgihzOtfc113c3.kTse7wei12gcsig8lnAOJrGbC.I6fxO', null, 'product@qq.com', '商品管理员', '只有商品权限', '2020-02-07 16:15:08', null, '1');
-INSERT INTO `ums_admin` VALUES ('7', 'orderAdmin', '$2a$10$jvbQgK.lNx5VGJwwzW76k.l3vI6POvwFf6n0hYd.8lQkPFxECgun.', null, 'order@qq.com', '订单管理员', '只有订单管理权限', '2020-02-07 16:15:50', null, '1');
+INSERT INTO `ums_admin` VALUES ('1', 'test', '$2a$10$ZLWLW6rS0HB9R9BAglIIx.4JcCg39ln/N7FglDRgVX8fTWn0UQtJi', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/timg.jpg', 'test@qq.com', '测试账号', null, '2018-09-29 13:55:30', '2018-09-29 13:55:39', '1', null);
+INSERT INTO `ums_admin` VALUES ('3', 'admin', '$2a$10$qxvL1ojiBaNut8VgN7gh8eYSqHjjBWzB2y8pq6ahKHAuLhkWheaNW', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/timg.jpg', 'admin@163.com', '系统管理员', '系统管理员', '2018-10-08 13:32:47', '2019-04-20 12:45:16', '1', null);
+INSERT INTO `ums_admin` VALUES ('4', 'macro', '$2a$10$Bx4jZPR7GhEpIQfefDQtVeS58GfT5n6mxs/b4nLLK65eMFa16topa', 'string', 'macro@qq.com', 'macro', 'macro专用', '2019-10-06 15:53:51', '2020-02-03 14:55:55', '1', null);
+INSERT INTO `ums_admin` VALUES ('6', 'productAdmin', '$2a$10$RGazHaYXgihzOtfc113c3.kTse7wei12gcsig8lnAOJrGbC.I6fxO', null, 'product@qq.com', '商品管理员', '只有商品权限', '2020-02-07 16:15:08', null, '1', null);
+INSERT INTO `ums_admin` VALUES ('7', 'orderAdmin', '$2a$10$jvbQgK.lNx5VGJwwzW76k.l3vI6POvwFf6n0hYd.8lQkPFxECgun.', null, 'order@qq.com', '订单管理员', '只有订单管理权限', '2020-02-07 16:15:50', null, '1', null);
+INSERT INTO `ums_admin` VALUES ('10', '123', '$2a$10$C4dGiGPVjWbSRUfJ3.SajeasvEbQmUE53ZKDHk.7m8CZop.FIgtWO', null, '1462541756@qq.com', '123', null, '2020-10-19 17:08:51', null, '1', null);
 
 -- ----------------------------
 -- Table structure for ums_admin_login_log
@@ -81,7 +84,7 @@ CREATE TABLE `ums_admin_login_log` (
   `address` varchar(100) DEFAULT NULL,
   `user_agent` varchar(100) DEFAULT NULL COMMENT '浏览器登录类型',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8 COMMENT='后台用户登录日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=utf8 COMMENT='后台用户登录日志表';
 
 -- ----------------------------
 -- Records of ums_admin_login_log
@@ -297,6 +300,14 @@ INSERT INTO `ums_admin_login_log` VALUES ('208', '3', '2020-10-17 18:45:35', '0:
 INSERT INTO `ums_admin_login_log` VALUES ('209', '3', '2020-10-18 06:19:47', '0:0:0:0:0:0:0:1', null, null);
 INSERT INTO `ums_admin_login_log` VALUES ('210', '3', '2020-10-18 10:24:10', '0:0:0:0:0:0:0:1', null, null);
 INSERT INTO `ums_admin_login_log` VALUES ('211', '1', '2020-10-18 10:24:39', '0:0:0:0:0:0:0:1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('212', '3', '2020-10-19 06:53:08', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('213', '3', '2020-10-19 07:01:27', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('214', '3', '2020-10-19 07:01:42', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('215', '3', '2020-10-19 07:01:55', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('216', '1', '2020-10-19 09:20:53', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('217', '3', '2020-10-19 15:01:26', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('218', '3', '2020-10-19 16:40:15', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('219', '10', '2020-10-19 17:08:58', '127.0.0.1', null, null);
 
 -- ----------------------------
 -- Table structure for ums_admin_role_relation
