@@ -46,6 +46,7 @@ secure:
       - /admin/info
       - /admin/logout
       - /minio/upload
+      - /mail/sentMailVerificationCode
 
 aliyun:
   oss:

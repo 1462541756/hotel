@@ -72,3 +72,20 @@ spring:
         reset-enable: true
         #启用
         enabled: true
+  ##邮箱服务器地址
+  ##QQ smtp.qq.com
+  ##sina smtp.sina.cn
+  ##aliyun smtp.aliyun.com
+  ##163 smtp.163.com
+  mail:
+    host: smtp.qq.com
+    ##邮箱用户名
+    username: 3034871979@qq.com
+            ##邮箱密码（注意：qq邮箱应该使用独立密码，去qq邮箱设置里面获取）
+    password: vxofttfdiexrdcji
+            ##编码格式
+    default-encoding: UTF-8
+            ##发送邮件地址
+    from: 3034871979@qq.com
+
+    subject: 旅店管理

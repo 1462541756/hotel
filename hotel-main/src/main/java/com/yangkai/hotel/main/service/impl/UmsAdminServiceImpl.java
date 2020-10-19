@@ -3,6 +3,8 @@ package com.yangkai.hotel.main.service.impl;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.github.pagehelper.PageHelper;
+import com.yangkai.hotel.main.dao.UmsAdminDao;
+import com.yangkai.hotel.main.dto.RegisterParam;
 import com.yangkai.hotel.main.dto.UmsAdminParam;
 import com.yangkai.hotel.main.dto.UpdateAdminPasswordParam;
 import com.yangkai.hotel.main.bo.AdminUserDetails;
@@ -18,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -57,9 +60,13 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     @Autowired
     private UmsAdminMapper umsAdminMapper;
 
+    @Autowired
+    private UmsAdminDao umsAdminDao;
 
     @Autowired
     private UmsAdminLoginLogMapper umsAdminLoginLogMapper;
+    @Autowired
+    StringRedisTemplate redisTemplate;
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {
@@ -73,23 +80,37 @@ public class UmsAdminServiceImpl implements UmsAdminService {
     }
 
     @Override
-    public UmsAdmin register(UmsAdminParam umsAdminParam) {
-        UmsAdmin umsAdmin = new UmsAdmin();
-        BeanUtils.copyProperties(umsAdminParam, umsAdmin);
-        umsAdmin.setCreateTime(new Date());
-        umsAdmin.setStatus(1);
-        //查询是否有相同用户名的用户
-        UmsAdminExample example = new UmsAdminExample();
-        example.createCriteria().andUsernameEqualTo(umsAdmin.getUsername());
-        List<UmsAdmin> umsAdminList = umsAdminMapper.selectByExample(example);
-        if (umsAdminList.size() > 0) {
-            return null;
+    public int register(RegisterParam registerParam) {
+        //验证验证码
+        String tmp=redisTemplate.opsForValue().get(registerParam.getMail());
+        if (tmp==null){
+            //验证码已失效或不存在
+            return 1;
         }
+        if (!tmp.equals(registerParam.getVerificationCode())){
+            //验证码错误
+            return 2;
+        }
+        //查询是否有相同用户名的用户
+        int count = umsAdminDao.selectByUsername(registerParam.getUsername());
+        if (count!=0) {
+            //"用户名已存在"
+            return 3;
+        }
+
         //将密码进行加密操作
-        String encodePassword = passwordEncoder.encode(umsAdmin.getPassword());
-        umsAdmin.setPassword(encodePassword);
-        umsAdminMapper.insert(umsAdmin);
-        return umsAdmin;
+        String encodePassword = passwordEncoder.encode(registerParam.getPassword());
+        registerParam.setPassword(encodePassword);
+
+        //设置账号创建时间和使用状态
+        registerParam.setCreateTime(new Date());
+        registerParam.setStatus(1);
+        int result=umsAdminDao.insert(registerParam);
+        if (result!=1){
+            //账号创建失败
+            return 4;
+        }
+        return 0;
     }
 
     @Override

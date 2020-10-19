@@ -2,6 +2,7 @@ package com.yangkai.hotel.main.controller;
 
 import com.yangkai.hotel.commons.api.CommonPage;
 import com.yangkai.hotel.commons.api.CommonResult;
+import com.yangkai.hotel.main.dto.RegisterParam;
 import com.yangkai.hotel.main.dto.UmsAdminLoginParam;
 import com.yangkai.hotel.main.dto.UmsAdminParam;
 import com.yangkai.hotel.main.dto.UpdateAdminPasswordParam;
@@ -40,12 +41,17 @@ public class UmsAdminController {
 
     @ApiOperation(value = "用户注册")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public CommonResult<UmsAdmin> register(@RequestBody UmsAdminParam umsAdminParam, BindingResult result) {
-        UmsAdmin umsAdmin = adminService.register(umsAdminParam);
-        if (umsAdmin == null) {
-            CommonResult.failed();
+    public CommonResult<String> register(@RequestBody RegisterParam registerParam) {
+        int resultType = adminService.register(registerParam);
+        switch (resultType){
+            case 0:return CommonResult.success("注册成功");
+            case 1:return CommonResult.failed("验证码已失效或不存在");
+            case 2:return CommonResult.failed("验证码错误");
+            case 3:return CommonResult.failed("用户名已存在");
+            case 4:return CommonResult.failed("账号创建失败");
+            default:return CommonResult.failed("注册失败");
         }
-        return CommonResult.success(umsAdmin);
+
     }
 
     @ApiOperation(value = "登录以后返回token")
