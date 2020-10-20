@@ -43,6 +43,7 @@ public class UmsAdminController {
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public CommonResult<String> register(@RequestBody RegisterParam registerParam) {
         int resultType = adminService.register(registerParam);
+        
         switch (resultType){
             case 0:return CommonResult.success("注册成功");
             case 1:return CommonResult.failed("验证码已失效或不存在");
