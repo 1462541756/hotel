@@ -126,14 +126,7 @@
       </if>
     </trim>
   </insert>
-    <insert id="insertList">
-      INSERT INTO ums_role_menu_relation (role_id, menu_id) VALUES
-      <foreach collection="list" separator="," item="item" index="index">
-        (#{item.roleId,jdbcType=BIGINT},
-        #{item.menuId,jdbcType=BIGINT})
-      </foreach>
-    </insert>
-    <select id="countByExample" parameterType="com.yangkai.hotel.mbg.model.UmsRoleMenuRelationExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.yangkai.hotel.mbg.model.UmsRoleMenuRelationExample" resultType="java.lang.Long">
     select count(*) from ums_role_menu_relation
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

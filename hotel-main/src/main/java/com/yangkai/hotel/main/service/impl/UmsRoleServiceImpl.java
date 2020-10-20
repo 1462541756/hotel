@@ -2,6 +2,8 @@ package com.yangkai.hotel.main.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.yangkai.hotel.main.dao.UmsRoleDao;
+import com.yangkai.hotel.main.dao.UmsRoleMenuRelationDao;
+import com.yangkai.hotel.main.dao.UmsRoleResourceRelationDao;
 import com.yangkai.hotel.main.service.UmsRoleService;
 import com.yangkai.hotel.mbg.mapper.UmsRoleMapper;
 import com.yangkai.hotel.mbg.mapper.UmsRoleMenuRelationMapper;
@@ -26,6 +28,10 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     private UmsRoleMenuRelationMapper roleMenuRelationMapper;
     @Autowired
     private UmsRoleResourceRelationMapper roleResourceRelationMapper;
+    @Autowired
+    private UmsRoleMenuRelationDao roleMenuRelationDao;
+    @Autowired
+    private UmsRoleResourceRelationDao roleResourceRelationDao;
     @Autowired
     private UmsRoleDao roleDao;
 
@@ -108,7 +114,7 @@ public class UmsRoleServiceImpl implements UmsRoleService {
             relation.setMenuId(menuId);
             relationList.add(relation);
         }
-        return roleMenuRelationMapper.insertList(relationList);
+        return roleMenuRelationDao.insertList(relationList);
     }
 
     @Override
@@ -125,6 +131,6 @@ public class UmsRoleServiceImpl implements UmsRoleService {
             relation.setResourceId(resourceId);
             relationList.add(relation);
         }
-        return roleResourceRelationMapper.insertList(relationList);
+        return roleResourceRelationDao.insertList(relationList);
     }
 }

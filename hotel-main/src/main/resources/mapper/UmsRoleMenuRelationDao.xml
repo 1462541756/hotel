@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangkai.hotel.main.dao.UmsRoleMenuRelationDao">
+
+    <insert id="insertList">
+        INSERT INTO ums_role_menu_relation (role_id, menu_id) VALUES
+        <foreach collection="list" separator="," item="item" index="index">
+            (#{item.roleId,jdbcType=BIGINT},
+            #{item.menuId,jdbcType=BIGINT})
+        </foreach>
+    </insert>
+</mapper>

@@ -27,6 +27,4 @@ public interface UmsRoleMenuRelationMapper {
     int updateByPrimaryKeySelective(UmsRoleMenuRelation record);
 
     int updateByPrimaryKey(UmsRoleMenuRelation record);
-
-    int insertList(@Param("list")List<UmsRoleMenuRelation> relationList);
 }

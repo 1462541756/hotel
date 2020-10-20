@@ -3,22 +3,19 @@ package com.yangkai.hotel.main.service.impl;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.github.pagehelper.PageHelper;
-import com.yangkai.hotel.main.dao.UmsAdminDao;
-import com.yangkai.hotel.main.dto.RegisterParam;
-import com.yangkai.hotel.main.dto.UmsAdminParam;
-import com.yangkai.hotel.main.dto.UpdateAdminPasswordParam;
 import com.yangkai.hotel.main.bo.AdminUserDetails;
+import com.yangkai.hotel.main.dao.UmsAdminDao;
 import com.yangkai.hotel.main.dao.UmsAdminRoleRelationDao;
+import com.yangkai.hotel.main.dto.RegisterParam;
+import com.yangkai.hotel.main.dto.UpdateAdminPasswordParam;
 import com.yangkai.hotel.main.service.UmsAdminService;
 import com.yangkai.hotel.mbg.mapper.UmsAdminLoginLogMapper;
 import com.yangkai.hotel.mbg.mapper.UmsAdminMapper;
 import com.yangkai.hotel.mbg.mapper.UmsAdminRoleRelationMapper;
 import com.yangkai.hotel.mbg.model.*;
 import com.yangkai.hotel.security.util.JwtTokenUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -38,7 +35,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * UmsAdminService实现类
