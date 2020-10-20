@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangkai.hotel.main.dao.OmsOrderDao">
+
+    <resultMap type="com.yangkai.hotel.mbg.model.OmsOrder" id="OmsOrderMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="orderSn" column="order_sn" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="payAmount" column="pay_amount" jdbcType="NUMERIC"/>
+        <result property="payType" column="pay_type" jdbcType="INTEGER"/>
+        <result property="sourceType" column="source_type" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="orderType" column="order_type" jdbcType="INTEGER"/>
+        <result property="note" column="note" jdbcType="VARCHAR"/>
+        <result property="paymentTime" column="payment_time" jdbcType="TIMESTAMP"/>
+        <result property="commentTime" column="comment_time" jdbcType="TIMESTAMP"/>
+        <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
+        <result property="roomName" column="room_name" jdbcType="VARCHAR"/>
+        <result property="floor" column="floor" jdbcType="VARCHAR"/>
+        <result property="serial" column="serial" jdbcType="VARCHAR"/>
+        <result property="pic" column="pic" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="OmsOrderMap">
+        select
+          id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic
+        from hotel.oms_order
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="OmsOrderMap">
+        select
+          id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic
+        from hotel.oms_order
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="OmsOrderMap">
+        select
+        id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time,
+        comment_time, modify_time, room_name, floor, serial, pic
+        from hotel.oms_order
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="orderSn != null and orderSn != ''">
+                and order_sn = #{orderSn}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+            <if test="payAmount != null">
+                and pay_amount = #{payAmount}
+            </if>
+            <if test="payType != null">
+                and pay_type = #{payType}
+            </if>
+            <if test="sourceType != null">
+                and source_type = #{sourceType}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="orderType != null">
+                and order_type = #{orderType}
+            </if>
+            <if test="note != null and note != ''">
+                and note = #{note}
+            </if>
+            <if test="paymentTime != null">
+                and payment_time = #{paymentTime}
+            </if>
+            <if test="commentTime != null">
+                and comment_time = #{commentTime}
+            </if>
+            <if test="modifyTime != null">
+                and modify_time = #{modifyTime}
+            </if>
+            <if test="roomName != null and roomName != ''">
+                and room_name = #{roomName}
+            </if>
+            <if test="floor != null and floor != ''">
+                and floor = #{floor}
+            </if>
+            <if test="serial != null and serial != ''">
+                and serial = #{serial}
+            </if>
+            <if test="pic != null and pic != ''">
+                and pic = #{pic}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.oms_order(order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic)
+        values (#{orderSn}, #{createTime}, #{username}, #{payAmount}, #{payType}, #{sourceType}, #{status}, #{orderType}, #{note}, #{paymentTime}, #{commentTime}, #{modifyTime}, #{roomName}, #{floor}, #{serial}, #{pic})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.oms_order(order_sn, create_time, username, pay_amount, pay_type, source_type, status,
+        order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.orderSn}, #{entity.createTime}, #{entity.username}, #{entity.payAmount}, #{entity.payType},
+            #{entity.sourceType}, #{entity.status}, #{entity.orderType}, #{entity.note}, #{entity.paymentTime},
+            #{entity.commentTime}, #{entity.modifyTime}, #{entity.roomName}, #{entity.floor}, #{entity.serial},
+            #{entity.pic})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.oms_order(order_sn, create_time, username, pay_amount, pay_type, source_type, status,
+        order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.orderSn}, #{entity.createTime}, #{entity.username}, #{entity.payAmount}, #{entity.payType},
+            #{entity.sourceType}, #{entity.status}, #{entity.orderType}, #{entity.note}, #{entity.paymentTime},
+            #{entity.commentTime}, #{entity.modifyTime}, #{entity.roomName}, #{entity.floor}, #{entity.serial},
+            #{entity.pic})
+        </foreach>
+        on duplicate key update
+        order_sn = values(order_sn) , create_time = values(create_time) , username = values(username) , pay_amount =
+        values(pay_amount) , pay_type = values(pay_type) , source_type = values(source_type) , status = values(status) ,
+        order_type = values(order_type) , note = values(note) , payment_time = values(payment_time) , comment_time =
+        values(comment_time) , modify_time = values(modify_time) , room_name = values(room_name) , floor = values(floor)
+        , serial = values(serial) , pic = values(pic)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update hotel.oms_order
+        <set>
+            <if test="orderSn != null and orderSn != ''">
+                order_sn = #{orderSn},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="payAmount != null">
+                pay_amount = #{payAmount},
+            </if>
+            <if test="payType != null">
+                pay_type = #{payType},
+            </if>
+            <if test="sourceType != null">
+                source_type = #{sourceType},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="orderType != null">
+                order_type = #{orderType},
+            </if>
+            <if test="note != null and note != ''">
+                note = #{note},
+            </if>
+            <if test="paymentTime != null">
+                payment_time = #{paymentTime},
+            </if>
+            <if test="commentTime != null">
+                comment_time = #{commentTime},
+            </if>
+            <if test="modifyTime != null">
+                modify_time = #{modifyTime},
+            </if>
+            <if test="roomName != null and roomName != ''">
+                room_name = #{roomName},
+            </if>
+            <if test="floor != null and floor != ''">
+                floor = #{floor},
+            </if>
+            <if test="serial != null and serial != ''">
+                serial = #{serial},
+            </if>
+            <if test="pic != null and pic != ''">
+                pic = #{pic},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from hotel.oms_order where id = #{id}
+    </delete>
+    <select id="selectUsernameByOrderId" resultType="java.lang.String">
+        select username from oms_order where id=#{orderId};
+    </select>
+</mapper>

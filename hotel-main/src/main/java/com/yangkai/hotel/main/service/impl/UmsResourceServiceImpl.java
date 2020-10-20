@@ -42,7 +42,7 @@ public class UmsResourceServiceImpl implements UmsResourceService {
 
     @Override
     public int delete(Long id) {
-        return resourceDao.deleteRelated();
+        return resourceDao.deleteRelated(id);
     }
 
 

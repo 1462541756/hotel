@@ -2,5 +2,5 @@ package com.yangkai.hotel.main.dao;
 
 public interface UmsResourceDao {
 
-    int deleteRelated();
+    int deleteRelated(Long id);
 }
