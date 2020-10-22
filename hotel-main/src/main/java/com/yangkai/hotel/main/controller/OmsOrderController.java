@@ -1,12 +1,15 @@
 package com.yangkai.hotel.main.controller;
 
+import cn.hutool.core.lang.Snowflake;
 import com.yangkai.hotel.commons.api.CommonPage;
 import com.yangkai.hotel.commons.api.CommonResult;
 import com.yangkai.hotel.main.bo.AdminUserDetails;
 import com.yangkai.hotel.main.dto.OmsOrderSubmitDto;
 import com.yangkai.hotel.main.service.OmsOrderService;
 import com.yangkai.hotel.mbg.model.OmsOrder;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +25,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-10-20 16:55:50
  */
+@Api(tags = "OmsOrderController", description = "订单管理")
 @RestController
 @RequestMapping("order")
 public class OmsOrderController {
@@ -30,6 +34,8 @@ public class OmsOrderController {
      */
     @Resource
     private OmsOrderService omsOrderService;
+    @Autowired
+    Snowflake snowflake;
 
     /**
      * 通过主键查询单条数据
@@ -76,10 +82,16 @@ public class OmsOrderController {
     public CommonResult create(OmsOrder omsOrderQueryParam) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
-        omsOrderQueryParam.setUsername(username);
-        omsOrderQueryParam.setCreateTime(new Date());
-        omsOrderQueryParam.setOrderSn(username+new Date().getTime());
-        OmsOrder result = omsOrderService.insert(omsOrderQueryParam);
+        OmsOrder order=new OmsOrder();
+        order.setUsername(username);
+        order.setCreateTime(new Date());
+        order.setOrderSn(Long.toString(snowflake.nextId()));
+        order.setStatus(0);
+        order.setRoomId(omsOrderQueryParam.getRoomId());
+        order.setFloor(omsOrderQueryParam.getFloor());
+        order.setRoomName(omsOrderQueryParam.getRoomName());
+        order.setNote(omsOrderQueryParam.getNote());
+        OmsOrder result = omsOrderService.insert(order);
         if (result==null){
             return CommonResult.failed("订单创建失败");
         }else {

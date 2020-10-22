@@ -45,6 +45,9 @@ public class OmsOrder implements Serializable {
     @ApiModelProperty(value = "修改时间")
     private Date modifyTime;
 
+    @ApiModelProperty(value = "房间id")
+    private Long roomId;
+
     @ApiModelProperty(value = "房间名")
     private String roomName;
 
@@ -163,6 +166,14 @@ public class OmsOrder implements Serializable {
         this.modifyTime = modifyTime;
     }
 
+    public Long getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(Long roomId) {
+        this.roomId = roomId;
+    }
+
     public String getRoomName() {
         return roomName;
     }
@@ -214,6 +225,7 @@ public class OmsOrder implements Serializable {
         sb.append(", paymentTime=").append(paymentTime);
         sb.append(", commentTime=").append(commentTime);
         sb.append(", modifyTime=").append(modifyTime);
+        sb.append(", roomId=").append(roomId);
         sb.append(", roomName=").append(roomName);
         sb.append(", floor=").append(floor);
         sb.append(", serial=").append(serial);

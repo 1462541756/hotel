@@ -15,6 +15,7 @@
     <result column="payment_time" jdbcType="TIMESTAMP" property="paymentTime" />
     <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
     <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="room_id" jdbcType="BIGINT" property="roomId" />
     <result column="room_name" jdbcType="VARCHAR" property="roomName" />
     <result column="floor" jdbcType="VARCHAR" property="floor" />
     <result column="serial" jdbcType="VARCHAR" property="serial" />
@@ -80,7 +81,8 @@
   </sql>
   <sql id="Base_Column_List">
     id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, 
-    note, payment_time, comment_time, modify_time, room_name, floor, serial, pic
+    note, payment_time, comment_time, modify_time, room_id, room_name, floor, serial, 
+    pic
   </sql>
   <select id="selectByExample" parameterType="com.yangkai.hotel.mbg.model.OmsOrderExample" resultMap="BaseResultMap">
     select
@@ -120,14 +122,14 @@
       pay_amount, pay_type, source_type, 
       status, order_type, note, 
       payment_time, comment_time, modify_time, 
-      room_name, floor, serial, 
-      pic)
+      room_id, room_name, floor, 
+      serial, pic)
     values (#{orderSn,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{username,jdbcType=VARCHAR}, 
       #{payAmount,jdbcType=DECIMAL}, #{payType,jdbcType=INTEGER}, #{sourceType,jdbcType=INTEGER}, 
       #{status,jdbcType=INTEGER}, #{orderType,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, 
       #{paymentTime,jdbcType=TIMESTAMP}, #{commentTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
-      #{roomName,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, #{serial,jdbcType=VARCHAR}, 
-      #{pic,jdbcType=VARCHAR})
+      #{roomId,jdbcType=BIGINT}, #{roomName,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, 
+      #{serial,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.yangkai.hotel.mbg.model.OmsOrder">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
@@ -170,6 +172,9 @@
       </if>
       <if test="modifyTime != null">
         modify_time,
+      </if>
+      <if test="roomId != null">
+        room_id,
       </if>
       <if test="roomName != null">
         room_name,
@@ -220,6 +225,9 @@
       </if>
       <if test="modifyTime != null">
         #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="roomId != null">
+        #{roomId,jdbcType=BIGINT},
       </if>
       <if test="roomName != null">
         #{roomName,jdbcType=VARCHAR},
@@ -283,6 +291,9 @@
       <if test="record.modifyTime != null">
         modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.roomId != null">
+        room_id = #{record.roomId,jdbcType=BIGINT},
+      </if>
       <if test="record.roomName != null">
         room_name = #{record.roomName,jdbcType=VARCHAR},
       </if>
@@ -315,6 +326,7 @@
       payment_time = #{record.paymentTime,jdbcType=TIMESTAMP},
       comment_time = #{record.commentTime,jdbcType=TIMESTAMP},
       modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
+      room_id = #{record.roomId,jdbcType=BIGINT},
       room_name = #{record.roomName,jdbcType=VARCHAR},
       floor = #{record.floor,jdbcType=VARCHAR},
       serial = #{record.serial,jdbcType=VARCHAR},
@@ -362,6 +374,9 @@
       <if test="modifyTime != null">
         modify_time = #{modifyTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="roomId != null">
+        room_id = #{roomId,jdbcType=BIGINT},
+      </if>
       <if test="roomName != null">
         room_name = #{roomName,jdbcType=VARCHAR},
       </if>
@@ -391,6 +406,7 @@
       payment_time = #{paymentTime,jdbcType=TIMESTAMP},
       comment_time = #{commentTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+      room_id = #{roomId,jdbcType=BIGINT},
       room_name = #{roomName,jdbcType=VARCHAR},
       floor = #{floor,jdbcType=VARCHAR},
       serial = #{serial,jdbcType=VARCHAR},
