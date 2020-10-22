@@ -236,66 +236,6 @@ public class OmsOrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreateTimeIsNull() {
-            addCriterion("create_time is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeIsNotNull() {
-            addCriterion("create_time is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeEqualTo(Date value) {
-            addCriterion("create_time =", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeNotEqualTo(Date value) {
-            addCriterion("create_time <>", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeGreaterThan(Date value) {
-            addCriterion("create_time >", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("create_time >=", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeLessThan(Date value) {
-            addCriterion("create_time <", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
-            addCriterion("create_time <=", value, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeIn(List<Date> values) {
-            addCriterion("create_time in", values, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeNotIn(List<Date> values) {
-            addCriterion("create_time not in", values, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeBetween(Date value1, Date value2) {
-            addCriterion("create_time between", value1, value2, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
-            addCriterion("create_time not between", value1, value2, "createTime");
-            return (Criteria) this;
-        }
-
         public Criteria andUsernameIsNull() {
             addCriterion("username is null");
             return (Criteria) this;
@@ -856,6 +796,66 @@ public class OmsOrderExample {
             return (Criteria) this;
         }
 
+        public Criteria andCreateTimeIsNull() {
+            addCriterion("create_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIsNotNull() {
+            addCriterion("create_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("create_time =", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("create_time <>", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("create_time >", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("create_time >=", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("create_time <", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("create_time <=", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("create_time in", values, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("create_time not in", values, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("create_time between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("create_time not between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
         public Criteria andModifyTimeIsNull() {
             addCriterion("modify_time is null");
             return (Criteria) this;
@@ -913,66 +913,6 @@ public class OmsOrderExample {
 
         public Criteria andModifyTimeNotBetween(Date value1, Date value2) {
             addCriterion("modify_time not between", value1, value2, "modifyTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdIsNull() {
-            addCriterion("room_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdIsNotNull() {
-            addCriterion("room_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdEqualTo(Long value) {
-            addCriterion("room_id =", value, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdNotEqualTo(Long value) {
-            addCriterion("room_id <>", value, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdGreaterThan(Long value) {
-            addCriterion("room_id >", value, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("room_id >=", value, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdLessThan(Long value) {
-            addCriterion("room_id <", value, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdLessThanOrEqualTo(Long value) {
-            addCriterion("room_id <=", value, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdIn(List<Long> values) {
-            addCriterion("room_id in", values, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdNotIn(List<Long> values) {
-            addCriterion("room_id not in", values, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdBetween(Long value1, Long value2) {
-            addCriterion("room_id between", value1, value2, "roomId");
-            return (Criteria) this;
-        }
-
-        public Criteria andRoomIdNotBetween(Long value1, Long value2) {
-            addCriterion("room_id not between", value1, value2, "roomId");
             return (Criteria) this;
         }
 

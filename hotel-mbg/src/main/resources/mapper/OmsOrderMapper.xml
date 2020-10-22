@@ -4,7 +4,6 @@
   <resultMap id="BaseResultMap" type="com.yangkai.hotel.mbg.model.OmsOrder">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="pay_amount" jdbcType="DECIMAL" property="payAmount" />
     <result column="pay_type" jdbcType="INTEGER" property="payType" />
@@ -14,8 +13,8 @@
     <result column="note" jdbcType="VARCHAR" property="note" />
     <result column="payment_time" jdbcType="TIMESTAMP" property="paymentTime" />
     <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
-    <result column="room_id" jdbcType="BIGINT" property="roomId" />
     <result column="room_name" jdbcType="VARCHAR" property="roomName" />
     <result column="floor" jdbcType="VARCHAR" property="floor" />
     <result column="serial" jdbcType="VARCHAR" property="serial" />
@@ -80,9 +79,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, 
-    note, payment_time, comment_time, modify_time, room_id, room_name, floor, serial, 
-    pic
+    id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, 
+    payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic
   </sql>
   <select id="selectByExample" parameterType="com.yangkai.hotel.mbg.model.OmsOrderExample" resultMap="BaseResultMap">
     select
@@ -118,18 +116,18 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into oms_order (order_sn, create_time, username, 
-      pay_amount, pay_type, source_type, 
-      status, order_type, note, 
-      payment_time, comment_time, modify_time, 
-      room_id, room_name, floor, 
-      serial, pic)
-    values (#{orderSn,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{username,jdbcType=VARCHAR}, 
-      #{payAmount,jdbcType=DECIMAL}, #{payType,jdbcType=INTEGER}, #{sourceType,jdbcType=INTEGER}, 
-      #{status,jdbcType=INTEGER}, #{orderType,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, 
-      #{paymentTime,jdbcType=TIMESTAMP}, #{commentTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
-      #{roomId,jdbcType=BIGINT}, #{roomName,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, 
-      #{serial,jdbcType=VARCHAR}, #{pic,jdbcType=VARCHAR})
+    insert into oms_order (order_sn, username, pay_amount, 
+      pay_type, source_type, status, 
+      order_type, note, payment_time, 
+      comment_time, create_time, modify_time, 
+      room_name, floor, serial, 
+      pic)
+    values (#{orderSn,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{payAmount,jdbcType=DECIMAL}, 
+      #{payType,jdbcType=INTEGER}, #{sourceType,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
+      #{orderType,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, #{paymentTime,jdbcType=TIMESTAMP}, 
+      #{commentTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
+      #{roomName,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, #{serial,jdbcType=VARCHAR}, 
+      #{pic,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.yangkai.hotel.mbg.model.OmsOrder">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
@@ -139,9 +137,6 @@
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="orderSn != null">
         order_sn,
-      </if>
-      <if test="createTime != null">
-        create_time,
       </if>
       <if test="username != null">
         username,
@@ -170,11 +165,11 @@
       <if test="commentTime != null">
         comment_time,
       </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
       <if test="modifyTime != null">
         modify_time,
-      </if>
-      <if test="roomId != null">
-        room_id,
       </if>
       <if test="roomName != null">
         room_name,
@@ -192,9 +187,6 @@
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="orderSn != null">
         #{orderSn,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="username != null">
         #{username,jdbcType=VARCHAR},
@@ -223,11 +215,11 @@
       <if test="commentTime != null">
         #{commentTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
       <if test="modifyTime != null">
         #{modifyTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="roomId != null">
-        #{roomId,jdbcType=BIGINT},
       </if>
       <if test="roomName != null">
         #{roomName,jdbcType=VARCHAR},
@@ -258,9 +250,6 @@
       <if test="record.orderSn != null">
         order_sn = #{record.orderSn,jdbcType=VARCHAR},
       </if>
-      <if test="record.createTime != null">
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      </if>
       <if test="record.username != null">
         username = #{record.username,jdbcType=VARCHAR},
       </if>
@@ -288,11 +277,11 @@
       <if test="record.commentTime != null">
         comment_time = #{record.commentTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
       <if test="record.modifyTime != null">
         modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.roomId != null">
-        room_id = #{record.roomId,jdbcType=BIGINT},
       </if>
       <if test="record.roomName != null">
         room_name = #{record.roomName,jdbcType=VARCHAR},
@@ -315,7 +304,6 @@
     update oms_order
     set id = #{record.id,jdbcType=BIGINT},
       order_sn = #{record.orderSn,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       username = #{record.username,jdbcType=VARCHAR},
       pay_amount = #{record.payAmount,jdbcType=DECIMAL},
       pay_type = #{record.payType,jdbcType=INTEGER},
@@ -325,8 +313,8 @@
       note = #{record.note,jdbcType=VARCHAR},
       payment_time = #{record.paymentTime,jdbcType=TIMESTAMP},
       comment_time = #{record.commentTime,jdbcType=TIMESTAMP},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
       modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
-      room_id = #{record.roomId,jdbcType=BIGINT},
       room_name = #{record.roomName,jdbcType=VARCHAR},
       floor = #{record.floor,jdbcType=VARCHAR},
       serial = #{record.serial,jdbcType=VARCHAR},
@@ -340,9 +328,6 @@
     <set>
       <if test="orderSn != null">
         order_sn = #{orderSn,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
       <if test="username != null">
         username = #{username,jdbcType=VARCHAR},
@@ -371,11 +356,11 @@
       <if test="commentTime != null">
         comment_time = #{commentTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
       <if test="modifyTime != null">
         modify_time = #{modifyTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="roomId != null">
-        room_id = #{roomId,jdbcType=BIGINT},
       </if>
       <if test="roomName != null">
         room_name = #{roomName,jdbcType=VARCHAR},
@@ -395,7 +380,6 @@
   <update id="updateByPrimaryKey" parameterType="com.yangkai.hotel.mbg.model.OmsOrder">
     update oms_order
     set order_sn = #{orderSn,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
       username = #{username,jdbcType=VARCHAR},
       pay_amount = #{payAmount,jdbcType=DECIMAL},
       pay_type = #{payType,jdbcType=INTEGER},
@@ -405,8 +389,8 @@
       note = #{note,jdbcType=VARCHAR},
       payment_time = #{paymentTime,jdbcType=TIMESTAMP},
       comment_time = #{commentTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP},
-      room_id = #{roomId,jdbcType=BIGINT},
       room_name = #{roomName,jdbcType=VARCHAR},
       floor = #{floor,jdbcType=VARCHAR},
       serial = #{serial,jdbcType=VARCHAR},

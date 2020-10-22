@@ -1,6 +1,8 @@
 package com.yangkai.hotel.main.service;
 
+import com.yangkai.hotel.main.dto.OmsOrderQueryParam;
 import com.yangkai.hotel.mbg.model.OmsOrder;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -32,10 +34,11 @@ public interface OmsOrderService {
     /**
      * 新增数据
      *
-     * @param omsOrder 实例对象
+     * @param params 实例对象
      * @return 实例对象
      */
-    OmsOrder insert(OmsOrder omsOrder);
+    @Transactional
+    int insert(OmsOrderQueryParam params);
 
     /**
      * 修改数据

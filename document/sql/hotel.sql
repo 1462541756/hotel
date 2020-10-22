@@ -10,10 +10,42 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2020-10-20 02:00:41
+Date: 2020-10-23 01:08:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for oms_order
+-- ----------------------------
+DROP TABLE IF EXISTS `oms_order`;
+CREATE TABLE `oms_order` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '订单id',
+  `order_sn` varchar(64) DEFAULT NULL COMMENT '订单编号',
+  `username` varchar(255) DEFAULT NULL COMMENT '用户账号',
+  `pay_amount` decimal(10,2) DEFAULT NULL COMMENT '应付金额（实际支付金额）',
+  `pay_type` int(1) DEFAULT NULL COMMENT '支付方式：0->未支付；1->支付宝；2->微信，3->现金',
+  `source_type` int(1) DEFAULT NULL COMMENT '订单来源：0->PC订单；1->app订单，2->线下订单',
+  `status` int(1) DEFAULT '0' COMMENT '订单状态：0->未付款；1->已付款；',
+  `order_type` int(1) DEFAULT '0' COMMENT '订单类型：0->正常订单；1->秒杀订单',
+  `note` varchar(500) DEFAULT NULL COMMENT '订单备注',
+  `payment_time` datetime DEFAULT NULL COMMENT '支付时间',
+  `comment_time` datetime DEFAULT NULL COMMENT '评价时间',
+  `create_time` datetime DEFAULT NULL COMMENT '提交时间',
+  `modify_time` datetime DEFAULT NULL COMMENT '修改时间',
+  `room_name` varchar(255) DEFAULT NULL COMMENT '房间名',
+  `floor` varchar(255) DEFAULT NULL COMMENT '楼层号',
+  `serial` varchar(255) DEFAULT NULL COMMENT '房间号',
+  `pic` varchar(255) DEFAULT NULL COMMENT '房间图片',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COMMENT='订单表';
+
+-- ----------------------------
+-- Records of oms_order
+-- ----------------------------
+INSERT INTO `oms_order` VALUES ('31', 'adminTue Oct 20 23:45:04 CST 2020', 'admin', '100.12', '0', '0', '1', '0', 'demoData', '2020-10-22 21:39:35', '2020-10-22 21:39:44', '2020-10-20 15:45:04', '2020-10-22 21:39:50', '111', '1', '0212', null);
+INSERT INTO `oms_order` VALUES ('32', 'admin1603208813955', 'admin', '200.00', '1', '1', '0', '0', 'demoData', '2020-10-22 21:39:37', '2020-10-22 21:39:46', '2020-10-20 15:46:54', '2020-10-22 21:39:52', '222', '2', '0213', null);
+INSERT INTO `oms_order` VALUES ('33', '1319229828368568320', 'admin', '455.67', '2', '0', '0', '1', 'demoData', '2020-10-22 21:39:39', '2020-10-22 21:39:48', '2020-10-22 10:51:15', '2020-10-22 21:39:54', '333', '1', '0123', null);
 
 -- ----------------------------
 -- Table structure for rms_room
@@ -37,7 +69,7 @@ CREATE TABLE `rms_room` (
 -- ----------------------------
 -- Records of rms_room
 -- ----------------------------
-INSERT INTO `rms_room` VALUES ('1', '双人房', '1', '2', '2', '双人床，有窗，单独', '1', '000101', '0', '10000.00', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/5ab46a3cN616bdc41.jpg,http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/5ac1bf5fN2522b9dc.jpg');
+INSERT INTO `rms_room` VALUES ('1', '双人房22', '1', '2', '2', '双人床，有窗，单独', '1', '000101', '0', '10000.00', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/5ab46a3cN616bdc41.jpg,http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/5ac1bf5fN2522b9dc.jpg');
 INSERT INTO `rms_room` VALUES ('2', '3', '0', '0', '0', null, '2', '2', '0', '0.00', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/header.jpg');
 INSERT INTO `rms_room` VALUES ('3', '111', '1', '1', '1', '1', '1', '1', '1', '1.00', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg');
 INSERT INTO `rms_room` VALUES ('4', '333', '1', '1', '1', null, '2', '2', '1', '2.00', 'http://127.0.0.1:9000/hotel/20201018/75888-106.jpg');
@@ -84,7 +116,7 @@ CREATE TABLE `ums_admin_login_log` (
   `address` varchar(100) DEFAULT NULL,
   `user_agent` varchar(100) DEFAULT NULL COMMENT '浏览器登录类型',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=utf8 COMMENT='后台用户登录日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=234 DEFAULT CHARSET=utf8 COMMENT='后台用户登录日志表';
 
 -- ----------------------------
 -- Records of ums_admin_login_log
@@ -308,6 +340,20 @@ INSERT INTO `ums_admin_login_log` VALUES ('216', '1', '2020-10-19 09:20:53', '12
 INSERT INTO `ums_admin_login_log` VALUES ('217', '3', '2020-10-19 15:01:26', '127.0.0.1', null, null);
 INSERT INTO `ums_admin_login_log` VALUES ('218', '3', '2020-10-19 16:40:15', '127.0.0.1', null, null);
 INSERT INTO `ums_admin_login_log` VALUES ('219', '10', '2020-10-19 17:08:58', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('220', '1', '2020-10-20 07:08:12', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('221', '10', '2020-10-20 07:47:20', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('222', '3', '2020-10-20 07:48:09', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('223', '3', '2020-10-20 07:53:46', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('224', '3', '2020-10-20 07:54:46', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('225', '3', '2020-10-20 08:12:27', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('226', '3', '2020-10-20 13:18:23', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('227', '3', '2020-10-20 17:25:29', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('228', '1', '2020-10-20 17:44:41', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('229', '3', '2020-10-20 17:45:06', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('230', '3', '2020-10-22 16:48:50', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('231', '3', '2020-10-22 16:50:46', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('232', '3', '2020-10-22 16:57:07', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('233', '3', '2020-10-22 16:58:32', '127.0.0.1', null, null);
 
 -- ----------------------------
 -- Table structure for ums_admin_role_relation
@@ -344,30 +390,13 @@ CREATE TABLE `ums_menu` (
   `icon` varchar(200) DEFAULT NULL COMMENT '前端图标',
   `hidden` int(1) DEFAULT NULL COMMENT '前端隐藏',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='后台菜单表';
 
 -- ----------------------------
 -- Records of ums_menu
 -- ----------------------------
-INSERT INTO `ums_menu` VALUES ('1', '0', '2020-02-02 14:50:36', '商品', '0', '0', 'pms', 'product', '0');
-INSERT INTO `ums_menu` VALUES ('2', '1', '2020-02-02 14:51:50', '商品列表', '1', '0', 'product', 'product-list', '0');
-INSERT INTO `ums_menu` VALUES ('3', '1', '2020-02-02 14:52:44', '添加商品', '1', '0', 'addProduct', 'product-add', '0');
-INSERT INTO `ums_menu` VALUES ('4', '1', '2020-02-02 14:53:51', '商品分类', '1', '0', 'productCate', 'product-cate', '0');
-INSERT INTO `ums_menu` VALUES ('5', '1', '2020-02-02 14:54:51', '商品类型', '1', '0', 'productAttr', 'product-attr', '0');
-INSERT INTO `ums_menu` VALUES ('6', '1', '2020-02-02 14:56:29', '品牌管理', '1', '0', 'brand', 'product-brand', '0');
 INSERT INTO `ums_menu` VALUES ('7', '0', '2020-02-02 16:54:07', '订单', '0', '0', 'oms', 'order', '0');
-INSERT INTO `ums_menu` VALUES ('8', '7', '2020-02-02 16:55:18', '订单列表', '1', '0', 'order', 'product-list', '0');
-INSERT INTO `ums_menu` VALUES ('9', '7', '2020-02-02 16:56:46', '订单设置', '1', '0', 'orderSetting', 'order-setting', '0');
-INSERT INTO `ums_menu` VALUES ('10', '7', '2020-02-02 16:57:39', '退货申请处理', '1', '0', 'returnApply', 'order-return', '0');
-INSERT INTO `ums_menu` VALUES ('11', '7', '2020-02-02 16:59:40', '退货原因设置', '1', '0', 'returnReason', 'order-return-reason', '0');
-INSERT INTO `ums_menu` VALUES ('12', '0', '2020-02-04 16:18:00', '营销', '0', '0', 'sms', 'sms', '0');
-INSERT INTO `ums_menu` VALUES ('13', '12', '2020-02-04 16:19:22', '秒杀活动列表', '1', '0', 'flash', 'sms-flash', '0');
-INSERT INTO `ums_menu` VALUES ('14', '12', '2020-02-04 16:20:16', '优惠券列表', '1', '0', 'coupon', 'sms-coupon', '0');
-INSERT INTO `ums_menu` VALUES ('16', '12', '2020-02-07 16:22:38', '品牌推荐', '1', '0', 'homeBrand', 'product-brand', '0');
-INSERT INTO `ums_menu` VALUES ('17', '12', '2020-02-07 16:23:14', '新品推荐', '1', '0', 'homeNew', 'sms-new', '0');
-INSERT INTO `ums_menu` VALUES ('18', '12', '2020-02-07 16:26:38', '人气推荐', '1', '0', 'homeHot', 'sms-hot', '0');
-INSERT INTO `ums_menu` VALUES ('19', '12', '2020-02-07 16:28:16', '专题推荐', '1', '0', 'homeSubject', 'sms-subject', '0');
-INSERT INTO `ums_menu` VALUES ('20', '12', '2020-02-07 16:28:42', '广告列表', '1', '0', 'homeAdvertise', 'sms-ad', '0');
+INSERT INTO `ums_menu` VALUES ('8', '7', '2020-02-02 16:55:18', '订单列表', '1', '0', 'order', 'order-list', '0');
 INSERT INTO `ums_menu` VALUES ('21', '0', '2020-02-07 16:29:13', '权限', '0', '0', 'ums', 'ums', '0');
 INSERT INTO `ums_menu` VALUES ('22', '21', '2020-02-07 16:29:51', '用户列表', '1', '0', 'admin', 'ums-admin', '0');
 INSERT INTO `ums_menu` VALUES ('23', '21', '2020-02-07 16:30:13', '角色列表', '1', '0', 'role', 'ums-role', '0');
@@ -378,7 +407,8 @@ INSERT INTO `ums_menu` VALUES ('27', '26', '2020-10-17 08:32:21', '房间列表'
 INSERT INTO `ums_menu` VALUES ('28', '0', '2020-10-17 08:37:39', '房间', '0', '0', 'rms', 'room', '0');
 INSERT INTO `ums_menu` VALUES ('29', '28', '2020-10-17 08:45:47', '房间列表', '1', '0', 'room', 'room', '0');
 INSERT INTO `ums_menu` VALUES ('30', '28', '2020-10-17 10:36:22', '添加房间', '1', '0', 'addRoom', 'room', '0');
-INSERT INTO `ums_menu` VALUES ('32', '28', '2020-10-17 13:22:34', '修改房间', '1', '0', 'updateRoom', 'room', '1');
+INSERT INTO `ums_menu` VALUES ('35', '21', '2020-10-20 10:49:52', 'test', '1', '0', 'test', 'room', '0');
+INSERT INTO `ums_menu` VALUES ('36', '7', '2020-10-22 16:46:18', '创建订单', '1', '0', 'addOrder', 'order-add', '0');
 
 -- ----------------------------
 -- Table structure for ums_resource
@@ -392,42 +422,18 @@ CREATE TABLE `ums_resource` (
   `description` varchar(500) DEFAULT NULL COMMENT '描述',
   `category_id` bigint(20) DEFAULT NULL COMMENT '资源分类ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COMMENT='后台资源表';
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COMMENT='后台资源表';
 
 -- ----------------------------
 -- Records of ums_resource
 -- ----------------------------
-INSERT INTO `ums_resource` VALUES ('1', '2020-02-04 17:04:55', '商品品牌管理', '/brand/**', null, '1');
-INSERT INTO `ums_resource` VALUES ('2', '2020-02-04 17:05:35', '商品属性分类管理', '/productAttribute/**', null, '1');
-INSERT INTO `ums_resource` VALUES ('3', '2020-02-04 17:06:13', '商品属性管理', '/productAttribute/**', null, '1');
-INSERT INTO `ums_resource` VALUES ('4', '2020-02-04 17:07:15', '商品分类管理', '/productCategory/**', null, '1');
-INSERT INTO `ums_resource` VALUES ('5', '2020-02-04 17:09:16', '商品管理', '/product/**', null, '1');
-INSERT INTO `ums_resource` VALUES ('6', '2020-02-04 17:09:53', '商品库存管理', '/sku/**', null, '1');
-INSERT INTO `ums_resource` VALUES ('8', '2020-02-05 14:43:37', '订单管理', '/order/**', '', '2');
-INSERT INTO `ums_resource` VALUES ('9', '2020-02-05 14:44:22', ' 订单退货申请管理', '/returnApply/**', '', '2');
-INSERT INTO `ums_resource` VALUES ('10', '2020-02-05 14:45:08', '退货原因管理', '/returnReason/**', '', '2');
-INSERT INTO `ums_resource` VALUES ('11', '2020-02-05 14:45:43', '订单设置管理', '/orderSetting/**', '', '2');
-INSERT INTO `ums_resource` VALUES ('12', '2020-02-05 14:46:23', '收货地址管理', '/companyAddress/**', '', '2');
-INSERT INTO `ums_resource` VALUES ('13', '2020-02-07 16:37:22', '优惠券管理', '/coupon/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('14', '2020-02-07 16:37:59', '优惠券领取记录管理', '/couponHistory/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('15', '2020-02-07 16:38:28', '限时购活动管理', '/flash/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('16', '2020-02-07 16:38:59', '限时购商品关系管理', '/flashProductRelation/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('17', '2020-02-07 16:39:22', '限时购场次管理', '/flashSession/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('18', '2020-02-07 16:40:07', '首页轮播广告管理', '/home/advertise/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('19', '2020-02-07 16:40:34', '首页品牌管理', '/home/brand/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('20', '2020-02-07 16:41:06', '首页新品管理', '/home/newProduct/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('21', '2020-02-07 16:42:16', '首页人气推荐管理', '/home/recommendProduct/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('22', '2020-02-07 16:42:48', '首页专题推荐管理', '/home/recommendSubject/**', '', '3');
-INSERT INTO `ums_resource` VALUES ('23', '2020-02-07 16:44:56', ' 商品优选管理', '/prefrenceArea/**', '', '5');
-INSERT INTO `ums_resource` VALUES ('24', '2020-02-07 16:45:39', '商品专题管理', '/subject/**', '', '5');
 INSERT INTO `ums_resource` VALUES ('25', '2020-02-07 16:47:34', '后台用户管理', '/admin/**', '', '4');
 INSERT INTO `ums_resource` VALUES ('26', '2020-02-07 16:48:24', '后台用户角色管理', '/role/**', '', '4');
 INSERT INTO `ums_resource` VALUES ('27', '2020-02-07 16:48:48', '后台菜单管理', '/menu/**', '', '4');
 INSERT INTO `ums_resource` VALUES ('28', '2020-02-07 16:49:18', '后台资源分类管理', '/resourceCategory/**', '', '4');
 INSERT INTO `ums_resource` VALUES ('29', '2020-02-07 16:49:45', '后台资源管理', '/resource/**', '', '4');
 INSERT INTO `ums_resource` VALUES ('31', '2020-10-17 08:35:02', '房间管理', '/room/**', '房间管理', '8');
-INSERT INTO `ums_resource` VALUES ('32', '2020-10-17 11:48:04', '创建房间', '/addRoom/**', '创建房间', '8');
-INSERT INTO `ums_resource` VALUES ('33', '2020-10-17 11:57:57', '修改房间', '/updateRoom/**', '', '8');
+INSERT INTO `ums_resource` VALUES ('34', '2020-10-22 16:41:31', '订单管理', '/order/**', '', '2');
 
 -- ----------------------------
 -- Table structure for ums_resource_category
@@ -444,9 +450,7 @@ CREATE TABLE `ums_resource_category` (
 -- ----------------------------
 -- Records of ums_resource_category
 -- ----------------------------
-INSERT INTO `ums_resource_category` VALUES ('1', '2020-02-05 10:21:44', '商品模块', '0');
 INSERT INTO `ums_resource_category` VALUES ('2', '2020-02-05 10:22:34', '订单模块', '0');
-INSERT INTO `ums_resource_category` VALUES ('3', '2020-02-05 10:22:48', '营销模块', '0');
 INSERT INTO `ums_resource_category` VALUES ('4', '2020-02-05 10:23:04', '权限模块', '1');
 INSERT INTO `ums_resource_category` VALUES ('5', '2020-02-07 16:34:27', '内容模块', '0');
 INSERT INTO `ums_resource_category` VALUES ('6', '2020-02-07 16:35:49', '其他模块', '0');
@@ -470,7 +474,7 @@ CREATE TABLE `ums_role` (
 -- ----------------------------
 -- Records of ums_role
 -- ----------------------------
-INSERT INTO `ums_role` VALUES ('1', '商品管理员', '只能查看及操作商品', '0', '2020-02-03 16:50:37', '1', '0');
+INSERT INTO `ums_role` VALUES ('1', '房间管理员', '只能查看及操作房间', '0', '2020-02-03 16:50:37', '1', '0');
 INSERT INTO `ums_role` VALUES ('2', '订单管理员', '只能查看及操作订单', '0', '2018-09-30 15:53:45', '1', '0');
 INSERT INTO `ums_role` VALUES ('5', '超级管理员', '拥有所有查看和操作功能', '0', '2020-02-02 15:11:05', '1', '0');
 INSERT INTO `ums_role` VALUES ('9', '测试角色', '测试角色', '0', '2020-10-18 10:22:51', '1', '0');
@@ -484,56 +488,36 @@ CREATE TABLE `ums_role_menu_relation` (
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   `menu_id` bigint(20) DEFAULT NULL COMMENT '菜单ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=507 DEFAULT CHARSET=utf8 COMMENT='后台角色菜单关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=623 DEFAULT CHARSET=utf8 COMMENT='后台角色菜单关系表';
 
 -- ----------------------------
 -- Records of ums_role_menu_relation
 -- ----------------------------
-INSERT INTO `ums_role_menu_relation` VALUES ('53', '2', '7');
-INSERT INTO `ums_role_menu_relation` VALUES ('54', '2', '8');
-INSERT INTO `ums_role_menu_relation` VALUES ('55', '2', '9');
-INSERT INTO `ums_role_menu_relation` VALUES ('56', '2', '10');
-INSERT INTO `ums_role_menu_relation` VALUES ('57', '2', '11');
-INSERT INTO `ums_role_menu_relation` VALUES ('96', '1', '1');
-INSERT INTO `ums_role_menu_relation` VALUES ('97', '1', '2');
-INSERT INTO `ums_role_menu_relation` VALUES ('98', '1', '3');
-INSERT INTO `ums_role_menu_relation` VALUES ('99', '1', '4');
-INSERT INTO `ums_role_menu_relation` VALUES ('100', '1', '5');
-INSERT INTO `ums_role_menu_relation` VALUES ('101', '1', '6');
-INSERT INTO `ums_role_menu_relation` VALUES ('102', '1', '8');
-INSERT INTO `ums_role_menu_relation` VALUES ('103', '1', '7');
-INSERT INTO `ums_role_menu_relation` VALUES ('459', '5', '1');
-INSERT INTO `ums_role_menu_relation` VALUES ('460', '5', '2');
-INSERT INTO `ums_role_menu_relation` VALUES ('461', '5', '3');
-INSERT INTO `ums_role_menu_relation` VALUES ('462', '5', '4');
-INSERT INTO `ums_role_menu_relation` VALUES ('463', '5', '5');
-INSERT INTO `ums_role_menu_relation` VALUES ('464', '5', '6');
-INSERT INTO `ums_role_menu_relation` VALUES ('465', '5', '7');
-INSERT INTO `ums_role_menu_relation` VALUES ('466', '5', '8');
-INSERT INTO `ums_role_menu_relation` VALUES ('467', '5', '9');
-INSERT INTO `ums_role_menu_relation` VALUES ('468', '5', '10');
-INSERT INTO `ums_role_menu_relation` VALUES ('469', '5', '11');
-INSERT INTO `ums_role_menu_relation` VALUES ('470', '5', '12');
-INSERT INTO `ums_role_menu_relation` VALUES ('471', '5', '13');
-INSERT INTO `ums_role_menu_relation` VALUES ('472', '5', '14');
-INSERT INTO `ums_role_menu_relation` VALUES ('473', '5', '16');
-INSERT INTO `ums_role_menu_relation` VALUES ('474', '5', '17');
-INSERT INTO `ums_role_menu_relation` VALUES ('475', '5', '18');
-INSERT INTO `ums_role_menu_relation` VALUES ('476', '5', '19');
-INSERT INTO `ums_role_menu_relation` VALUES ('477', '5', '20');
-INSERT INTO `ums_role_menu_relation` VALUES ('478', '5', '21');
-INSERT INTO `ums_role_menu_relation` VALUES ('479', '5', '22');
-INSERT INTO `ums_role_menu_relation` VALUES ('480', '5', '23');
-INSERT INTO `ums_role_menu_relation` VALUES ('481', '5', '24');
-INSERT INTO `ums_role_menu_relation` VALUES ('482', '5', '25');
-INSERT INTO `ums_role_menu_relation` VALUES ('483', '5', '28');
-INSERT INTO `ums_role_menu_relation` VALUES ('484', '5', '29');
-INSERT INTO `ums_role_menu_relation` VALUES ('485', '5', '30');
-INSERT INTO `ums_role_menu_relation` VALUES ('486', '5', '32');
-INSERT INTO `ums_role_menu_relation` VALUES ('503', '9', '28');
-INSERT INTO `ums_role_menu_relation` VALUES ('504', '9', '29');
-INSERT INTO `ums_role_menu_relation` VALUES ('505', '9', '30');
-INSERT INTO `ums_role_menu_relation` VALUES ('506', '9', '32');
+INSERT INTO `ums_role_menu_relation` VALUES ('532', '2', '7');
+INSERT INTO `ums_role_menu_relation` VALUES ('533', '2', '8');
+INSERT INTO `ums_role_menu_relation` VALUES ('536', '2', '28');
+INSERT INTO `ums_role_menu_relation` VALUES ('537', '2', '29');
+INSERT INTO `ums_role_menu_relation` VALUES ('538', '2', '30');
+INSERT INTO `ums_role_menu_relation` VALUES ('540', '1', '7');
+INSERT INTO `ums_role_menu_relation` VALUES ('541', '1', '8');
+INSERT INTO `ums_role_menu_relation` VALUES ('544', '1', '28');
+INSERT INTO `ums_role_menu_relation` VALUES ('545', '1', '29');
+INSERT INTO `ums_role_menu_relation` VALUES ('546', '1', '30');
+INSERT INTO `ums_role_menu_relation` VALUES ('604', '9', '28');
+INSERT INTO `ums_role_menu_relation` VALUES ('605', '9', '29');
+INSERT INTO `ums_role_menu_relation` VALUES ('606', '9', '30');
+INSERT INTO `ums_role_menu_relation` VALUES ('608', '5', '7');
+INSERT INTO `ums_role_menu_relation` VALUES ('609', '5', '8');
+INSERT INTO `ums_role_menu_relation` VALUES ('610', '5', '36');
+INSERT INTO `ums_role_menu_relation` VALUES ('613', '5', '21');
+INSERT INTO `ums_role_menu_relation` VALUES ('614', '5', '22');
+INSERT INTO `ums_role_menu_relation` VALUES ('615', '5', '23');
+INSERT INTO `ums_role_menu_relation` VALUES ('616', '5', '24');
+INSERT INTO `ums_role_menu_relation` VALUES ('617', '5', '25');
+INSERT INTO `ums_role_menu_relation` VALUES ('618', '5', '35');
+INSERT INTO `ums_role_menu_relation` VALUES ('619', '5', '28');
+INSERT INTO `ums_role_menu_relation` VALUES ('620', '5', '29');
+INSERT INTO `ums_role_menu_relation` VALUES ('621', '5', '30');
 
 -- ----------------------------
 -- Table structure for ums_role_resource_relation
@@ -544,56 +528,16 @@ CREATE TABLE `ums_role_resource_relation` (
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   `resource_id` bigint(20) DEFAULT NULL COMMENT '资源ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=392 DEFAULT CHARSET=utf8 COMMENT='后台角色资源关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=402 DEFAULT CHARSET=utf8 COMMENT='后台角色资源关系表';
 
 -- ----------------------------
 -- Records of ums_role_resource_relation
 -- ----------------------------
-INSERT INTO `ums_role_resource_relation` VALUES ('103', '2', '8');
-INSERT INTO `ums_role_resource_relation` VALUES ('104', '2', '9');
-INSERT INTO `ums_role_resource_relation` VALUES ('105', '2', '10');
-INSERT INTO `ums_role_resource_relation` VALUES ('106', '2', '11');
-INSERT INTO `ums_role_resource_relation` VALUES ('107', '2', '12');
-INSERT INTO `ums_role_resource_relation` VALUES ('187', '1', '1');
-INSERT INTO `ums_role_resource_relation` VALUES ('188', '1', '2');
-INSERT INTO `ums_role_resource_relation` VALUES ('189', '1', '3');
-INSERT INTO `ums_role_resource_relation` VALUES ('190', '1', '4');
-INSERT INTO `ums_role_resource_relation` VALUES ('191', '1', '5');
-INSERT INTO `ums_role_resource_relation` VALUES ('192', '1', '6');
-INSERT INTO `ums_role_resource_relation` VALUES ('193', '1', '23');
-INSERT INTO `ums_role_resource_relation` VALUES ('194', '1', '24');
 INSERT INTO `ums_role_resource_relation` VALUES ('195', '1', '31');
-INSERT INTO `ums_role_resource_relation` VALUES ('346', '5', '1');
-INSERT INTO `ums_role_resource_relation` VALUES ('347', '5', '2');
-INSERT INTO `ums_role_resource_relation` VALUES ('348', '5', '3');
-INSERT INTO `ums_role_resource_relation` VALUES ('349', '5', '4');
-INSERT INTO `ums_role_resource_relation` VALUES ('350', '5', '5');
-INSERT INTO `ums_role_resource_relation` VALUES ('351', '5', '6');
-INSERT INTO `ums_role_resource_relation` VALUES ('352', '5', '8');
-INSERT INTO `ums_role_resource_relation` VALUES ('353', '5', '9');
-INSERT INTO `ums_role_resource_relation` VALUES ('354', '5', '10');
-INSERT INTO `ums_role_resource_relation` VALUES ('355', '5', '11');
-INSERT INTO `ums_role_resource_relation` VALUES ('356', '5', '12');
-INSERT INTO `ums_role_resource_relation` VALUES ('357', '5', '13');
-INSERT INTO `ums_role_resource_relation` VALUES ('358', '5', '14');
-INSERT INTO `ums_role_resource_relation` VALUES ('359', '5', '15');
-INSERT INTO `ums_role_resource_relation` VALUES ('360', '5', '16');
-INSERT INTO `ums_role_resource_relation` VALUES ('361', '5', '17');
-INSERT INTO `ums_role_resource_relation` VALUES ('362', '5', '18');
-INSERT INTO `ums_role_resource_relation` VALUES ('363', '5', '19');
-INSERT INTO `ums_role_resource_relation` VALUES ('364', '5', '20');
-INSERT INTO `ums_role_resource_relation` VALUES ('365', '5', '21');
-INSERT INTO `ums_role_resource_relation` VALUES ('366', '5', '22');
-INSERT INTO `ums_role_resource_relation` VALUES ('367', '5', '23');
-INSERT INTO `ums_role_resource_relation` VALUES ('368', '5', '24');
-INSERT INTO `ums_role_resource_relation` VALUES ('369', '5', '25');
-INSERT INTO `ums_role_resource_relation` VALUES ('370', '5', '26');
-INSERT INTO `ums_role_resource_relation` VALUES ('371', '5', '27');
-INSERT INTO `ums_role_resource_relation` VALUES ('372', '5', '28');
-INSERT INTO `ums_role_resource_relation` VALUES ('373', '5', '29');
-INSERT INTO `ums_role_resource_relation` VALUES ('374', '5', '31');
-INSERT INTO `ums_role_resource_relation` VALUES ('375', '5', '32');
-INSERT INTO `ums_role_resource_relation` VALUES ('376', '5', '33');
 INSERT INTO `ums_role_resource_relation` VALUES ('389', '9', '31');
-INSERT INTO `ums_role_resource_relation` VALUES ('390', '9', '32');
-INSERT INTO `ums_role_resource_relation` VALUES ('391', '9', '33');
+INSERT INTO `ums_role_resource_relation` VALUES ('394', '5', '25');
+INSERT INTO `ums_role_resource_relation` VALUES ('395', '5', '26');
+INSERT INTO `ums_role_resource_relation` VALUES ('396', '5', '27');
+INSERT INTO `ums_role_resource_relation` VALUES ('397', '5', '28');
+INSERT INTO `ums_role_resource_relation` VALUES ('398', '5', '29');
+INSERT INTO `ums_role_resource_relation` VALUES ('399', '5', '31');

@@ -5,7 +5,6 @@ com\yangkai\hotel\security\util\JwtTokenUtil.class
 com\yangkai\hotel\security\entity\RestfulAccessDeniedHandler.class
 com\yangkai\hotel\security\entity\DynamicSecurityMetadataSource.class
 com\yangkai\hotel\security\config\SecurityConfig.class
-com\yangkai\hotel\security\HotelSecurityApplication.class
 com\yangkai\hotel\security\entity\RestAuthenticationEntryPoint.class
 com\yangkai\hotel\security\entity\DynamicSecurityService.class
 com\yangkai\hotel\security\config\IgnoreUrlsConfig.class

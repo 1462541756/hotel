@@ -3,11 +3,13 @@ package com.yangkai.hotel.main.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.yangkai.hotel.main.bo.AdminUserDetails;
 import com.yangkai.hotel.main.dao.OmsOrderDao;
+import com.yangkai.hotel.main.dto.OmsOrderQueryParam;
 import com.yangkai.hotel.main.service.OmsOrderService;
 import com.yangkai.hotel.mbg.mapper.OmsOrderMapper;
+import com.yangkai.hotel.mbg.mapper.RmsRoomMapper;
 import com.yangkai.hotel.mbg.model.OmsOrder;
 import com.yangkai.hotel.mbg.model.OmsOrderExample;
-import com.yangkai.hotel.security.util.JwtTokenUtil;
+import com.yangkai.hotel.mbg.model.RmsRoom;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,8 @@ public class OmsOrderServiceImpl implements OmsOrderService {
     private OmsOrderDao omsOrderDao;
     @Resource
     private OmsOrderMapper omsOrderMapper;
+    @Resource
+    private RmsRoomMapper rmsRoomMapper;
 
     /**
      * 通过ID查询单条数据
@@ -55,13 +59,18 @@ public class OmsOrderServiceImpl implements OmsOrderService {
     /**
      * 新增数据
      *
-     * @param omsOrder 实例对象
+     * @param params 实例对象
      * @return 实例对象
      */
     @Override
-    public OmsOrder insert(OmsOrder omsOrder) {
-        this.omsOrderDao.insert(omsOrder);
-        return omsOrder;
+    public int insert(OmsOrderQueryParam params) {
+        RmsRoom rmsRoom=rmsRoomMapper.selectByPrimaryKey(params.getRoomId());
+        params.setRoomId(null);
+        params.setRoomName(rmsRoom.getName());
+        params.setFloor(rmsRoom.getFloor());
+        params.setSerial(rmsRoom.getSerial());
+        params.setPic(rmsRoom.getPic());
+        return omsOrderMapper.insertSelective(params);
     }
 
     /**
@@ -96,9 +105,13 @@ public class OmsOrderServiceImpl implements OmsOrderService {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
             criteria.andUsernameEqualTo(username);
-        }
-        if (omsOrderQueryParam.getUsername()!=null){
+        }else {
+            if (omsOrderQueryParam.getUsername()!=null){
             criteria.andUsernameLike("%"+omsOrderQueryParam.getUsername()+"%");
+            }
+        }
+        if (omsOrderQueryParam.getOrderSn()!=null){
+            criteria.andOrderSnLike("%"+omsOrderQueryParam.getOrderSn()+"%");
         }
         if (omsOrderQueryParam.getSourceType()!=null){
             criteria.andSourceTypeEqualTo(omsOrderQueryParam.getSourceType());
@@ -109,6 +122,9 @@ public class OmsOrderServiceImpl implements OmsOrderService {
         if (omsOrderQueryParam.getOrderType()!=null){
             criteria.andOrderTypeEqualTo(omsOrderQueryParam.getOrderType());
         }
+        if (omsOrderQueryParam.getStatus()!=null){
+            criteria.andStatusEqualTo(omsOrderQueryParam.getStatus());
+        }
         return  omsOrderMapper.selectByExample(example);
     }
     @Override
@@ -117,8 +133,9 @@ public class OmsOrderServiceImpl implements OmsOrderService {
         if (!isVip){
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
-            String tmp=omsOrderDao.selectUsernameByOrderId(orderId);
-            if (tmp==null||!tmp.equals(username)){
+            if (username==null)return 0;
+            OmsOrder order=omsOrderMapper.selectByPrimaryKey(orderId);
+            if (order==null||!username.equals(order.getUsername())){
                 return 0;
             }
         }

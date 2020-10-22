@@ -45,7 +45,7 @@ public interface OmsOrderDao {
      * @param omsOrder 实例对象
      * @return 影响行数
      */
-    int insert(OmsOrder omsOrder);
+    OmsOrder insert(OmsOrder omsOrder);
 
     /**
      * 批量新增数据（MyBatis原生foreach方法）
@@ -81,5 +81,4 @@ public interface OmsOrderDao {
 
 
 
-    String selectUsernameByOrderId(Long orderId);
 }

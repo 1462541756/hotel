@@ -5,7 +5,6 @@
     <resultMap type="com.yangkai.hotel.mbg.model.OmsOrder" id="OmsOrderMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="orderSn" column="order_sn" jdbcType="VARCHAR"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
         <result property="username" column="username" jdbcType="VARCHAR"/>
         <result property="payAmount" column="pay_amount" jdbcType="NUMERIC"/>
         <result property="payType" column="pay_type" jdbcType="INTEGER"/>
@@ -15,6 +14,7 @@
         <result property="note" column="note" jdbcType="VARCHAR"/>
         <result property="paymentTime" column="payment_time" jdbcType="TIMESTAMP"/>
         <result property="commentTime" column="comment_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
         <result property="modifyTime" column="modify_time" jdbcType="TIMESTAMP"/>
         <result property="roomName" column="room_name" jdbcType="VARCHAR"/>
         <result property="floor" column="floor" jdbcType="VARCHAR"/>
@@ -25,7 +25,7 @@
     <!--查询单个-->
     <select id="queryById" resultMap="OmsOrderMap">
         select
-          id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic
+          id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic
         from hotel.oms_order
         where id = #{id}
     </select>
@@ -33,7 +33,7 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="OmsOrderMap">
         select
-          id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic
+          id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic
         from hotel.oms_order
         limit #{offset}, #{limit}
     </select>
@@ -41,8 +41,8 @@
     <!--通过实体作为筛选条件查询-->
     <select id="queryAll" resultMap="OmsOrderMap">
         select
-        id, order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time,
-        comment_time, modify_time, room_name, floor, serial, pic
+        id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time,
+        create_time, modify_time, room_name, floor, serial, pic
         from hotel.oms_order
         <where>
             <if test="id != null">
@@ -50,9 +50,6 @@
             </if>
             <if test="orderSn != null and orderSn != ''">
                 and order_sn = #{orderSn}
-            </if>
-            <if test="createTime != null">
-                and create_time = #{createTime}
             </if>
             <if test="username != null and username != ''">
                 and username = #{username}
@@ -81,6 +78,9 @@
             <if test="commentTime != null">
                 and comment_time = #{commentTime}
             </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
             <if test="modifyTime != null">
                 and modify_time = #{modifyTime}
             </if>
@@ -101,38 +101,38 @@
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
-        insert into hotel.oms_order(order_sn, create_time, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic)
-        values (#{orderSn}, #{createTime}, #{username}, #{payAmount}, #{payType}, #{sourceType}, #{status}, #{orderType}, #{note}, #{paymentTime}, #{commentTime}, #{modifyTime}, #{roomName}, #{floor}, #{serial}, #{pic})
+        insert into hotel.oms_order(order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic)
+        values (#{orderSn}, #{username}, #{payAmount}, #{payType}, #{sourceType}, #{status}, #{orderType}, #{note}, #{paymentTime}, #{commentTime}, #{createTime}, #{modifyTime}, #{roomName}, #{floor}, #{serial}, #{pic})
     </insert>
 
     <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
-        insert into hotel.oms_order(order_sn, create_time, username, pay_amount, pay_type, source_type, status,
-        order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic)
+        insert into hotel.oms_order(order_sn, username, pay_amount, pay_type, source_type, status, order_type, note,
+        payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic)
         values
         <foreach collection="entities" item="entity" separator=",">
-            (#{entity.orderSn}, #{entity.createTime}, #{entity.username}, #{entity.payAmount}, #{entity.payType},
-            #{entity.sourceType}, #{entity.status}, #{entity.orderType}, #{entity.note}, #{entity.paymentTime},
-            #{entity.commentTime}, #{entity.modifyTime}, #{entity.roomName}, #{entity.floor}, #{entity.serial},
+            (#{entity.orderSn}, #{entity.username}, #{entity.payAmount}, #{entity.payType}, #{entity.sourceType},
+            #{entity.status}, #{entity.orderType}, #{entity.note}, #{entity.paymentTime}, #{entity.commentTime},
+            #{entity.createTime}, #{entity.modifyTime}, #{entity.roomName}, #{entity.floor}, #{entity.serial},
             #{entity.pic})
         </foreach>
     </insert>
 
     <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
-        insert into hotel.oms_order(order_sn, create_time, username, pay_amount, pay_type, source_type, status,
-        order_type, note, payment_time, comment_time, modify_time, room_name, floor, serial, pic)
+        insert into hotel.oms_order(order_sn, username, pay_amount, pay_type, source_type, status, order_type, note,
+        payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic)
         values
         <foreach collection="entities" item="entity" separator=",">
-            (#{entity.orderSn}, #{entity.createTime}, #{entity.username}, #{entity.payAmount}, #{entity.payType},
-            #{entity.sourceType}, #{entity.status}, #{entity.orderType}, #{entity.note}, #{entity.paymentTime},
-            #{entity.commentTime}, #{entity.modifyTime}, #{entity.roomName}, #{entity.floor}, #{entity.serial},
+            (#{entity.orderSn}, #{entity.username}, #{entity.payAmount}, #{entity.payType}, #{entity.sourceType},
+            #{entity.status}, #{entity.orderType}, #{entity.note}, #{entity.paymentTime}, #{entity.commentTime},
+            #{entity.createTime}, #{entity.modifyTime}, #{entity.roomName}, #{entity.floor}, #{entity.serial},
             #{entity.pic})
         </foreach>
         on duplicate key update
-        order_sn = values(order_sn) , create_time = values(create_time) , username = values(username) , pay_amount =
-        values(pay_amount) , pay_type = values(pay_type) , source_type = values(source_type) , status = values(status) ,
-        order_type = values(order_type) , note = values(note) , payment_time = values(payment_time) , comment_time =
-        values(comment_time) , modify_time = values(modify_time) , room_name = values(room_name) , floor = values(floor)
-        , serial = values(serial) , pic = values(pic)
+        order_sn = values(order_sn) , username = values(username) , pay_amount = values(pay_amount) , pay_type =
+        values(pay_type) , source_type = values(source_type) , status = values(status) , order_type = values(order_type)
+        , note = values(note) , payment_time = values(payment_time) , comment_time = values(comment_time) , create_time
+        = values(create_time) , modify_time = values(modify_time) , room_name = values(room_name) , floor =
+        values(floor) , serial = values(serial) , pic = values(pic)
     </insert>
 
     <!--通过主键修改数据-->
@@ -141,9 +141,6 @@
         <set>
             <if test="orderSn != null and orderSn != ''">
                 order_sn = #{orderSn},
-            </if>
-            <if test="createTime != null">
-                create_time = #{createTime},
             </if>
             <if test="username != null and username != ''">
                 username = #{username},
@@ -172,6 +169,9 @@
             <if test="commentTime != null">
                 comment_time = #{commentTime},
             </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
             <if test="modifyTime != null">
                 modify_time = #{modifyTime},
             </if>
@@ -195,7 +195,5 @@
     <delete id="deleteById">
         delete from hotel.oms_order where id = #{id}
     </delete>
-    <select id="selectUsernameByOrderId" resultType="java.lang.String">
-        select username from oms_order where id=#{orderId};
-    </select>
+
 </mapper>

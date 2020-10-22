@@ -12,9 +12,6 @@ public class OmsOrder implements Serializable {
     @ApiModelProperty(value = "订单编号")
     private String orderSn;
 
-    @ApiModelProperty(value = "提交时间")
-    private Date createTime;
-
     @ApiModelProperty(value = "用户账号")
     private String username;
 
@@ -42,11 +39,11 @@ public class OmsOrder implements Serializable {
     @ApiModelProperty(value = "评价时间")
     private Date commentTime;
 
+    @ApiModelProperty(value = "提交时间")
+    private Date createTime;
+
     @ApiModelProperty(value = "修改时间")
     private Date modifyTime;
-
-    @ApiModelProperty(value = "房间id")
-    private Long roomId;
 
     @ApiModelProperty(value = "房间名")
     private String roomName;
@@ -76,14 +73,6 @@ public class OmsOrder implements Serializable {
 
     public void setOrderSn(String orderSn) {
         this.orderSn = orderSn;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
     }
 
     public String getUsername() {
@@ -158,20 +147,20 @@ public class OmsOrder implements Serializable {
         this.commentTime = commentTime;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
     public Date getModifyTime() {
         return modifyTime;
     }
 
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
-    }
-
-    public Long getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
     }
 
     public String getRoomName() {
@@ -214,7 +203,6 @@ public class OmsOrder implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", orderSn=").append(orderSn);
-        sb.append(", createTime=").append(createTime);
         sb.append(", username=").append(username);
         sb.append(", payAmount=").append(payAmount);
         sb.append(", payType=").append(payType);
@@ -224,8 +212,8 @@ public class OmsOrder implements Serializable {
         sb.append(", note=").append(note);
         sb.append(", paymentTime=").append(paymentTime);
         sb.append(", commentTime=").append(commentTime);
+        sb.append(", createTime=").append(createTime);
         sb.append(", modifyTime=").append(modifyTime);
-        sb.append(", roomId=").append(roomId);
         sb.append(", roomName=").append(roomName);
         sb.append(", floor=").append(floor);
         sb.append(", serial=").append(serial);

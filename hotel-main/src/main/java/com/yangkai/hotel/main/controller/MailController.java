@@ -1,6 +1,5 @@
 package com.yangkai.hotel.main.controller;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import com.yangkai.hotel.commons.api.CommonResult;
 import com.yangkai.hotel.commons.util.CommonsUtil;
 import com.yangkai.hotel.main.service.MailService;

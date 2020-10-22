@@ -4,6 +4,7 @@ import cn.hutool.core.lang.Snowflake;
 import com.yangkai.hotel.commons.api.CommonPage;
 import com.yangkai.hotel.commons.api.CommonResult;
 import com.yangkai.hotel.main.bo.AdminUserDetails;
+import com.yangkai.hotel.main.dto.OmsOrderQueryParam;
 import com.yangkai.hotel.main.dto.OmsOrderSubmitDto;
 import com.yangkai.hotel.main.service.OmsOrderService;
 import com.yangkai.hotel.mbg.model.OmsOrder;
@@ -54,6 +55,7 @@ public class OmsOrderController {
     public CommonResult<CommonPage<OmsOrder>> listVip(OmsOrder omsOrderQueryParam,
                                                    @RequestParam(value = "pageSize", defaultValue = "5") Integer pageSize,
                                                    @RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum) {
+
         List<OmsOrder> orderList = omsOrderService.list(omsOrderQueryParam, pageSize, pageNum,false);
         return CommonResult.success(CommonPage.restPage(orderList));
     }
@@ -66,6 +68,28 @@ public class OmsOrderController {
         return CommonResult.success(CommonPage.restPage(orderList));
     }
 
+
+    @ApiOperation("创建订单")
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public CommonResult create(OmsOrderQueryParam omsOrderQueryParam ) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
+        OmsOrderQueryParam orderParam=new OmsOrderQueryParam();
+        orderParam.setUsername(username);
+        orderParam.setCreateTime(new Date());
+        orderParam.setOrderSn(Long.toString(snowflake.nextId()));
+        orderParam.setStatus(0);
+        orderParam.setRoomId(omsOrderQueryParam.getRoomId());
+        orderParam.setFloor(omsOrderQueryParam.getFloor());
+        orderParam.setRoomName(omsOrderQueryParam.getRoomName());
+        orderParam.setNote(omsOrderQueryParam.getNote());
+        int  count = omsOrderService.insert(orderParam);
+        if (count==1){
+            return CommonResult.success("订单创建成功");
+        }else {
+            return CommonResult.failed("订单创建失败");
+        }
+    }
     @ApiOperation("内部人员取消订单")
     @RequestMapping(value = "/cancel/vip/{orderId}", method = RequestMethod.GET)
     public CommonResult cancelVip(@NotNull @PathVariable Long orderId) {
@@ -76,31 +100,8 @@ public class OmsOrderController {
             return CommonResult.success("订单取消成功");
         }
     }
-
-    @ApiOperation("创建订单")
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public CommonResult create(OmsOrder omsOrderQueryParam) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
-        OmsOrder order=new OmsOrder();
-        order.setUsername(username);
-        order.setCreateTime(new Date());
-        order.setOrderSn(Long.toString(snowflake.nextId()));
-        order.setStatus(0);
-        order.setRoomId(omsOrderQueryParam.getRoomId());
-        order.setFloor(omsOrderQueryParam.getFloor());
-        order.setRoomName(omsOrderQueryParam.getRoomName());
-        order.setNote(omsOrderQueryParam.getNote());
-        OmsOrder result = omsOrderService.insert(order);
-        if (result==null){
-            return CommonResult.failed("订单创建失败");
-        }else {
-            return CommonResult.success("订单创建成功");
-        }
-    }
-
     @ApiOperation("用户取消订单")
-    @RequestMapping(value = "/cancel/user/{orderId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/cancel/user/{orderId}", method = RequestMethod.POST)
     public CommonResult cancelUser(@NotNull @PathVariable Long orderId) {
         int count = omsOrderService.cancel(orderId,false);
         if (count == 0) {

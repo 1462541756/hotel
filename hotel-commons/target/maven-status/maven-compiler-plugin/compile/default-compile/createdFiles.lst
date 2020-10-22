@@ -1,5 +1,6 @@
 com\yangkai\hotel\commons\exception\GlobalExceptionHandler.class
 com\yangkai\hotel\commons\exception\Asserts.class
+com\yangkai\hotel\commons\util\CommonsUtil.class
 com\yangkai\hotel\commons\exception\ApiException.class
 com\yangkai\hotel\commons\api\IErrorCode.class
 com\yangkai\hotel\commons\api\CommonPage.class
