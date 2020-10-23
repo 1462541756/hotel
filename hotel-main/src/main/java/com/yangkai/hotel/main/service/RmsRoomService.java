@@ -22,4 +22,6 @@ public interface RmsRoomService {
     int addRoom(RmsRoom room);
 
     int deleteById(Long id);
+
+    int updateRoomsStatus(Integer status, List<Long> ids);
 }

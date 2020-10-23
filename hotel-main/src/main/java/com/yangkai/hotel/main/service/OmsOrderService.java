@@ -61,4 +61,6 @@ public interface OmsOrderService {
     int cancel(Long orderId,boolean isVip);
 
     int submit(Long orderId,Integer payType);
+
+    int commit(Long orderId, String commitPassword);
 }

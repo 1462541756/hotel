@@ -1,6 +1,7 @@
 package com.yangkai.hotel.main.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.sun.org.apache.regexp.internal.RE;
 import com.yangkai.hotel.main.bo.AdminUserDetails;
 import com.yangkai.hotel.main.dao.OmsOrderDao;
 import com.yangkai.hotel.main.dto.OmsOrderQueryParam;
@@ -125,28 +126,40 @@ public class OmsOrderServiceImpl implements OmsOrderService {
         if (omsOrderQueryParam.getStatus()!=null){
             criteria.andStatusEqualTo(omsOrderQueryParam.getStatus());
         }
+        example.setOrderByClause("status");
         return  omsOrderMapper.selectByExample(example);
     }
     @Override
     public int cancel(Long orderId,boolean isVip){
+        OmsOrder order=omsOrderMapper.selectByPrimaryKey(orderId);
         //用户只能取消自己的订单，操作员可以取消所有人的订单
         if (!isVip){
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
-            if (username==null)return 0;
-            OmsOrder order=omsOrderMapper.selectByPrimaryKey(orderId);
-            if (order==null||!username.equals(order.getUsername())){
+            if (username==null){
+                //用户未登录
                 return 0;
             }
+            if (order==null||!username.equals(order.getUsername())){
+                //该订单不属于登录者账号
+                return 1;
+            }
         }
-        //只能取消未付款的订单
-        OmsOrderExample example=new OmsOrderExample();
-        example.createCriteria().andIdEqualTo(orderId).andStatusEqualTo(0);
-        List<OmsOrder> orders=omsOrderMapper.selectByExample(example);
-        if (orders.size()==0){
-            return 0;
+
+        if (order.getStatus()!=0){
+            //只能取消未付款的订单
+            return 2;
         }
-        return omsOrderDao.deleteById(orderId);
+
+        order.setStatus(2);
+
+        if (omsOrderMapper.updateByPrimaryKeySelective(order)!=1){
+            //修改失败
+            return 3;
+        }else {
+            //修改成功
+            return 4;
+        }
     }
 
 
@@ -157,6 +170,17 @@ public class OmsOrderServiceImpl implements OmsOrderService {
         order.setPayType(payType);
         order.setId(orderId);
         return  omsOrderMapper.updateByPrimaryKeySelective(order);
+    }
+
+    public int commit(Long orderId, String commitPassword){
+        //未实现支付接口先用固定字符模拟
+        if (!"123456".equals(commitPassword)){
+            return 0;
+        }
+        OmsOrder order=new OmsOrder();
+        order.setId(orderId);
+        order.setStatus(1);
+        return omsOrderMapper.updateByPrimaryKeySelective(order);
     }
 
 }

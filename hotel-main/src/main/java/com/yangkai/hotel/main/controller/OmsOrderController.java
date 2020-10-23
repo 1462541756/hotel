@@ -38,16 +38,11 @@ public class OmsOrderController {
     @Autowired
     Snowflake snowflake;
 
-    /**
-     * 通过主键查询单条数据
-     *
-     * @param id 主键
-     * @return 单条数据
-     */
-    @GetMapping("/getOrderById")
+
     @ApiOperation("通过id查询订单")
-    public OmsOrder getOrderById(Long id) {
-        return this.omsOrderService.queryById(id);
+    @RequestMapping(value = "/getOrderById/{orderID}", method = RequestMethod.GET)
+    public CommonResult<OmsOrder> getOrderById(@PathVariable Long orderID) {
+        return CommonResult.success(this.omsOrderService.queryById(orderID));
     }
 
     @ApiOperation("用户分页查询订单")
@@ -93,32 +88,50 @@ public class OmsOrderController {
     @ApiOperation("内部人员取消订单")
     @RequestMapping(value = "/cancel/vip/{orderId}", method = RequestMethod.GET)
     public CommonResult cancelVip(@NotNull @PathVariable Long orderId) {
-        int count = omsOrderService.cancel(orderId,true);
-        if (count == 0) {
-            return CommonResult.failed("订单取消失败");
-        } else {
-            return CommonResult.success("订单取消成功");
+        int result = omsOrderService.cancel(orderId,true);
+        switch(result){
+            case 0:return CommonResult.failed("用户未登录");
+            case 1:return CommonResult.failed("该订单不属于登录者账号");
+            case 2:return CommonResult.failed("只能取消未付款的订单");
+            case 3:return CommonResult.failed("取消失败");
+            case 4:return CommonResult.success("取消成功");
+            default:return CommonResult.failed("取消失败");
         }
     }
     @ApiOperation("用户取消订单")
     @RequestMapping(value = "/cancel/user/{orderId}", method = RequestMethod.POST)
     public CommonResult cancelUser(@NotNull @PathVariable Long orderId) {
-        int count = omsOrderService.cancel(orderId,false);
-        if (count == 0) {
-            return CommonResult.failed("订单取消失败");
-        } else {
-            return CommonResult.success("订单取消成功");
+        int result = omsOrderService.cancel(orderId,false);
+        switch(result){
+            case 0:return CommonResult.failed("用户未登录");
+            case 1:return CommonResult.failed("该订单不属于登录者账号");
+            case 2:return CommonResult.failed("只能取消未付款的订单");
+            case 3:return CommonResult.failed("取消失败");
+            case 4:return CommonResult.success("取消成功");
+            default:return CommonResult.failed("取消失败");
         }
     }
 
     @ApiOperation("用户支付")
-    @RequestMapping(value = "/submit/", method = RequestMethod.POST)
+    @RequestMapping(value = "/submit", method = RequestMethod.POST)
     public CommonResult submit(OmsOrderSubmitDto omsOrderSubmitDto) {
         int count = omsOrderService.submit(omsOrderSubmitDto.getOrderId(),omsOrderSubmitDto.getPayType());
         if (count == 0) {
             return CommonResult.failed("支付失败");
         } else {
             return CommonResult.success("支付成功");
+        }
+    }
+
+    @ApiOperation("线下支付（内部人员操作）")
+    @RequestMapping(value = "/commit", method = RequestMethod.POST)
+    public CommonResult commit(@RequestParam(value = "orderId") Long orderId,
+                                @RequestParam(value = "commitPassword") String commitPassword) {
+        int count = omsOrderService.commit(orderId,commitPassword);
+        if (count == 0) {
+            return CommonResult.failed("提交失败");
+        } else {
+            return CommonResult.success("提交成功");
         }
     }
 

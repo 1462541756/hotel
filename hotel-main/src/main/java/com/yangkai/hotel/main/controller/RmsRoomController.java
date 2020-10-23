@@ -2,6 +2,7 @@ package com.yangkai.hotel.main.controller;
 
 import com.yangkai.hotel.commons.api.CommonPage;
 import com.yangkai.hotel.commons.api.CommonResult;
+import com.yangkai.hotel.main.dto.UpdateRoomsStatusParams;
 import com.yangkai.hotel.main.service.RmsRoomService;
 import com.yangkai.hotel.mbg.model.RmsRoom;
 import io.swagger.annotations.Api;
@@ -9,6 +10,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -67,6 +70,16 @@ public class RmsRoomController {
     public CommonResult deleteById(@PathVariable Long id) {
 
         int count = roomService.deleteById(id);
+        if (count > 0) {
+            return CommonResult.success(count);
+        }
+        return CommonResult.failed();
+    }
+
+    @ApiOperation("批量启动/停用房间")
+    @RequestMapping(value = "/updateRoomsStatus", method = RequestMethod.POST)
+    public CommonResult updateRoomsStatus(@RequestBody UpdateRoomsStatusParams params) {
+        int count = roomService.updateRoomsStatus(params.getStatus(), Arrays.asList(params.getIds()));
         if (count > 0) {
             return CommonResult.success(count);
         }

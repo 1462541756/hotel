@@ -6,6 +6,7 @@ import com.yangkai.hotel.main.service.RmsRoomService;
 import com.yangkai.hotel.mbg.mapper.RmsRoomMapper;
 import com.yangkai.hotel.mbg.model.RmsRoom;
 import com.yangkai.hotel.mbg.model.RmsRoomExample;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -71,6 +72,15 @@ public class RmsRoomServiceImpl implements RmsRoomService {
     @Override
     public int deleteById(Long id) {
         return rmsRoomDao.deleteById(id);
+    }
+    @Override
+    public int updateRoomsStatus(Integer status, List<Long> ids){
+        RmsRoomExample example = new RmsRoomExample();
+        RmsRoomExample.Criteria criteria = example.createCriteria();
+        criteria.andIdIn(ids);
+        RmsRoom room=new RmsRoom();
+        room.setStatus(status);
+        return rmsRoomMapper.updateByExampleSelective(room, example);
     }
 
 }
