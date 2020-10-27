@@ -106,6 +106,10 @@ public class UmsRoleServiceImpl implements UmsRoleService {
         example.createCriteria().andRoleIdEqualTo(roleId);
         roleMenuRelationMapper.deleteByExample(example);
 
+        if (menuIds==null||menuIds.size()==0){
+            return 1;
+        }
+
         //批量插入新关系
         List<UmsRoleMenuRelation> relationList = new ArrayList<>();
         for (Long menuId : menuIds) {
@@ -123,6 +127,11 @@ public class UmsRoleServiceImpl implements UmsRoleService {
         UmsRoleResourceRelationExample example=new UmsRoleResourceRelationExample();
         example.createCriteria().andRoleIdEqualTo(roleId);
         roleResourceRelationMapper.deleteByExample(example);
+
+        if (resourceIds==null||resourceIds.size()==0){
+            return 1;
+        }
+
         //批量插入新关系
         List<UmsRoleResourceRelation> relationList = new ArrayList<>();
         for (Long resourceId : resourceIds) {
@@ -132,5 +141,10 @@ public class UmsRoleServiceImpl implements UmsRoleService {
             relationList.add(relation);
         }
         return roleResourceRelationDao.insertList(relationList);
+    }
+
+    @Override
+    public List<UmsRole> getRoles(Long id){
+        return roleDao.getRolesByUserId(id);
     }
 }

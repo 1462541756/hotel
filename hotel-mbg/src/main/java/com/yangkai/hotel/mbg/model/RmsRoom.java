@@ -24,7 +24,7 @@ public class RmsRoom implements Serializable {
     private String description;
 
     @ApiModelProperty(value = "楼层数")
-    private String floor;
+    private Integer floor;
 
     @ApiModelProperty(value = "房间序号")
     private String serial;
@@ -88,11 +88,11 @@ public class RmsRoom implements Serializable {
         this.description = description;
     }
 
-    public String getFloor() {
+    public Integer getFloor() {
         return floor;
     }
 
-    public void setFloor(String floor) {
+    public void setFloor(Integer floor) {
         this.floor = floor;
     }
 

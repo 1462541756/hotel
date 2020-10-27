@@ -125,13 +125,15 @@ public class OmsOrderController {
 
     @ApiOperation("线下支付（内部人员操作）")
     @RequestMapping(value = "/commit", method = RequestMethod.POST)
-    public CommonResult commit(@RequestParam(value = "orderId") Long orderId,
-                                @RequestParam(value = "commitPassword") String commitPassword) {
-        int count = omsOrderService.commit(orderId,commitPassword);
-        if (count == 0) {
-            return CommonResult.failed("提交失败");
-        } else {
-            return CommonResult.success("提交成功");
+    public CommonResult commit(@NotNull @RequestParam(value = "orderId") Long orderId,
+                               @NotNull @RequestParam(value = "commitPassword") String commitPassword) {
+        int result = omsOrderService.commit(orderId,commitPassword);
+        if (result == 0) {
+            return CommonResult.failed("支付失败");
+        }else if(result==-1){
+            return CommonResult.failed("密码错误");
+        } else{
+            return CommonResult.success("支付成功");
         }
     }
 

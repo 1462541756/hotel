@@ -8,7 +8,7 @@
     <result column="clean" jdbcType="INTEGER" property="clean" />
     <result column="maintenance" jdbcType="INTEGER" property="maintenance" />
     <result column="description" jdbcType="VARCHAR" property="description" />
-    <result column="floor" jdbcType="VARCHAR" property="floor" />
+    <result column="floor" jdbcType="INTEGER" property="floor" />
     <result column="serial" jdbcType="VARCHAR" property="serial" />
     <result column="sort" jdbcType="BIGINT" property="sort" />
     <result column="price" jdbcType="DECIMAL" property="price" />
@@ -114,7 +114,7 @@
       serial, sort, price, 
       pic)
     values (#{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{clean,jdbcType=INTEGER}, 
-      #{maintenance,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, 
+      #{maintenance,jdbcType=INTEGER}, #{description,jdbcType=VARCHAR}, #{floor,jdbcType=INTEGER}, 
       #{serial,jdbcType=VARCHAR}, #{sort,jdbcType=BIGINT}, #{price,jdbcType=DECIMAL}, 
       #{pic,jdbcType=VARCHAR})
   </insert>
@@ -172,7 +172,7 @@
         #{description,jdbcType=VARCHAR},
       </if>
       <if test="floor != null">
-        #{floor,jdbcType=VARCHAR},
+        #{floor,jdbcType=INTEGER},
       </if>
       <if test="serial != null">
         #{serial,jdbcType=VARCHAR},
@@ -216,7 +216,7 @@
         description = #{record.description,jdbcType=VARCHAR},
       </if>
       <if test="record.floor != null">
-        floor = #{record.floor,jdbcType=VARCHAR},
+        floor = #{record.floor,jdbcType=INTEGER},
       </if>
       <if test="record.serial != null">
         serial = #{record.serial,jdbcType=VARCHAR},
@@ -243,7 +243,7 @@
       clean = #{record.clean,jdbcType=INTEGER},
       maintenance = #{record.maintenance,jdbcType=INTEGER},
       description = #{record.description,jdbcType=VARCHAR},
-      floor = #{record.floor,jdbcType=VARCHAR},
+      floor = #{record.floor,jdbcType=INTEGER},
       serial = #{record.serial,jdbcType=VARCHAR},
       sort = #{record.sort,jdbcType=BIGINT},
       price = #{record.price,jdbcType=DECIMAL},
@@ -271,7 +271,7 @@
         description = #{description,jdbcType=VARCHAR},
       </if>
       <if test="floor != null">
-        floor = #{floor,jdbcType=VARCHAR},
+        floor = #{floor,jdbcType=INTEGER},
       </if>
       <if test="serial != null">
         serial = #{serial,jdbcType=VARCHAR},
@@ -295,7 +295,7 @@
       clean = #{clean,jdbcType=INTEGER},
       maintenance = #{maintenance,jdbcType=INTEGER},
       description = #{description,jdbcType=VARCHAR},
-      floor = #{floor,jdbcType=VARCHAR},
+      floor = #{floor,jdbcType=INTEGER},
       serial = #{serial,jdbcType=VARCHAR},
       sort = #{sort,jdbcType=BIGINT},
       price = #{price,jdbcType=DECIMAL},

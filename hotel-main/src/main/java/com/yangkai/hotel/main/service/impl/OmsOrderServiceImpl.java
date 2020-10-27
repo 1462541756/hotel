@@ -107,11 +107,14 @@ public class OmsOrderServiceImpl implements OmsOrderService {
             String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
             criteria.andUsernameEqualTo(username);
         }else {
-            if (omsOrderQueryParam.getUsername()!=null){
+            if (omsOrderQueryParam.getUsername()!=null&&!omsOrderQueryParam.getUsername().equals("")){
             criteria.andUsernameLike("%"+omsOrderQueryParam.getUsername()+"%");
             }
         }
-        if (omsOrderQueryParam.getOrderSn()!=null){
+        if (omsOrderQueryParam.getCardId()!=null &&!omsOrderQueryParam.getCardId().equals("")){
+            criteria.andCardIdLike("%"+omsOrderQueryParam.getCardId()+"%");
+        }
+        if (omsOrderQueryParam.getOrderSn()!=null &&!omsOrderQueryParam.getOrderSn().equals("")){
             criteria.andOrderSnLike("%"+omsOrderQueryParam.getOrderSn()+"%");
         }
         if (omsOrderQueryParam.getSourceType()!=null){
@@ -175,11 +178,12 @@ public class OmsOrderServiceImpl implements OmsOrderService {
     public int commit(Long orderId, String commitPassword){
         //未实现支付接口先用固定字符模拟
         if (!"123456".equals(commitPassword)){
-            return 0;
+            return -1;
         }
         OmsOrder order=new OmsOrder();
         order.setId(orderId);
         order.setStatus(1);
+
         return omsOrderMapper.updateByPrimaryKeySelective(order);
     }
 

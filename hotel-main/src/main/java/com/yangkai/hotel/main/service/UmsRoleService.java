@@ -64,4 +64,6 @@ public interface UmsRoleService {
      */
     @Transactional
     int allocResource(Long roleId, List<Long> resourceIds);
+
+    List<UmsRole> getRoles(Long id);
 }

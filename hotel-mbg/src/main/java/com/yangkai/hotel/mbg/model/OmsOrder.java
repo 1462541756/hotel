@@ -49,13 +49,26 @@ public class OmsOrder implements Serializable {
     private String roomName;
 
     @ApiModelProperty(value = "楼层号")
-    private String floor;
+    private Integer floor;
 
     @ApiModelProperty(value = "房间号")
     private String serial;
 
     @ApiModelProperty(value = "房间图片")
     private String pic;
+
+    @ApiModelProperty(value = "房间id")
+    private Long roomId;
+
+    @ApiModelProperty(value = "身份证号")
+    private String cardId;
+
+    @ApiModelProperty(value = "登记入住状态：0->未登记入住；1->已登记入住；2->已退房")
+    private Integer registerStatus;
+
+    private Date checkInTime;
+
+    private Date checkOutTime;
 
     private static final long serialVersionUID = 1L;
 
@@ -171,11 +184,11 @@ public class OmsOrder implements Serializable {
         this.roomName = roomName;
     }
 
-    public String getFloor() {
+    public Integer getFloor() {
         return floor;
     }
 
-    public void setFloor(String floor) {
+    public void setFloor(Integer floor) {
         this.floor = floor;
     }
 
@@ -193,6 +206,46 @@ public class OmsOrder implements Serializable {
 
     public void setPic(String pic) {
         this.pic = pic;
+    }
+
+    public Long getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(Long roomId) {
+        this.roomId = roomId;
+    }
+
+    public String getCardId() {
+        return cardId;
+    }
+
+    public void setCardId(String cardId) {
+        this.cardId = cardId;
+    }
+
+    public Integer getRegisterStatus() {
+        return registerStatus;
+    }
+
+    public void setRegisterStatus(Integer registerStatus) {
+        this.registerStatus = registerStatus;
+    }
+
+    public Date getCheckInTime() {
+        return checkInTime;
+    }
+
+    public void setCheckInTime(Date checkInTime) {
+        this.checkInTime = checkInTime;
+    }
+
+    public Date getCheckOutTime() {
+        return checkOutTime;
+    }
+
+    public void setCheckOutTime(Date checkOutTime) {
+        this.checkOutTime = checkOutTime;
     }
 
     @Override
@@ -218,6 +271,11 @@ public class OmsOrder implements Serializable {
         sb.append(", floor=").append(floor);
         sb.append(", serial=").append(serial);
         sb.append(", pic=").append(pic);
+        sb.append(", roomId=").append(roomId);
+        sb.append(", cardId=").append(cardId);
+        sb.append(", registerStatus=").append(registerStatus);
+        sb.append(", checkInTime=").append(checkInTime);
+        sb.append(", checkOutTime=").append(checkOutTime);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

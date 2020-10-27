@@ -61,5 +61,12 @@
         GROUP BY
             r.id
     </select>
+    <select id="getRolesByUserId" resultType="com.yangkai.hotel.mbg.model.UmsRole">
+        select
+            role.*
+        from ums_admin_role_relation as rr
+        left join ums_role as  role on rr.role_id=role.id
+        where rr.admin_id=#{id}
+    </select>
 
 </mapper>

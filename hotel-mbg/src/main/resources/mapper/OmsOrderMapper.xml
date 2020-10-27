@@ -16,9 +16,14 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
     <result column="room_name" jdbcType="VARCHAR" property="roomName" />
-    <result column="floor" jdbcType="VARCHAR" property="floor" />
+    <result column="floor" jdbcType="INTEGER" property="floor" />
     <result column="serial" jdbcType="VARCHAR" property="serial" />
     <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="room_id" jdbcType="BIGINT" property="roomId" />
+    <result column="card_id" jdbcType="VARCHAR" property="cardId" />
+    <result column="register_status" jdbcType="INTEGER" property="registerStatus" />
+    <result column="check_in_time" jdbcType="TIMESTAMP" property="checkInTime" />
+    <result column="check_out_time" jdbcType="TIMESTAMP" property="checkOutTime" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -80,7 +85,8 @@
   </sql>
   <sql id="Base_Column_List">
     id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, 
-    payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic
+    payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic, 
+    room_id, card_id, register_status, check_in_time, check_out_time
   </sql>
   <select id="selectByExample" parameterType="com.yangkai.hotel.mbg.model.OmsOrderExample" resultMap="BaseResultMap">
     select
@@ -121,13 +127,17 @@
       order_type, note, payment_time, 
       comment_time, create_time, modify_time, 
       room_name, floor, serial, 
-      pic)
+      pic, room_id, card_id, 
+      register_status, check_in_time, check_out_time
+      )
     values (#{orderSn,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{payAmount,jdbcType=DECIMAL}, 
       #{payType,jdbcType=INTEGER}, #{sourceType,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
       #{orderType,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, #{paymentTime,jdbcType=TIMESTAMP}, 
       #{commentTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, 
-      #{roomName,jdbcType=VARCHAR}, #{floor,jdbcType=VARCHAR}, #{serial,jdbcType=VARCHAR}, 
-      #{pic,jdbcType=VARCHAR})
+      #{roomName,jdbcType=VARCHAR}, #{floor,jdbcType=INTEGER}, #{serial,jdbcType=VARCHAR}, 
+      #{pic,jdbcType=VARCHAR}, #{roomId,jdbcType=BIGINT}, #{cardId,jdbcType=VARCHAR}, 
+      #{registerStatus,jdbcType=INTEGER}, #{checkInTime,jdbcType=TIMESTAMP}, #{checkOutTime,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.yangkai.hotel.mbg.model.OmsOrder">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
@@ -183,6 +193,21 @@
       <if test="pic != null">
         pic,
       </if>
+      <if test="roomId != null">
+        room_id,
+      </if>
+      <if test="cardId != null">
+        card_id,
+      </if>
+      <if test="registerStatus != null">
+        register_status,
+      </if>
+      <if test="checkInTime != null">
+        check_in_time,
+      </if>
+      <if test="checkOutTime != null">
+        check_out_time,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="orderSn != null">
@@ -225,13 +250,28 @@
         #{roomName,jdbcType=VARCHAR},
       </if>
       <if test="floor != null">
-        #{floor,jdbcType=VARCHAR},
+        #{floor,jdbcType=INTEGER},
       </if>
       <if test="serial != null">
         #{serial,jdbcType=VARCHAR},
       </if>
       <if test="pic != null">
         #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="roomId != null">
+        #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="cardId != null">
+        #{cardId,jdbcType=VARCHAR},
+      </if>
+      <if test="registerStatus != null">
+        #{registerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkInTime != null">
+        #{checkInTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkOutTime != null">
+        #{checkOutTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -287,13 +327,28 @@
         room_name = #{record.roomName,jdbcType=VARCHAR},
       </if>
       <if test="record.floor != null">
-        floor = #{record.floor,jdbcType=VARCHAR},
+        floor = #{record.floor,jdbcType=INTEGER},
       </if>
       <if test="record.serial != null">
         serial = #{record.serial,jdbcType=VARCHAR},
       </if>
       <if test="record.pic != null">
         pic = #{record.pic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomId != null">
+        room_id = #{record.roomId,jdbcType=BIGINT},
+      </if>
+      <if test="record.cardId != null">
+        card_id = #{record.cardId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registerStatus != null">
+        register_status = #{record.registerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.checkInTime != null">
+        check_in_time = #{record.checkInTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.checkOutTime != null">
+        check_out_time = #{record.checkOutTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null">
@@ -316,9 +371,14 @@
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
       room_name = #{record.roomName,jdbcType=VARCHAR},
-      floor = #{record.floor,jdbcType=VARCHAR},
+      floor = #{record.floor,jdbcType=INTEGER},
       serial = #{record.serial,jdbcType=VARCHAR},
-      pic = #{record.pic,jdbcType=VARCHAR}
+      pic = #{record.pic,jdbcType=VARCHAR},
+      room_id = #{record.roomId,jdbcType=BIGINT},
+      card_id = #{record.cardId,jdbcType=VARCHAR},
+      register_status = #{record.registerStatus,jdbcType=INTEGER},
+      check_in_time = #{record.checkInTime,jdbcType=TIMESTAMP},
+      check_out_time = #{record.checkOutTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -366,13 +426,28 @@
         room_name = #{roomName,jdbcType=VARCHAR},
       </if>
       <if test="floor != null">
-        floor = #{floor,jdbcType=VARCHAR},
+        floor = #{floor,jdbcType=INTEGER},
       </if>
       <if test="serial != null">
         serial = #{serial,jdbcType=VARCHAR},
       </if>
       <if test="pic != null">
         pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="roomId != null">
+        room_id = #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="cardId != null">
+        card_id = #{cardId,jdbcType=VARCHAR},
+      </if>
+      <if test="registerStatus != null">
+        register_status = #{registerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkInTime != null">
+        check_in_time = #{checkInTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="checkOutTime != null">
+        check_out_time = #{checkOutTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -392,9 +467,14 @@
       create_time = #{createTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP},
       room_name = #{roomName,jdbcType=VARCHAR},
-      floor = #{floor,jdbcType=VARCHAR},
+      floor = #{floor,jdbcType=INTEGER},
       serial = #{serial,jdbcType=VARCHAR},
-      pic = #{pic,jdbcType=VARCHAR}
+      pic = #{pic,jdbcType=VARCHAR},
+      room_id = #{roomId,jdbcType=BIGINT},
+      card_id = #{cardId,jdbcType=VARCHAR},
+      register_status = #{registerStatus,jdbcType=INTEGER},
+      check_in_time = #{checkInTime,jdbcType=TIMESTAMP},
+      check_out_time = #{checkOutTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

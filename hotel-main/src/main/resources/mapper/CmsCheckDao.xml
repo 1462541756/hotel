@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangkai.hotel.main.dao.CmsCheckDao">
+
+    <resultMap type="com.yangkai.hotel.mbg.model.CmsCheck" id="CmsCheckMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="orderId" column="order_id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="cardId" column="card_id" jdbcType="VARCHAR"/>
+        <result property="checkInTime" column="check_in_time" jdbcType="TIMESTAMP"/>
+        <result property="checkOutTime" column="check_out_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CmsCheckMap">
+        select
+          id, order_id, name, card_id, check_in_time, check_out_time
+        from hotel.cms_check
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="CmsCheckMap">
+        select
+          id, order_id, name, card_id, check_in_time, check_out_time
+        from hotel.cms_check
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="CmsCheckMap">
+        select
+        id, order_id, name, card_id, check_in_time, check_out_time
+        from hotel.cms_check
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="orderId != null">
+                and order_id = #{orderId}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="cardId != null and cardId != ''">
+                and card_id = #{cardId}
+            </if>
+            <if test="checkInTime != null">
+                and check_in_time = #{checkInTime}
+            </if>
+            <if test="checkOutTime != null">
+                and check_out_time = #{checkOutTime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.cms_check(order_id, name, card_id, check_in_time, check_out_time)
+        values (#{orderId}, #{name}, #{cardId}, #{checkInTime}, #{checkOutTime})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.cms_check(order_id, name, card_id, check_in_time, check_out_time)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.orderId}, #{entity.name}, #{entity.cardId}, #{entity.checkInTime}, #{entity.checkOutTime})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.cms_check(order_id, name, card_id, check_in_time, check_out_time)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.orderId}, #{entity.name}, #{entity.cardId}, #{entity.checkInTime}, #{entity.checkOutTime})
+        </foreach>
+        on duplicate key update
+        order_id = values(order_id) , name = values(name) , card_id = values(card_id) , check_in_time =
+        values(check_in_time) , check_out_time = values(check_out_time)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update hotel.cms_check
+        <set>
+            <if test="orderId != null">
+                order_id = #{orderId},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="cardId != null and cardId != ''">
+                card_id = #{cardId},
+            </if>
+            <if test="checkInTime != null">
+                check_in_time = #{checkInTime},
+            </if>
+            <if test="checkOutTime != null">
+                check_out_time = #{checkOutTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from hotel.cms_check where id = #{id}
+    </delete>
+
+    <resultMap type="com.yangkai.hotel.main.dto.RoomOptionDto" id="options">
+        <result property="label" column="floor" jdbcType="VARCHAR"/>
+        <result property="value" column="floor" jdbcType="INTEGER"/>
+        <collection property="children"  ofType="com.yangkai.hotel.main.dto.RoomOptionDto">
+            <result property="label" column="serial" jdbcType="VARCHAR"/>
+            <result property="value" column="id" jdbcType="INTEGER"/>
+        </collection>
+
+    </resultMap>
+
+    <select id="fetchOptions" resultMap="options">
+            select floor, serial ,id from rms_room
+    </select>
+
+    <resultMap type="com.yangkai.hotel.main.dto.CheckDetail" id="detailMap">
+        <result property="orderId" column="id" jdbcType="INTEGER"/>
+        <result property="orderSn" column="order_sn" jdbcType="VARCHAR"/>
+        <result property="roomName" column="room_name" jdbcType="VARCHAR"/>
+        <result property="floor" column="floor" jdbcType="INTEGER"/>
+        <result property="serial" column="serial" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="registerStatus" column="register_status" jdbcType="INTEGER"/>
+        <collection property="people"  ofType="com.yangkai.hotel.mbg.model.CmsCheck">
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="cardId" column="card_id" jdbcType="VARCHAR"/>
+            <result property="checkInTime" column="check_in_time" jdbcType="TIMESTAMP"/>
+            <result property="checkOutTime" column="check_out_time" jdbcType="TIMESTAMP"/>
+        </collection>
+    </resultMap>
+    <select id="getDetail" resultMap="detailMap">
+        select
+            o.id as id,
+            o.order_sn as order_sn,
+            o.room_name as room_name,
+            o.floor as floor,
+            o.serial as serial,
+            o.status as status,
+            o.register_status as register_status,
+            c.name as name,
+            c.card_id as card_id,
+            c.check_in_time as check_in_time,
+            c.check_out_time as check_out_time
+        from oms_order as o
+        left join cms_check as c on o.id=c.order_id
+        where o.order_sn=#{orderSn}
+    </select>
+</mapper>

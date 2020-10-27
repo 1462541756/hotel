@@ -31,14 +31,14 @@ public class RmsRoomServiceImpl implements RmsRoomService {
         PageHelper.startPage(pageNum, pageSize);
         RmsRoomExample example = new RmsRoomExample();
         RmsRoomExample.Criteria criteria = example.createCriteria();
-        if (room.getDescription() != null) {
+        if (room.getDescription() != null && !room.getDescription().equals("")) {
             criteria.andNameLike("%" + room.getName() + "%");
             criteria.andDescriptionLike("%" + room.getDescription() + "%");
         }
-        if (room.getFloor() != null) {
+        if (room.getFloor() != null ) {
             criteria.andFloorEqualTo( room.getFloor());
         }
-        if (room.getSerial() != null) {
+        if (room.getSerial() != null && !room.getSerial().equals("")) {
             criteria.andSerialEqualTo(room.getSerial() );
         }
         if (room.getClean() != null) {

@@ -2,6 +2,7 @@ package com.yangkai.hotel.main.dao;
 
 import com.yangkai.hotel.mbg.model.UmsMenu;
 import com.yangkai.hotel.mbg.model.UmsResource;
+import com.yangkai.hotel.mbg.model.UmsRole;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -16,4 +17,5 @@ public interface UmsRoleDao {
 
     List<UmsResource> getResourceListByRoleId(@Param("roleId") Long roleId);
 
+    List<UmsRole> getRolesByUserId(Long id);
 }
