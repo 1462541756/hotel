@@ -3,7 +3,7 @@
 <mapper namespace="com.yangkai.hotel.mbg.mapper.CmsCheckMapper">
   <resultMap id="BaseResultMap" type="com.yangkai.hotel.mbg.model.CmsCheck">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="order_id" jdbcType="BIGINT" property="orderId" />
+    <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="card_id" jdbcType="VARCHAR" property="cardId" />
     <result column="check_in_time" jdbcType="TIMESTAMP" property="checkInTime" />
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, order_id, name, card_id, check_in_time, check_out_time
+    id, order_sn, name, card_id, check_in_time, check_out_time
   </sql>
   <select id="selectByExample" parameterType="com.yangkai.hotel.mbg.model.CmsCheckExample" resultMap="BaseResultMap">
     select
@@ -104,9 +104,9 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into cms_check (order_id, name, card_id, 
+    insert into cms_check (order_sn, name, card_id, 
       check_in_time, check_out_time)
-    values (#{orderId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{cardId,jdbcType=VARCHAR}, 
+    values (#{orderSn,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{cardId,jdbcType=VARCHAR}, 
       #{checkInTime,jdbcType=TIMESTAMP}, #{checkOutTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.yangkai.hotel.mbg.model.CmsCheck">
@@ -115,8 +115,8 @@
     </selectKey>
     insert into cms_check
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="orderId != null">
-        order_id,
+      <if test="orderSn != null">
+        order_sn,
       </if>
       <if test="name != null">
         name,
@@ -132,8 +132,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="orderId != null">
-        #{orderId,jdbcType=BIGINT},
+      <if test="orderSn != null">
+        #{orderSn,jdbcType=VARCHAR},
       </if>
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
@@ -161,8 +161,8 @@
       <if test="record.id != null">
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.orderId != null">
-        order_id = #{record.orderId,jdbcType=BIGINT},
+      <if test="record.orderSn != null">
+        order_sn = #{record.orderSn,jdbcType=VARCHAR},
       </if>
       <if test="record.name != null">
         name = #{record.name,jdbcType=VARCHAR},
@@ -184,7 +184,7 @@
   <update id="updateByExample" parameterType="map">
     update cms_check
     set id = #{record.id,jdbcType=BIGINT},
-      order_id = #{record.orderId,jdbcType=BIGINT},
+      order_sn = #{record.orderSn,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
       card_id = #{record.cardId,jdbcType=VARCHAR},
       check_in_time = #{record.checkInTime,jdbcType=TIMESTAMP},
@@ -196,8 +196,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.yangkai.hotel.mbg.model.CmsCheck">
     update cms_check
     <set>
-      <if test="orderId != null">
-        order_id = #{orderId,jdbcType=BIGINT},
+      <if test="orderSn != null">
+        order_sn = #{orderSn,jdbcType=VARCHAR},
       </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
@@ -216,7 +216,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.yangkai.hotel.mbg.model.CmsCheck">
     update cms_check
-    set order_id = #{orderId,jdbcType=BIGINT},
+    set order_sn = #{orderSn,jdbcType=VARCHAR},
       name = #{name,jdbcType=VARCHAR},
       card_id = #{cardId,jdbcType=VARCHAR},
       check_in_time = #{checkInTime,jdbcType=TIMESTAMP},

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangkai.hotel.main.dao.EmsEventDao">
+
+    <resultMap type="com.yangkai.hotel.mbg.model.EmsEvent" id="EmsEventMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="subject" column="subject" jdbcType="VARCHAR"/>
+        <result property="type" column="type" jdbcType="INTEGER"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="checkTime" column="check_time" jdbcType="TIMESTAMP"/>
+        <result property="receiveTime" column="receive_time" jdbcType="TIMESTAMP"/>
+        <result property="finishTime" column="finish_time" jdbcType="TIMESTAMP"/>
+        <result property="checkStatus" column="check_status" jdbcType="INTEGER"/>
+        <result property="reportPeople" column="report_people" jdbcType="VARCHAR"/>
+        <result property="checkPeople" column="check_people" jdbcType="VARCHAR"/>
+        <result property="checkOpinion" column="check_opinion" jdbcType="VARCHAR"/>
+        <result property="handlePeople" column="handle_people" jdbcType="VARCHAR"/>
+        <result property="pic" column="pic" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="EmsEventMap">
+        select
+          id, subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people, check_people, check_opinion, handle_people, pic, status
+        from hotel.ems_event
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="EmsEventMap">
+        select
+          id, subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people, check_people, check_opinion, handle_people, pic, status
+        from hotel.ems_event
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="EmsEventMap">
+        select
+        id, subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people,
+        check_people, check_opinion, handle_people, pic, status
+        from hotel.ems_event
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="subject != null and subject != ''">
+                and subject = #{subject}
+            </if>
+            <if test="type != null">
+                and type = #{type}
+            </if>
+            <if test="description != null and description != ''">
+                and description = #{description}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="checkTime != null">
+                and check_time = #{checkTime}
+            </if>
+            <if test="receiveTime != null">
+                and receive_time = #{receiveTime}
+            </if>
+            <if test="finishTime != null">
+                and finish_time = #{finishTime}
+            </if>
+            <if test="checkStatus != null">
+                and check_status = #{checkStatus}
+            </if>
+            <if test="reportPeople != null and reportPeople != ''">
+                and report_people = #{reportPeople}
+            </if>
+            <if test="checkPeople != null and checkPeople != ''">
+                and check_people = #{checkPeople}
+            </if>
+            <if test="checkOpinion != null and checkOpinion != ''">
+                and check_opinion = #{checkOpinion}
+            </if>
+            <if test="handlePeople != null and handlePeople != ''">
+                and handle_people = #{handlePeople}
+            </if>
+            <if test="pic != null and pic != ''">
+                and pic = #{pic}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.ems_event(subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people, check_people, check_opinion, handle_people, pic, status)
+        values (#{subject}, #{type}, #{description}, #{createTime}, #{checkTime}, #{receiveTime}, #{finishTime}, #{checkStatus}, #{reportPeople}, #{checkPeople}, #{checkOpinion}, #{handlePeople}, #{pic}, #{status})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.ems_event(subject, type, description, create_time, check_time, receive_time, finish_time,
+        check_status, report_people, check_people, check_opinion, handle_people, pic, status)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.subject}, #{entity.type}, #{entity.description}, #{entity.createTime}, #{entity.checkTime},
+            #{entity.receiveTime}, #{entity.finishTime}, #{entity.checkStatus}, #{entity.reportPeople},
+            #{entity.checkPeople}, #{entity.checkOpinion}, #{entity.handlePeople}, #{entity.pic}, #{entity.status})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into hotel.ems_event(subject, type, description, create_time, check_time, receive_time, finish_time,
+        check_status, report_people, check_people, check_opinion, handle_people, pic, status)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.subject}, #{entity.type}, #{entity.description}, #{entity.createTime}, #{entity.checkTime},
+            #{entity.receiveTime}, #{entity.finishTime}, #{entity.checkStatus}, #{entity.reportPeople},
+            #{entity.checkPeople}, #{entity.checkOpinion}, #{entity.handlePeople}, #{entity.pic}, #{entity.status})
+        </foreach>
+        on duplicate key update
+        subject = values(subject) , type = values(type) , description = values(description) , create_time =
+        values(create_time) , check_time = values(check_time) , receive_time = values(receive_time) , finish_time =
+        values(finish_time) , check_status = values(check_status) , report_people = values(report_people) , check_people
+        = values(check_people) , check_opinion = values(check_opinion) , handle_people = values(handle_people) , pic =
+        values(pic) , status = values(status)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update hotel.ems_event
+        <set>
+            <if test="subject != null and subject != ''">
+                subject = #{subject},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="checkTime != null">
+                check_time = #{checkTime},
+            </if>
+            <if test="receiveTime != null">
+                receive_time = #{receiveTime},
+            </if>
+            <if test="finishTime != null">
+                finish_time = #{finishTime},
+            </if>
+            <if test="checkStatus != null">
+                check_status = #{checkStatus},
+            </if>
+            <if test="reportPeople != null and reportPeople != ''">
+                report_people = #{reportPeople},
+            </if>
+            <if test="checkPeople != null and checkPeople != ''">
+                check_people = #{checkPeople},
+            </if>
+            <if test="checkOpinion != null and checkOpinion != ''">
+                check_opinion = #{checkOpinion},
+            </if>
+            <if test="handlePeople != null and handlePeople != ''">
+                handle_people = #{handlePeople},
+            </if>
+            <if test="pic != null and pic != ''">
+                pic = #{pic},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from hotel.ems_event where id = #{id}
+    </delete>
+
+</mapper>

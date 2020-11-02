@@ -18,4 +18,6 @@ public interface UmsRoleDao {
     List<UmsResource> getResourceListByRoleId(@Param("roleId") Long roleId);
 
     List<UmsRole> getRolesByUserId(Long id);
+
+    List<UmsResource> getResourceListByUserId(Long id);
 }

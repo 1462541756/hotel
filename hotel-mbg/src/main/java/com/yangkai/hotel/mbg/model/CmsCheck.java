@@ -7,8 +7,8 @@ import java.util.Date;
 public class CmsCheck implements Serializable {
     private Long id;
 
-    @ApiModelProperty(value = "订单id")
-    private Long orderId;
+    @ApiModelProperty(value = "订单号")
+    private String orderSn;
 
     @ApiModelProperty(value = "姓名")
     private String name;
@@ -32,12 +32,12 @@ public class CmsCheck implements Serializable {
         this.id = id;
     }
 
-    public Long getOrderId() {
-        return orderId;
+    public String getOrderSn() {
+        return orderSn;
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public void setOrderSn(String orderSn) {
+        this.orderSn = orderSn;
     }
 
     public String getName() {
@@ -79,7 +79,7 @@ public class CmsCheck implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", orderId=").append(orderId);
+        sb.append(", orderSn=").append(orderSn);
         sb.append(", name=").append(name);
         sb.append(", cardId=").append(cardId);
         sb.append(", checkInTime=").append(checkInTime);

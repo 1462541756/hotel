@@ -68,5 +68,14 @@
         left join ums_role as  role on rr.role_id=role.id
         where rr.admin_id=#{id}
     </select>
+    <select id="getResourceListByUserId" resultType="com.yangkai.hotel.mbg.model.UmsResource">
+         select distinct
+            r.*
+        from ums_admin_role_relation  as arr
+        left join ums_role_resource_relation as rr on arr.role_id=rr.role_id
+        left join ums_resource as r on rr.resource_id=r.id
+        where arr.admin_id=#{id}
+
+    </select>
 
 </mapper>

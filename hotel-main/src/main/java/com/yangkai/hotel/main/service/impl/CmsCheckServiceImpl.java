@@ -13,9 +13,7 @@ import com.yangkai.hotel.mbg.model.CmsCheck;
 import com.yangkai.hotel.mbg.model.CmsCheckExample;
 import com.yangkai.hotel.mbg.model.OmsOrder;
 import com.yangkai.hotel.mbg.model.RmsRoom;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sun.java2d.cmm.CMSManager;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -139,11 +137,14 @@ public class CmsCheckServiceImpl implements CmsCheckService {
         if (cmsCheckQueryParam.getCardId()!=null&&!cmsCheckQueryParam.getCardId().equals("")){
             criteria.andCardIdLike("%"+cmsCheckQueryParam.getCardId()+"%");
         }
+        if (cmsCheckQueryParam.getOrderSn()!=null&&!cmsCheckQueryParam.getOrderSn().equals("")){
+            criteria.andOrderSnLike("%"+cmsCheckQueryParam.getOrderSn()+"%");
+        }
         return cmsCheckMapper.selectByExample(example);
     }
     @Override
     public int checkIn(CmsCheckPeopleQueryParams params){
-        OmsOrder order=omsOrderMapper.selectByPrimaryKey(params.getOrderId());
+        OmsOrder order=omsOrderMapper.selectByPrimaryKey(params.getOrderSn());
         if (order==null){
             return -1;
         }
@@ -159,7 +160,7 @@ public class CmsCheckServiceImpl implements CmsCheckService {
         cmsCheck.setCardId(params.getCardId());
         cmsCheck.setName(params.getName());
         cmsCheck.setCheckInTime(new Date());
-        cmsCheck.setOrderId(order.getId());
+        cmsCheck.setOrderSn(order.getOrderSn());
         return cmsCheckMapper.insert(cmsCheck);
     }
 }

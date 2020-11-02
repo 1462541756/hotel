@@ -8,18 +8,18 @@ import java.util.Date;
  * @description：
  */
 public class CmsCheckPeopleQueryParams {
-    private Long orderId;
+    private Long orderSn;
     private String name;
     private String cardId;
     private Date checkInTime;
     private Date checkOutTime;
 
-    public Long getOrderId() {
-        return orderId;
+    public Long getOrderSn() {
+        return orderSn;
     }
 
-    public void setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public void setOrderSn(Long orderSn) {
+        this.orderSn = orderSn;
     }
 
     public String getName() {

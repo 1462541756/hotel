@@ -66,4 +66,6 @@ public interface UmsRoleService {
     int allocResource(Long roleId, List<Long> resourceIds);
 
     List<UmsRole> getRoles(Long id);
+
+    List<UmsResource> getResources(Long id);
 }

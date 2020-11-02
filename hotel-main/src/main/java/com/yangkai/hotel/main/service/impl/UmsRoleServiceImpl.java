@@ -147,4 +147,9 @@ public class UmsRoleServiceImpl implements UmsRoleService {
     public List<UmsRole> getRoles(Long id){
         return roleDao.getRolesByUserId(id);
     }
+
+    @Override
+    public  List<UmsResource> getResources(Long id) {
+       return roleDao.getResourceListByUserId(id);
+    }
 }

@@ -94,6 +94,7 @@ public class UmsAdminController {
         data.put("username", umsAdmin.getUsername());
         data.put("roles", roleService.getRoles(umsAdmin.getId()));
         data.put("menus", roleService.getMenuList(umsAdmin.getId()));
+        data.put("resources",roleService.getResources(umsAdmin.getId()));
         data.put("icon", umsAdmin.getIcon());
         return CommonResult.success(data);
     }
