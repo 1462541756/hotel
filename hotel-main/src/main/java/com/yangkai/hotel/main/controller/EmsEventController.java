@@ -72,33 +72,18 @@ public class EmsEventController {
     @ApiOperation("上报事件/保存草稿")
     @RequestMapping(value = "/report", method = RequestMethod.POST)
     public CommonResult report(@RequestBody EmsEvent params) {
-        EmsEvent emsEvent=new EmsEvent();
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
         if (username==null){
             return CommonResult.forbidden("无操作权限");
         }
-
-        emsEvent.setSubject(params.getSubject());
-        emsEvent.setType(params.getType());
-        emsEvent.setDescription(params.getDescription());
-        emsEvent.setPic(params.getPic());
-
-        emsEvent.setReportPeople(username);
-        emsEvent.setCreateTime(new Date());
-        emsEvent.setStatus(0);
-        if (params.getCheckStatus()!=null&&params.getStatus()==1){
-            //1为提交
-            emsEvent.setStatus(1);
-        }else {
-            //0为仅保存，不提交
-            emsEvent.setStatus(0);
-        }
-        int count= this.emsEventService.report(emsEvent);
+        params.setReportPeople(username);
+        params.setStatus(0);
+        int count= this.emsEventService.report(params);
         if (count==1){
-            return CommonResult.success("上报成功");
+            return CommonResult.success("操作成功");
         }else {
-            return CommonResult.failed("上报失败");
+            return CommonResult.failed("操作失败");
         }
     }
 
@@ -115,4 +100,15 @@ public class EmsEventController {
         }
     }
 
+    @ApiOperation("审核")
+    @RequestMapping(value = "/check", method = RequestMethod.POST)
+    public CommonResult check(@RequestBody EmsEvent params) {
+        return CommonResult.success(emsEventService.check(params));
+    }
+
+    @ApiOperation("改变任务状态")
+    @RequestMapping(value = "/changeStatus", method = RequestMethod.POST)
+    public CommonResult changeStatus(@RequestBody EmsEvent params) {
+        return CommonResult.success(emsEventService.changeStatus(params));
+    }
 }

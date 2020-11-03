@@ -2,10 +2,7 @@ package com.yangkai.hotel.main.controller;
 
 import com.yangkai.hotel.commons.api.CommonPage;
 import com.yangkai.hotel.commons.api.CommonResult;
-import com.yangkai.hotel.main.dto.RegisterParam;
-import com.yangkai.hotel.main.dto.UmsAdminLoginParam;
-import com.yangkai.hotel.main.dto.UmsAdminParam;
-import com.yangkai.hotel.main.dto.UpdateAdminPasswordParam;
+import com.yangkai.hotel.main.dto.*;
 import com.yangkai.hotel.main.service.UmsRoleService;
 import com.yangkai.hotel.main.service.UmsAdminService;
 import com.yangkai.hotel.mbg.model.UmsAdmin;
@@ -19,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,7 +50,17 @@ public class UmsAdminController {
             case 4:return CommonResult.failed("账号创建失败");
             default:return CommonResult.failed("注册失败");
         }
-
+    }
+    @ApiOperation(value = "管理员添加账户")
+    @RequestMapping(value = "/register2", method = RequestMethod.POST)
+    public CommonResult register2(@RequestBody UmsAdmin umsAdmin) {
+        umsAdmin.setCreateTime(new Date());
+        int count = adminService.register2(umsAdmin);
+        if (count==1){
+            return CommonResult.success("添加账户成功");
+        }else {
+            return CommonResult.failed("添加账户失败");
+        }
     }
 
     @ApiOperation(value = "登录以后返回token")

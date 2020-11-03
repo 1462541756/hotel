@@ -1,7 +1,6 @@
 package com.yangkai.hotel.main.service;
 
 import com.yangkai.hotel.main.dto.RegisterParam;
-import com.yangkai.hotel.main.dto.UmsAdminParam;
 import com.yangkai.hotel.main.dto.UpdateAdminPasswordParam;
 import com.yangkai.hotel.mbg.model.UmsAdmin;
 import com.yangkai.hotel.mbg.model.UmsResource;
@@ -86,4 +85,6 @@ public interface UmsAdminService {
      * 获取用户信息
      */
     UserDetails loadUserByUsername(String username);
+
+    int register2(UmsAdmin umsAdmin);
 }

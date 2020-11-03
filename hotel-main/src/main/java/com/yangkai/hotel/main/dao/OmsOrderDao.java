@@ -80,5 +80,5 @@ public interface OmsOrderDao {
     int deleteById(Long id);
 
 
-
+    OmsOrder queryByOrderSn(String orderSn);
 }

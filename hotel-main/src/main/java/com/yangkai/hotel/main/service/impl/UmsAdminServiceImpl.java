@@ -265,4 +265,15 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         }
         throw new UsernameNotFoundException("用户名或密码错误");
     }
+
+    @Override
+    public int register2(UmsAdmin umsAdmin) {
+        String encodePassword = passwordEncoder.encode(umsAdmin.getPassword());
+        umsAdmin.setPassword(encodePassword);
+
+        //设置账号创建时间和使用状态
+        umsAdmin.setCreateTime(new Date());
+        umsAdmin.setStatus(1);
+        return umsAdminMapper.insert(umsAdmin);
+    }
 }

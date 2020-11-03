@@ -1,5 +1,6 @@
 package com.yangkai.hotel.main.service;
 
+import com.yangkai.hotel.commons.api.CommonResult;
 import com.yangkai.hotel.mbg.model.EmsEvent;
 
 import java.util.List;
@@ -49,4 +50,8 @@ public interface EmsEventService {
     int cancelReportById(Long id);
 
     int reportFromDraft(Long id);
+
+    int check(EmsEvent params);
+
+    int changeStatus(EmsEvent params);
 }

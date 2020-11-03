@@ -119,6 +119,12 @@
             </if>
         </where>
     </select>
+    <select id="queryByOrderSn" resultMap="OmsOrderMap">
+        select
+          id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic, room_id, card_id, register_status, check_in_time, check_out_time
+        from hotel.oms_order
+        where order_sn=#{orderSn}
+    </select>
 
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">

@@ -12,6 +12,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -78,13 +79,18 @@ public class EmsEventServiceImpl implements EmsEventService {
         if (emsEvent.getSubject()!=null&&emsEvent.getSubject().trim().length()>0){
             criteria.andSubjectLike("%"+emsEvent.getSubject()+"%");
         }
+        example.setOrderByClause("create_time DESC,finish_time DESC,receive_time DESC");
         return emsEventMapper.selectByExample(example);
     }
 
     @Override
     public int report(EmsEvent event) {
-
-        return emsEventDao.insert(event);
+        event.setCreateTime(new Date());
+        if (event.getId()==null){
+            return emsEventDao.insert(event);
+        }else {
+            return emsEventMapper.updateByPrimaryKeySelective(event);
+        }
     }
     @Override
     public synchronized int deleteEventById(Long id){
@@ -99,7 +105,7 @@ public class EmsEventServiceImpl implements EmsEventService {
             //操作者不是事件创建者
             return 3;
         }
-        if (emsEvent.getCheckStatus()!=0){
+        if (emsEvent.getCheckStatus()!=null&&emsEvent.getCheckStatus()!=0){
             //事件已提交,无法删除
             return 4;
         }
@@ -133,6 +139,7 @@ public class EmsEventServiceImpl implements EmsEventService {
             //事件已经审核通过,无法删除
             return 4;
         }
+        emsEvent.setCheckStatus(0);
         int count = emsEventMapper.updateByPrimaryKeySelective(emsEvent);
         if (count!=1){
             return 5;
@@ -153,10 +160,11 @@ public class EmsEventServiceImpl implements EmsEventService {
             //操作者不是事件创建者
             return 3;
         }
-        if (emsEvent.getCheckStatus()!=0&&emsEvent.getCheckStatus()!=null){
+        if (emsEvent.getCheckStatus()!=null&&emsEvent.getCheckStatus()!=0&&emsEvent.getCheckStatus()!=2){
             //事件已提交
             return 4;
         }
+        emsEvent.setStatus(0);
         emsEvent.setCheckStatus(1);
         int count=emsEventMapper.updateByPrimaryKeySelective(emsEvent);
         if (count!=1){
@@ -164,5 +172,34 @@ public class EmsEventServiceImpl implements EmsEventService {
         }else {
             return 1;
         }
+    }
+
+    @Override
+    public int check(EmsEvent params) {
+        EmsEvent emsEvent=emsEventMapper.selectByPrimaryKey(params.getId());
+        emsEvent.setCheckStatus(params.getCheckStatus());
+        emsEvent.setCheckOpinion(params.getCheckOpinion());
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
+        emsEvent.setCheckPeople(username);
+        emsEvent.setCheckTime(new Date());
+        return emsEventMapper.updateByPrimaryKeySelective(emsEvent);
+    }
+
+    @Override
+    public int changeStatus(EmsEvent params) {
+        EmsEvent emsEvent=emsEventMapper.selectByPrimaryKey(params.getId());
+        emsEvent.setStatus(params.getStatus());
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username=( (AdminUserDetails)authentication.getPrincipal()).getUsername();
+        emsEvent.setHandlePeople(username);
+        if (params.getStatus()==1){
+            emsEvent.setReceiveTime(new Date());
+        }
+        if (params.getStatus()==2){
+            emsEvent.setFinishTime(new Date());
+        }
+        emsEvent.setReceiveTime(new Date());
+        return emsEventMapper.updateByPrimaryKeySelective(emsEvent);
     }
 }

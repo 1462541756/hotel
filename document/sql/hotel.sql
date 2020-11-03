@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50719
 File Encoding         : 65001
 
-Date: 2020-11-03 02:25:30
+Date: 2020-11-03 16:53:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `cms_check` (
   `check_in_time` datetime DEFAULT NULL COMMENT '入住登记时间',
   `check_out_time` datetime DEFAULT NULL COMMENT '退房时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='入住记录';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='入住记录';
 
 -- ----------------------------
 -- Records of cms_check
@@ -42,6 +42,9 @@ INSERT INTO `cms_check` VALUES ('7', '1319229828368568320', '222', '3333', '2020
 INSERT INTO `cms_check` VALUES ('8', '1319229828368568320', '222', '3333', '2020-10-27 16:46:40', null);
 INSERT INTO `cms_check` VALUES ('9', '1319229828368568320', '222', '333', '2020-10-27 16:46:53', null);
 INSERT INTO `cms_check` VALUES ('10', '1319229828368568320', '222', '333', '2020-10-27 16:51:38', null);
+INSERT INTO `cms_check` VALUES ('11', 'adminTue Oct 20 23:45:04 CST 2020', '99', '999', '2020-11-03 08:34:26', null);
+INSERT INTO `cms_check` VALUES ('12', 'adminTue Oct 20 23:45:04 CST 2020', '222', '222', '2020-11-03 08:37:54', null);
+INSERT INTO `cms_check` VALUES ('13', 'admin1603208813955', '222', '222', '2020-11-03 08:49:34', null);
 
 -- ----------------------------
 -- Table structure for ems_event
@@ -64,27 +67,15 @@ CREATE TABLE `ems_event` (
   `pic` varchar(255) DEFAULT NULL COMMENT '相关图片',
   `status` int(1) DEFAULT '0' COMMENT '事件状态：0->待处理，1->处理中，2->处理完成',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ems_event
 -- ----------------------------
-INSERT INTO `ems_event` VALUES ('1', '上报测试', '1', '上报测试', '2020-11-03 00:42:20', '2020-11-03 00:42:13', '2020-11-03 00:41:39', '2020-11-03 00:41:04', '0', null, null, null, null, 'http://127.0.0.1:9000/hotel/20201102/71572-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('2', '上报测试2', '2', '上报测试', '2020-11-03 00:42:23', '2020-11-03 00:42:16', '2020-11-03 00:41:42', '2020-11-03 00:41:06', '0', null, null, null, null, null, '0');
-INSERT INTO `ems_event` VALUES ('3', '上报测试3', '1', '上报测试', '2020-11-03 00:42:25', '2020-11-03 00:42:18', '2020-11-03 00:41:43', '2020-11-03 00:41:08', '0', null, null, null, null, null, '0');
-INSERT INTO `ems_event` VALUES ('4', '2233', '2', '3333', '2020-11-03 00:42:27', '2020-11-03 00:42:29', '2020-11-03 00:41:45', '2020-11-03 00:41:10', '0', null, null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('5', '2233', '2', '3333', '2020-11-02 12:09:49', '2020-11-03 00:42:31', '2020-11-03 00:41:47', '2020-11-03 00:41:12', '1', 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('6', '上报测试', '1', '上报测试', '2020-11-02 14:41:21', '2020-11-03 00:42:34', '2020-11-03 00:41:49', '2020-11-03 00:41:15', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/71572-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('7', '2233', '2', '3333', '2020-11-02 14:41:43', '2020-11-03 00:42:35', '2020-11-03 00:41:52', '2020-11-03 00:41:17', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('8', '2233', '2', '3333', '2020-11-02 14:41:46', '2020-11-03 00:42:38', '2020-11-03 00:41:53', '2020-11-03 00:41:19', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('9', '上报测试3', '1', '上报测试', '2020-11-02 14:45:00', '2020-11-03 00:42:40', '2020-11-03 00:41:55', '2020-11-03 00:41:21', null, 'admin', null, null, null, null, '0');
-INSERT INTO `ems_event` VALUES ('10', '2233', '2', '3333', '2020-11-02 15:15:53', '2020-11-03 00:42:42', '2020-11-03 00:41:57', '2020-11-03 00:41:23', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('11', '2233', '2', '3333', '2020-11-02 15:15:55', '2020-11-03 00:42:44', '2020-11-03 00:41:59', '2020-11-03 00:41:26', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('12', '2233', '2', '3333', '2020-11-02 15:15:56', '2020-11-03 00:42:46', '2020-11-03 00:42:01', '2020-11-03 00:41:28', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('13', '2233', '2', '3333', '2020-11-02 15:15:57', '2020-11-03 00:42:48', '2020-11-03 00:42:04', '2020-11-03 00:41:30', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('14', '2233', '2', '3333', '2020-11-02 15:15:57', '2020-11-03 00:42:50', '2020-11-03 00:42:06', '2020-11-03 00:41:32', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('15', '2233', '2', '3333', '2020-11-02 15:15:58', '2020-11-03 00:42:52', '2020-11-03 00:42:08', '2020-11-03 00:41:34', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
-INSERT INTO `ems_event` VALUES ('16', '2233', '2', '3333', '2020-11-02 15:17:15', '2020-11-03 00:42:55', '2020-11-03 00:42:09', '2020-11-03 00:41:37', null, 'admin', null, null, null, 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '0');
+INSERT INTO `ems_event` VALUES ('5', '2233', '2', '333345555666', '2020-11-02 12:09:49', '2020-11-03 06:26:30', '2020-11-03 07:11:32', '2020-11-03 07:11:32', '3', 'admin', 'admin2', '通过', 'admin', 'http://127.0.0.1:9000/hotel/20201102/73320-106.jpg', '2');
+INSERT INTO `ems_event` VALUES ('22', 'clean上报', '1', 'clean上报', '2020-11-03 06:25:10', '2020-11-03 07:22:32', '2020-11-03 07:24:17', '2020-11-03 07:24:17', '3', 'clean', 'admin', '通过', 'admin', 'http://127.0.0.1:9000/hotel/20201103/75486-106.jpg', '2');
+INSERT INTO `ems_event` VALUES ('26', '事件上报测试2', '2', '事件上报测试2', '2020-11-03 07:32:24', null, null, null, '1', 'clean', null, null, null, null, '0');
+INSERT INTO `ems_event` VALUES ('27', '2222', '1', '222', '2020-11-03 07:49:46', null, null, null, '0', 'clean', null, null, null, null, '0');
 
 -- ----------------------------
 -- Table structure for oms_order
@@ -114,14 +105,23 @@ CREATE TABLE `oms_order` (
   `check_in_time` datetime DEFAULT NULL,
   `check_out_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COMMENT='订单表';
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COMMENT='订单表';
 
 -- ----------------------------
 -- Records of oms_order
 -- ----------------------------
-INSERT INTO `oms_order` VALUES ('31', 'adminTue Oct 20 23:45:04 CST 2020', 'admin', '100.12', '1', '0', '1', '0', 'demoData', '2020-10-22 21:39:35', '2020-10-22 21:39:44', '2020-10-20 15:45:04', '2020-10-22 21:39:50', '111', '1', '0212', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '1', '500381198805040856', '2', '2020-10-27 16:31:29', '2020-10-28 07:36:13');
-INSERT INTO `oms_order` VALUES ('32', 'admin1603208813955', 'admin', '200.00', '1', '1', '1', '0', 'demoData', '2020-10-22 21:39:37', '2020-10-22 21:39:46', '2020-10-20 15:46:54', '2020-10-22 21:39:52', '222', '2', '0213', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '2', '500381198805040857', '2', null, '2020-10-27 17:00:11');
-INSERT INTO `oms_order` VALUES ('33', '1319229828368568320', 'admin', '455.67', '2', '0', '1', '1', 'demoData', '2020-10-22 21:39:39', '2020-10-22 21:39:48', '2020-10-22 10:51:15', '2020-10-22 21:39:54', '333', '1', '0123', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '3', '500381198805040858', '2', null, '2020-10-28 07:53:51');
+INSERT INTO `oms_order` VALUES ('31', '1', 'admin', '100.12', '1', '0', '2', '0', 'demoData', '2020-10-22 21:39:35', '2020-10-22 21:39:44', '2020-10-20 15:45:04', '2020-10-22 21:39:50', '111', '1', '0212', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '1', '500381198805040856', '1', '2020-11-03 08:37:54', '2020-11-03 08:34:54');
+INSERT INTO `oms_order` VALUES ('32', '2', 'admin', '200.00', '1', '1', '1', '0', 'demoData', '2020-10-22 21:39:37', '2020-10-22 21:39:46', '2020-10-20 15:46:54', '2020-10-22 21:39:52', '222', '2', '0213', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '2', '500381198805040857', '2', null, '2020-11-03 08:39:55');
+INSERT INTO `oms_order` VALUES ('33', '3', 'admin', '455.67', '2', '0', '0', '1', 'demoData', '2020-10-22 21:39:39', '2020-10-22 21:39:48', '2020-10-22 10:51:15', '2020-10-22 21:39:54', '333', '1', '0123', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '3', '500381198805040858', '2', null, '2020-10-28 07:53:51');
+INSERT INTO `oms_order` VALUES ('34', '4', 'admin', '100.12', '1', '0', '2', '0', 'demoData', '2020-10-22 21:39:35', '2020-10-22 21:39:44', '2020-10-20 15:45:04', '2020-10-22 21:39:50', '111', '1', '0212', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '1', '500381198805040856', '0', '2020-11-03 08:34:26', '2020-11-03 08:34:54');
+INSERT INTO `oms_order` VALUES ('35', '5', 'admin', '200.00', '1', '1', '2', '0', 'demoData', '2020-10-22 21:39:37', '2020-10-22 21:39:46', '2020-10-20 15:46:54', '2020-10-22 21:39:52', '222', '2', '0213', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '2', '500381198805040857', '1', null, '2020-10-27 17:00:11');
+INSERT INTO `oms_order` VALUES ('36', '6', 'admin', '455.67', '2', '0', '2', '1', 'demoData', '2020-10-22 21:39:39', '2020-10-22 21:39:48', '2020-10-22 10:51:15', '2020-10-22 21:39:54', '333', '1', '0123', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '3', '500381198805040858', '2', null, '2020-10-28 07:53:51');
+INSERT INTO `oms_order` VALUES ('37', 'adminTue Oct 20 23:45:04 CST 2020', 'admin', '100.12', '1', '0', '1', '0', 'demoData', '2020-10-22 21:39:35', '2020-10-22 21:39:44', '2020-10-20 15:45:04', '2020-10-22 21:39:50', '111', '1', '0212', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '1', '500381198805040856', '0', '2020-11-03 08:34:26', '2020-11-03 08:34:54');
+INSERT INTO `oms_order` VALUES ('38', 'admin1603208813955', 'admin', '200.00', '1', '1', '1', '0', 'demoData', '2020-10-22 21:39:37', '2020-10-22 21:39:46', '2020-10-20 15:46:54', '2020-10-22 21:39:52', '222', '2', '0213', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '2', '500381198805040857', '1', '2020-11-03 08:49:34', '2020-10-27 17:00:11');
+INSERT INTO `oms_order` VALUES ('39', '1319229828368568320', 'admin', '455.67', '2', '0', '1', '1', 'demoData', '2020-10-22 21:39:39', '2020-10-22 21:39:48', '2020-10-22 10:51:15', '2020-10-22 21:39:54', '333', '1', '0123', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '3', '500381198805040858', '2', null, '2020-10-28 07:53:51');
+INSERT INTO `oms_order` VALUES ('40', '9', 'admin', '100.12', '1', '0', '0', '0', 'demoData', '2020-10-22 21:39:35', '2020-10-22 21:39:44', '2020-10-20 15:45:04', '2020-10-22 21:39:50', '111', '1', '0212', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '1', '500381198805040856', '0', '2020-11-03 08:37:54', '2020-11-03 08:34:54');
+INSERT INTO `oms_order` VALUES ('41', '10', 'admin', '200.00', '1', '1', '0', '0', 'demoData', '2020-10-22 21:39:37', '2020-10-22 21:39:46', '2020-10-20 15:46:54', '2020-10-22 21:39:52', '222', '2', '0213', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '2', '500381198805040857', '0', null, '2020-11-03 08:39:55');
+INSERT INTO `oms_order` VALUES ('42', '11', 'admin', '455.67', '2', '0', '0', '1', 'demoData', '2020-10-22 21:39:39', '2020-10-22 21:39:48', '2020-10-22 10:51:15', '2020-10-22 21:39:54', '333', '1', '0123', 'http://127.0.0.1:9000/hotel/20201018/header.jpg,http://127.0.0.1:9000/hotel/20201018/41412-106.jpg', '3', '500381198805040858', '0', null, '2020-10-28 07:53:51');
 
 -- ----------------------------
 -- Table structure for rms_room
@@ -171,14 +171,17 @@ CREATE TABLE `ums_admin` (
   `phone` varchar(255) DEFAULT NULL COMMENT '手机号',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ums_admin_phone` (`phone`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='后台用户表';
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='后台用户表';
 
 -- ----------------------------
 -- Records of ums_admin
 -- ----------------------------
-INSERT INTO `ums_admin` VALUES ('1', 'user', '$2a$10$l6FVQDmrBkfLhnY50r2PeeUaCiAVGRra0oyZ1j3J7SNsw9plkRaBe', 'http://127.0.0.1:9000/hotel/20201028/48637-106.jpg', 'test@qq.com', '普通用户', null, '2018-09-29 13:55:30', '2018-09-29 13:55:39', '1', null);
-INSERT INTO `ums_admin` VALUES ('3', 'admin', '$2a$10$16/4qSKwTraDSz6HrfiiyecbTiYfptOsteidQXZSeiOFS9lZlARXm', 'http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20180607/timg.jpg', 'guitai@163.com', '超级管理员', '超级管理员', '2018-10-08 13:32:47', '2019-04-20 12:45:16', '1', null);
-INSERT INTO `ums_admin` VALUES ('10', 'guitai', '$2a$10$QbREB0hHTNaAXL/pVmre2OQOhVu8jPu4yi.aIrK/MK7GQR3tOxFmy', 'http://127.0.0.1:9000/hotel/20201028/48637-106.jpg', '1462541756@qq.com', '柜台服务员', null, '2020-10-19 17:08:51', null, '1', null);
+INSERT INTO `ums_admin` VALUES ('1', 'user', '$2a$10$l6FVQDmrBkfLhnY50r2PeeUaCiAVGRra0oyZ1j3J7SNsw9plkRaBe', 'http://127.0.0.1:9000/hotel/20201018/header.jpg', 'test@qq.com', '普通用户', null, '2018-09-29 13:55:30', '2018-09-29 13:55:39', '1', null);
+INSERT INTO `ums_admin` VALUES ('3', 'admin', '$2a$10$16/4qSKwTraDSz6HrfiiyecbTiYfptOsteidQXZSeiOFS9lZlARXm', 'http://127.0.0.1:9000/hotel/20201018/header.jpg', 'guitai@163.com', '超级管理员', '超级管理员', '2018-10-08 13:32:47', '2019-04-20 12:45:16', '1', null);
+INSERT INTO `ums_admin` VALUES ('10', 'guitai', '$2a$10$QbREB0hHTNaAXL/pVmre2OQOhVu8jPu4yi.aIrK/MK7GQR3tOxFmy', 'http://127.0.0.1:9000/hotel/20201018/header.jpg', '1462541756@qq.com', '柜台服务员', null, '2020-10-19 17:08:51', null, '1', null);
+INSERT INTO `ums_admin` VALUES ('11', 'clean', '$2a$10$qqylOiTGmWyeRQ4EQDdPyOOWVDmUcCN3nSjaBT9YabKdHYee3wwty', 'http://127.0.0.1:9000/hotel/20201018/header.jpg', 'clean', 'clean', 'clean', null, null, '1', null);
+INSERT INTO `ums_admin` VALUES ('12', 'clean2', '$2a$10$VOMvk2TbDJWl6H7JzG3Vb.jnSwCfdMRUx0...MD1EQ1WM6eXfadE6', 'http://127.0.0.1:9000/hotel/20201018/header.jpg', 'clean2', 'clean2', 'clean2', null, null, '1', null);
+INSERT INTO `ums_admin` VALUES ('13', 'admin2', '$2a$10$1KKekgszD.t2TWvzeohKeOTkkSVi/OQ/xDB9rBxFttZPk4P5ugxBK', null, 'admin2', '超级管理员2', 'admin2', '2020-11-03 05:23:26', null, '1', null);
 
 -- ----------------------------
 -- Table structure for ums_admin_login_log
@@ -192,7 +195,7 @@ CREATE TABLE `ums_admin_login_log` (
   `address` varchar(100) DEFAULT NULL,
   `user_agent` varchar(100) DEFAULT NULL COMMENT '浏览器登录类型',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=273 DEFAULT CHARSET=utf8 COMMENT='后台用户登录日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=287 DEFAULT CHARSET=utf8 COMMENT='后台用户登录日志表';
 
 -- ----------------------------
 -- Records of ums_admin_login_log
@@ -469,6 +472,20 @@ INSERT INTO `ums_admin_login_log` VALUES ('269', '10', '2020-10-28 09:49:54', '1
 INSERT INTO `ums_admin_login_log` VALUES ('270', '3', '2020-11-02 06:39:59', '127.0.0.1', null, null);
 INSERT INTO `ums_admin_login_log` VALUES ('271', '3', '2020-11-02 07:35:04', '127.0.0.1', null, null);
 INSERT INTO `ums_admin_login_log` VALUES ('272', '3', '2020-11-02 07:36:12', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('273', '3', '2020-11-03 05:09:57', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('274', '3', '2020-11-03 05:10:43', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('275', '3', '2020-11-03 05:14:24', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('276', '12', '2020-11-03 05:18:02', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('277', '3', '2020-11-03 05:23:07', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('278', '12', '2020-11-03 05:26:18', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('279', '3', '2020-11-03 05:31:24', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('280', '11', '2020-11-03 05:45:14', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('281', '3', '2020-11-03 05:47:06', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('282', '11', '2020-11-03 05:48:31', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('283', '13', '2020-11-03 06:26:02', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('284', '11', '2020-11-03 06:27:19', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('285', '3', '2020-11-03 06:49:56', '127.0.0.1', null, null);
+INSERT INTO `ums_admin_login_log` VALUES ('286', '11', '2020-11-03 07:47:15', '127.0.0.1', null, null);
 
 -- ----------------------------
 -- Table structure for ums_admin_role_relation
@@ -479,7 +496,7 @@ CREATE TABLE `ums_admin_role_relation` (
   `admin_id` bigint(20) DEFAULT NULL,
   `role_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8 COMMENT='后台用户和角色关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COMMENT='后台用户和角色关系表';
 
 -- ----------------------------
 -- Records of ums_admin_role_relation
@@ -490,6 +507,9 @@ INSERT INTO `ums_admin_role_relation` VALUES ('31', '1', '9');
 INSERT INTO `ums_admin_role_relation` VALUES ('32', '7', '2');
 INSERT INTO `ums_admin_role_relation` VALUES ('33', '10', '2');
 INSERT INTO `ums_admin_role_relation` VALUES ('36', '3', '5');
+INSERT INTO `ums_admin_role_relation` VALUES ('37', '11', '10');
+INSERT INTO `ums_admin_role_relation` VALUES ('38', '12', '10');
+INSERT INTO `ums_admin_role_relation` VALUES ('39', '13', '5');
 
 -- ----------------------------
 -- Table structure for ums_menu
@@ -545,7 +565,7 @@ CREATE TABLE `ums_resource` (
   `description` varchar(500) DEFAULT NULL COMMENT '描述',
   `category_id` bigint(20) DEFAULT NULL COMMENT '资源分类ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COMMENT='后台资源表';
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COMMENT='后台资源表';
 
 -- ----------------------------
 -- Records of ums_resource
@@ -558,7 +578,16 @@ INSERT INTO `ums_resource` VALUES ('29', '2020-02-07 16:49:45', '后台资源管
 INSERT INTO `ums_resource` VALUES ('31', '2020-10-17 08:35:02', '房间管理', '/room/**', '房间管理', '8');
 INSERT INTO `ums_resource` VALUES ('34', '2020-10-22 16:41:31', '订单管理', '/order/**', '', '2');
 INSERT INTO `ums_resource` VALUES ('36', '2020-10-27 14:40:33', '前台资源', '/front/**', '前台资源', '6');
-INSERT INTO `ums_resource` VALUES ('37', '2020-11-02 07:31:46', '事件管理', '/event/**', '事件管理', '9');
+INSERT INTO `ums_resource` VALUES ('37', '2020-11-02 07:31:46', '事件管理全部权限', '/event/**', '事件管理全部权限', '9');
+INSERT INTO `ums_resource` VALUES ('38', '2020-11-03 05:32:18', '事件审核', '/event/check', '事件审核', '9');
+INSERT INTO `ums_resource` VALUES ('39', '2020-11-03 05:35:32', '改变事件任务状态', '/event/changeStatus', '改变任务状态：接受任务、取消任务、提交完成任务', '9');
+INSERT INTO `ums_resource` VALUES ('40', '2020-11-03 05:37:08', '根据id取消上报事件', '/event/cancelReportById/**', '根据id取消上报事件', '9');
+INSERT INTO `ums_resource` VALUES ('41', '2020-11-03 05:37:48', '根据id获取事件', '/event/getEventById/**', '根据id获取事件', '9');
+INSERT INTO `ums_resource` VALUES ('42', '2020-11-03 05:38:46', '根据id删除事件', '/event/deleteEventById/**', '根据id删除事件', '4');
+INSERT INTO `ums_resource` VALUES ('43', '2020-11-03 05:40:18', '获取事件列表', '/event/fetchList', '获取事件列表', '9');
+INSERT INTO `ums_resource` VALUES ('44', '2020-11-03 05:44:50', '将草稿上报', '/event/reportFromDraft/**', '将草稿上报', '9');
+INSERT INTO `ums_resource` VALUES ('45', '2020-11-03 05:47:53', '事件上报', '/event/report', '事件上报', '9');
+INSERT INTO `ums_resource` VALUES ('46', '2020-11-03 07:28:28', '通过id删除事件', '/event/deleteEventById/**', '通过id删除事件，只能删除自己创建的', '9');
 
 -- ----------------------------
 -- Table structure for ums_resource_category
@@ -594,7 +623,7 @@ CREATE TABLE `ums_role` (
   `status` int(1) DEFAULT '1' COMMENT '启用状态：0->禁用；1->启用',
   `sort` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='后台用户角色表';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='后台用户角色表';
 
 -- ----------------------------
 -- Records of ums_role
@@ -602,6 +631,7 @@ CREATE TABLE `ums_role` (
 INSERT INTO `ums_role` VALUES ('2', '柜台服务员', '柜台服务员', '0', '2018-09-30 15:53:45', '1', '0');
 INSERT INTO `ums_role` VALUES ('5', '超级管理员', '拥有所有查看和操作功能', '0', '2020-02-02 15:11:05', '1', '0');
 INSERT INTO `ums_role` VALUES ('9', '普通用户', '普通用户', '0', '2020-10-18 10:22:51', '1', '0');
+INSERT INTO `ums_role` VALUES ('10', '清洁维护人员', '清洁维护人员', '0', '2020-11-03 03:28:58', '1', '0');
 
 -- ----------------------------
 -- Table structure for ums_role_menu_relation
@@ -612,19 +642,11 @@ CREATE TABLE `ums_role_menu_relation` (
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   `menu_id` bigint(20) DEFAULT NULL COMMENT '菜单ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=769 DEFAULT CHARSET=utf8 COMMENT='后台角色菜单关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=800 DEFAULT CHARSET=utf8 COMMENT='后台角色菜单关系表';
 
 -- ----------------------------
 -- Records of ums_role_menu_relation
 -- ----------------------------
-INSERT INTO `ums_role_menu_relation` VALUES ('675', '2', '7');
-INSERT INTO `ums_role_menu_relation` VALUES ('676', '2', '8');
-INSERT INTO `ums_role_menu_relation` VALUES ('677', '2', '28');
-INSERT INTO `ums_role_menu_relation` VALUES ('678', '2', '29');
-INSERT INTO `ums_role_menu_relation` VALUES ('679', '2', '30');
-INSERT INTO `ums_role_menu_relation` VALUES ('680', '2', '40');
-INSERT INTO `ums_role_menu_relation` VALUES ('681', '2', '41');
-INSERT INTO `ums_role_menu_relation` VALUES ('682', '2', '42');
 INSERT INTO `ums_role_menu_relation` VALUES ('750', '5', '7');
 INSERT INTO `ums_role_menu_relation` VALUES ('751', '5', '8');
 INSERT INTO `ums_role_menu_relation` VALUES ('752', '5', '21');
@@ -644,6 +666,24 @@ INSERT INTO `ums_role_menu_relation` VALUES ('765', '5', '44');
 INSERT INTO `ums_role_menu_relation` VALUES ('766', '5', '45');
 INSERT INTO `ums_role_menu_relation` VALUES ('767', '5', '46');
 INSERT INTO `ums_role_menu_relation` VALUES ('768', '5', '47');
+INSERT INTO `ums_role_menu_relation` VALUES ('782', '10', '43');
+INSERT INTO `ums_role_menu_relation` VALUES ('783', '10', '44');
+INSERT INTO `ums_role_menu_relation` VALUES ('784', '10', '45');
+INSERT INTO `ums_role_menu_relation` VALUES ('785', '10', '46');
+INSERT INTO `ums_role_menu_relation` VALUES ('786', '10', '47');
+INSERT INTO `ums_role_menu_relation` VALUES ('787', '2', '7');
+INSERT INTO `ums_role_menu_relation` VALUES ('788', '2', '8');
+INSERT INTO `ums_role_menu_relation` VALUES ('789', '2', '28');
+INSERT INTO `ums_role_menu_relation` VALUES ('790', '2', '29');
+INSERT INTO `ums_role_menu_relation` VALUES ('791', '2', '30');
+INSERT INTO `ums_role_menu_relation` VALUES ('792', '2', '40');
+INSERT INTO `ums_role_menu_relation` VALUES ('793', '2', '41');
+INSERT INTO `ums_role_menu_relation` VALUES ('794', '2', '42');
+INSERT INTO `ums_role_menu_relation` VALUES ('795', '2', '43');
+INSERT INTO `ums_role_menu_relation` VALUES ('796', '2', '44');
+INSERT INTO `ums_role_menu_relation` VALUES ('797', '2', '45');
+INSERT INTO `ums_role_menu_relation` VALUES ('798', '2', '46');
+INSERT INTO `ums_role_menu_relation` VALUES ('799', '2', '47');
 
 -- ----------------------------
 -- Table structure for ums_role_resource_relation
@@ -654,21 +694,29 @@ CREATE TABLE `ums_role_resource_relation` (
   `role_id` bigint(20) DEFAULT NULL COMMENT '角色ID',
   `resource_id` bigint(20) DEFAULT NULL COMMENT '资源ID',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=432 DEFAULT CHARSET=utf8 COMMENT='后台角色资源关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=479 DEFAULT CHARSET=utf8 COMMENT='后台角色资源关系表';
 
 -- ----------------------------
 -- Records of ums_role_resource_relation
 -- ----------------------------
-INSERT INTO `ums_role_resource_relation` VALUES ('419', '9', '36');
-INSERT INTO `ums_role_resource_relation` VALUES ('420', '2', '31');
-INSERT INTO `ums_role_resource_relation` VALUES ('421', '2', '34');
-INSERT INTO `ums_role_resource_relation` VALUES ('422', '2', '36');
-INSERT INTO `ums_role_resource_relation` VALUES ('423', '5', '25');
-INSERT INTO `ums_role_resource_relation` VALUES ('424', '5', '26');
-INSERT INTO `ums_role_resource_relation` VALUES ('425', '5', '27');
-INSERT INTO `ums_role_resource_relation` VALUES ('426', '5', '28');
-INSERT INTO `ums_role_resource_relation` VALUES ('427', '5', '29');
-INSERT INTO `ums_role_resource_relation` VALUES ('428', '5', '31');
-INSERT INTO `ums_role_resource_relation` VALUES ('429', '5', '34');
-INSERT INTO `ums_role_resource_relation` VALUES ('430', '5', '36');
-INSERT INTO `ums_role_resource_relation` VALUES ('431', '5', '37');
+INSERT INTO `ums_role_resource_relation` VALUES ('432', '9', '36');
+INSERT INTO `ums_role_resource_relation` VALUES ('437', '5', '25');
+INSERT INTO `ums_role_resource_relation` VALUES ('438', '5', '26');
+INSERT INTO `ums_role_resource_relation` VALUES ('439', '5', '27');
+INSERT INTO `ums_role_resource_relation` VALUES ('440', '5', '28');
+INSERT INTO `ums_role_resource_relation` VALUES ('441', '5', '29');
+INSERT INTO `ums_role_resource_relation` VALUES ('442', '5', '31');
+INSERT INTO `ums_role_resource_relation` VALUES ('443', '5', '34');
+INSERT INTO `ums_role_resource_relation` VALUES ('444', '5', '36');
+INSERT INTO `ums_role_resource_relation` VALUES ('445', '5', '37');
+INSERT INTO `ums_role_resource_relation` VALUES ('468', '10', '39');
+INSERT INTO `ums_role_resource_relation` VALUES ('469', '10', '40');
+INSERT INTO `ums_role_resource_relation` VALUES ('470', '10', '41');
+INSERT INTO `ums_role_resource_relation` VALUES ('471', '10', '43');
+INSERT INTO `ums_role_resource_relation` VALUES ('472', '10', '44');
+INSERT INTO `ums_role_resource_relation` VALUES ('473', '10', '45');
+INSERT INTO `ums_role_resource_relation` VALUES ('474', '10', '46');
+INSERT INTO `ums_role_resource_relation` VALUES ('475', '2', '31');
+INSERT INTO `ums_role_resource_relation` VALUES ('476', '2', '34');
+INSERT INTO `ums_role_resource_relation` VALUES ('477', '2', '36');
+INSERT INTO `ums_role_resource_relation` VALUES ('478', '2', '37');
