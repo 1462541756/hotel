@@ -10,7 +10,7 @@
     <artifactId>hotel-main</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>hotel-main</name>
-    <description>酒店管理系统主体</description>
+    <description>旅店管理系统主体</description>
 
 
     <dependencies>
