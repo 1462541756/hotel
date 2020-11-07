@@ -1,5 +1,6 @@
-package com.yangkai.hotel.main.service;
+package com.yangkai.hotel.main.service.impl;
 import com.yangkai.hotel.main.config.MailConfiguration;
+import com.yangkai.hotel.main.service.MailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import java.util.regex.Pattern;
  * @description：
  */
 @Service
-public class MainServiceImp  implements MailService{
+public class MainServiceImp  implements MailService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     JavaMailSender mailSender;

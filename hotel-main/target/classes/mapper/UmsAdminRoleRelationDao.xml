@@ -34,4 +34,5 @@
         GROUP BY
             ur.id
     </select>
+
 </mapper>

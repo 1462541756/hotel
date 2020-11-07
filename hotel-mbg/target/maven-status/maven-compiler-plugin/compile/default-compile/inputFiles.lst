@@ -1,5 +1,7 @@
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsResourceCategoryExample.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\OmsOrderExample.java
+D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\EmsEventMapper.java
+D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\EmsEvent.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsResourceCategory.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\OmsOrderMapper.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\UmsAdminRoleRelationMapper.java
@@ -15,7 +17,9 @@ D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\UmsAdminMapper.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\OmsOrder.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\UmsMenuMapper.java
+D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\EmsEventExample.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsRoleMenuRelationExample.java
+D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\CmsCheckExample.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\RmsRoom.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsMenuExample.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\Generator.java
@@ -24,7 +28,9 @@ D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\RmsRoomExample.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsResource.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\UmsResourceCategoryMapper.java
+D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\CmsCheckMapper.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsRoleMenuRelation.java
+D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\CmsCheck.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\mapper\UmsRoleResourceRelationMapper.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsAdminLoginLog.java
 D:\Users\1462541756\Desktop\综合课程设计\hotel\hotel-mbg\src\main\java\com\yangkai\hotel\mbg\model\UmsRoleExample.java

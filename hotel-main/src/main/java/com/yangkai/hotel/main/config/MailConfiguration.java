@@ -1,11 +1,7 @@
 package com.yangkai.hotel.main.config;
 
-import com.aliyun.oss.OSSClient;
-import org.checkerframework.checker.units.qual.C;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 /**
  * @author 杨锴

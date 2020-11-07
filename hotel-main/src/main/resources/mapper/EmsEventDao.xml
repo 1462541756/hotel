@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yangkai.hotel.main.dao.EmsEventDao">
 
-    <resultMap type="com.yangkai.hotel.mbg.model.EmsEvent" id="EmsEventMap">
-        <result property="id" column="id" jdbcType="INTEGER"/>
+    <resultMap type="com.yangkai.hotel.mbg.model.EmsEvent" id="BaseResultMap">
+        <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="subject" column="subject" jdbcType="VARCHAR"/>
         <result property="type" column="type" jdbcType="INTEGER"/>
         <result property="description" column="description" jdbcType="VARCHAR"/>
@@ -21,7 +21,7 @@
     </resultMap>
 
     <!--查询单个-->
-    <select id="queryById" resultMap="EmsEventMap">
+    <select id="queryById" resultMap="BaseResultMap">
         select
           id, subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people, check_people, check_opinion, handle_people, pic, status
         from hotel.ems_event
@@ -29,7 +29,7 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="EmsEventMap">
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
           id, subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people, check_people, check_opinion, handle_people, pic, status
         from hotel.ems_event
@@ -37,7 +37,7 @@
     </select>
 
     <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="EmsEventMap">
+    <select id="queryAll" resultMap="BaseResultMap">
         select
         id, subject, type, description, create_time, check_time, receive_time, finish_time, check_status, report_people,
         check_people, check_opinion, handle_people, pic, status

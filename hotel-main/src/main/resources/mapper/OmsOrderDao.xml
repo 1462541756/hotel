@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yangkai.hotel.main.dao.OmsOrderDao">
 
-    <resultMap type="com.yangkai.hotel.mbg.model.OmsOrder" id="OmsOrderMap">
-        <result property="id" column="id" jdbcType="INTEGER"/>
+    <resultMap type="com.yangkai.hotel.mbg.model.OmsOrder" id="BaseResultMap">
+        <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="orderSn" column="order_sn" jdbcType="VARCHAR"/>
         <result property="username" column="username" jdbcType="VARCHAR"/>
         <result property="payAmount" column="pay_amount" jdbcType="NUMERIC"/>
@@ -28,7 +28,7 @@
     </resultMap>
 
     <!--查询单个-->
-    <select id="queryById" resultMap="OmsOrderMap">
+    <select id="queryById" resultMap="BaseResultMap">
         select
           id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic, room_id, card_id, register_status, check_in_time, check_out_time
         from hotel.oms_order
@@ -36,7 +36,7 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="OmsOrderMap">
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
           id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic, room_id, card_id, register_status, check_in_time, check_out_time
         from hotel.oms_order
@@ -44,7 +44,7 @@
     </select>
 
     <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="OmsOrderMap">
+    <select id="queryAll" resultMap="BaseResultMap">
         select
         id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time,
         create_time, modify_time, room_name, floor, serial, pic, room_id, card_id, register_status, check_in_time,
@@ -119,7 +119,7 @@
             </if>
         </where>
     </select>
-    <select id="queryByOrderSn" resultMap="OmsOrderMap">
+    <select id="queryByOrderSn" resultMap="BaseResultMap">
         select
           id, order_sn, username, pay_amount, pay_type, source_type, status, order_type, note, payment_time, comment_time, create_time, modify_time, room_name, floor, serial, pic, room_id, card_id, register_status, check_in_time, check_out_time
         from hotel.oms_order

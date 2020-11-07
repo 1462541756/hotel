@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yangkai.hotel.main.dao.CmsCheckDao">
 
-    <resultMap type="com.yangkai.hotel.mbg.model.CmsCheck" id="CmsCheckMap">
-        <result property="id" column="id" jdbcType="INTEGER"/>
+    <resultMap type="com.yangkai.hotel.mbg.model.CmsCheck" id="BaseResultMap">
+        <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="orderSn" column="order_sn" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="cardId" column="card_id" jdbcType="VARCHAR"/>
@@ -13,7 +14,7 @@
 
 
     <!--查询单个-->
-    <select id="queryById" resultMap="CmsCheckMap">
+    <select id="queryById" resultMap="BaseResultMap">
         select
           id, order_sn, name, card_id, check_in_time, check_out_time
         from hotel.cms_check
@@ -21,7 +22,7 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="CmsCheckMap">
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
           id, order_sn, name, card_id, check_in_time, check_out_time
         from hotel.cms_check
@@ -29,7 +30,7 @@
     </select>
 
     <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="CmsCheckMap">
+    <select id="queryAll" resultMap="BaseResultMap">
         select
         id, order_sn, name, card_id, check_in_time, check_out_time
         from hotel.cms_check

@@ -7,6 +7,7 @@ import com.yangkai.hotel.main.service.EmsEventService;
 import com.yangkai.hotel.mbg.mapper.EmsEventMapper;
 import com.yangkai.hotel.mbg.model.EmsEvent;
 import com.yangkai.hotel.mbg.model.EmsEventExample;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -23,9 +24,9 @@ import java.util.List;
  */
 @Service("emsEventService")
 public class EmsEventServiceImpl implements EmsEventService {
-    @Resource
+    @Autowired
     private EmsEventDao emsEventDao;
-    @Resource
+    @Autowired
     private EmsEventMapper emsEventMapper;
 
     /**

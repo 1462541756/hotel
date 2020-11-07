@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yangkai.hotel.main.dao.RmsRoomDao">
 
-    <resultMap type="com.yangkai.hotel.mbg.model.RmsRoom" id="RmsRoomMap">
-        <result property="id" column="id" jdbcType="INTEGER"/>
+    <resultMap type="com.yangkai.hotel.mbg.model.RmsRoom" id="BaseResultMap">
+        <id property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="status" column="status" jdbcType="INTEGER"/>
         <result property="clean" column="clean" jdbcType="INTEGER"/>
@@ -17,7 +17,7 @@
     </resultMap>
 
     <!--查询单个-->
-    <select id="queryById" resultMap="RmsRoomMap">
+    <select id="queryById" resultMap="BaseResultMap">
         select
           id, name, status, clean, maintenance, description, floor, serial, sort, price, pic
         from hotel.rms_room
@@ -25,7 +25,7 @@
     </select>
 
     <!--查询指定行数据-->
-    <select id="queryAllByLimit" resultMap="RmsRoomMap">
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
         select
           id, name, status, clean, maintenance, description, floor, serial, sort, price, pic
         from hotel.rms_room
@@ -33,7 +33,7 @@
     </select>
 
     <!--通过实体作为筛选条件查询-->
-    <select id="queryAll" resultMap="RmsRoomMap">
+    <select id="queryAll" resultMap="BaseResultMap">
         select
         id, name, status, clean, maintenance, description, floor, serial, sort, price, pic
         from hotel.rms_room
