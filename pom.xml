@@ -64,6 +64,7 @@
 
     </properties>
 
+    <!--公共依赖-->
     <dependencies>
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -94,9 +95,14 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+        </dependency>
     </dependencies>
 
-    <!-- 子模块继承之后，提供作用：锁定版本 + 子module不用写groupId和version -->
+    <!-- 子模块继承之后，提供作用：锁定版本 + 子模块不用写版本号 -->
     <dependencyManagement>
 
         <dependencies>
