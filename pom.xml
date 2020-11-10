@@ -18,6 +18,7 @@
 
 
     <modules>
+        <module>hotel-demo</module>
         <module>hotel-main</module>
         <module>hotel-commons</module>
         <module>hotel-security</module>

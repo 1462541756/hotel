@@ -2,9 +2,9 @@ spring:
   profiles:
     active: dev
   application:
-    name: hotel-main
+    name: hotel-demo
 server:
-  port: 8080
+  port: 8088
 mybatis:
   type-aliases-package: com.yangkai.hotel  #别名包，配置后可不用写类的全限名
   mapper-locations:
