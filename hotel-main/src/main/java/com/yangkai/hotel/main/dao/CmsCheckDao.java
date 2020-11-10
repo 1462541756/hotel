@@ -3,6 +3,7 @@ import com.yangkai.hotel.main.dto.CheckDetail;
 import com.yangkai.hotel.main.dto.RoomOptionDto;
 import com.yangkai.hotel.mbg.model.CmsCheck;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-10-27 15:14:51
  */
+@Repository
 public interface CmsCheckDao {
 
     /**

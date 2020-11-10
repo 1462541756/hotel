@@ -1,7 +1,9 @@
 package com.yangkai.hotel.main.dao;
 
 import com.yangkai.hotel.mbg.model.EmsEvent;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,6 +13,8 @@ import java.util.List;
  * @author makejava
  * @since 2020-11-02 18:45:19
  */
+//@Mapper  本注解配合@Select等使用可不用配置mappe.xml文件
+@Repository
 public interface EmsEventDao {
 
     /**

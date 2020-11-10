@@ -1,12 +1,14 @@
 spring:
   profiles:
     active: dev
+  application:
+    name: hotel-main
 server:
   port: 8080
 mybatis:
+  type-aliases-package: com.yangkai.hotel  #别名包，配置后可不用写类的全限名
   mapper-locations:
-    - classpath:mapper/**/*.xml
-    - classpath*:mapper/**/*.xml
+    - classpath*:mapper/**/*.xml  #classpath*和classpath同时用会导致重复加载
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #  configuration:

@@ -4,12 +4,14 @@ import com.yangkai.hotel.mbg.model.UmsMenu;
 import com.yangkai.hotel.mbg.model.UmsResource;
 import com.yangkai.hotel.mbg.model.UmsRole;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * 后台用户角色自定义Dao
  */
+@Repository
 public interface UmsRoleDao {
     List<UmsMenu> getMenuList(@Param("adminId") Long adminId);
 

@@ -4,12 +4,14 @@ import com.yangkai.hotel.mbg.model.UmsAdminRoleRelation;
 import com.yangkai.hotel.mbg.model.UmsResource;
 import com.yangkai.hotel.mbg.model.UmsRole;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * 后台用户与角色管理自定义Dao
  */
+@Repository
 public interface UmsAdminRoleRelationDao {
     /**
      * 批量插入用户角色关系

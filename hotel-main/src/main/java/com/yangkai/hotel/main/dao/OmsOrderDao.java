@@ -2,6 +2,7 @@ package com.yangkai.hotel.main.dao;
 
 import com.yangkai.hotel.mbg.model.OmsOrder;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-10-20 16:55:50
  */
+@Repository
 public interface OmsOrderDao {
 
     /**
