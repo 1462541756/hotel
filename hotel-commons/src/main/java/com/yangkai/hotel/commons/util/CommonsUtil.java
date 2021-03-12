@@ -13,16 +13,16 @@ public  class CommonsUtil {
 
     //生成验证码
     public static String getRandomVerificationCode(int len){
-        String result="";
+        StringBuilder result= new StringBuilder();
         Random random =new Random();
         for (int i = 0; i <len; i++) {
-            result+=CODE.charAt(Math.abs(random.nextInt())%CODE.length());
+            result.append(CODE.charAt(Math.abs(random.nextInt()) % CODE.length()));
         }
-        return result;
+        return result.toString();
     }
     private static String regex = "^[a-z0-9A-Z]+[- | a-z0-9A-Z . _]+@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-z]{2,}$";
 
-    //格式验证
+    //邮箱格式验证
     public static boolean validEmail(String email) {
         return Pattern.compile(regex).matcher(email).find();
     }
